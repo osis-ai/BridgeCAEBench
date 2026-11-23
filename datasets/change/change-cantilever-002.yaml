@@ -1,0 +1,26 @@
+id: change-cantilever-002
+line: change
+bridge: osis-bridge-cantilever-box
+status: verified
+version: 1
+kind: settlement
+start: template:变截面悬浇连续梁-70+130+70
+base: 变截面悬浇连续梁-70+130+70
+reference: overlay:reference
+hide_templates:
+- 变截面悬浇连续梁-70+130+70
+brief: 设计变更：地勘复核后地基条件变差，支座不均匀沉降加大为主墩 20mm、桥台 15mm。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: settlement_mm
+  op: approx_list
+  value:
+  - 15.0
+  - 20.0
+  tol: 0.5
+preserve: true
+may_change:
+- settlements
+notes: '脚本变更（tools/draft_change.py: settlement），起始模板 变截面悬浇连续梁-70+130+70。'

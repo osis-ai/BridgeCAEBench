@@ -1,0 +1,59 @@
+id: handover-rigid-002
+line: handover
+bridge: osis-bridge-rigid-frame-box
+status: verified
+version: 1
+kind: B
+start: overlay:start
+base: 变截面连续刚构-56+5x100+56-双肢
+reference: template:变截面连续刚构-56+5x100+56-双肢
+hide_templates:
+- 变截面连续刚构-56+5x100+56-双肢
+brief: |
+  这个项目是同事做到一半交给我的：边界和荷载也已经做完（prep/_1～_8），只剩活载分析（含沉降）和施工阶段没做，main.py 已经写好调用顺序。请接着补完，不要改动已经做好的部分，最后重建并求解确认能算通。
+  设计参数：
+  - 汽车荷载公路-I 级，车道数 3
+  - 支座不均匀沉降 10mm
+  - 施工阶段（共 59 个）：桥墩施工 → 浇筑0号块 → 挂篮1 → …… → 张拉3中跨合龙束及底板束 → 体系转换 → 二期 → 十年收缩徐变 → 运营
+hidden:
+  lane_count: 3
+  settlement_mm:
+  - 10.0
+  uniform_temp:
+  - -23.0
+  - 34.0
+  tendon_stress:
+  - 1395000000.0
+  - null
+  stage_count: 59
+  二期恒载_kN_m:
+    二期: 11.414
+hidden_profile: true
+must_ask: []
+checks:
+- field: live_grade
+  op: eq
+  value: HIGHWAY_I
+- field: lane_count
+  op: eq
+  value: 3
+- field: settlement_mm
+  op: approx_list
+  value:
+  - 10.0
+  tol: 0.5
+- field: stage_count
+  op: eq
+  value: 59
+preserve: true
+may_change:
+- creep_days
+- lane_count
+- live_code
+- live_grade
+- settlement_mm
+- settlements
+- stage_count
+- stage_durations
+- stage_names
+notes: 由 tools/draft_handover.py 从模板 变截面连续刚构-56+5x100+56-双肢 截断生成：删去 _9_analysis.py, _10_stage.py。

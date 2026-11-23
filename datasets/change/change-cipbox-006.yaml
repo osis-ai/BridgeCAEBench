@@ -1,0 +1,29 @@
+id: change-cipbox-006
+line: change
+bridge: osis-bridge-conventional-box
+status: verified
+version: 1
+kind: live_grade+pavement
+start: template:现浇等截面箱梁-30+35+22-单箱三室-16.75
+base: 现浇等截面箱梁-30+35+22-单箱三室-16.75
+reference: overlay:reference
+hide_templates:
+- 现浇等截面箱梁-30+35+22-单箱三室-16.75
+brief: 设计变更（两项）：这条路按二级公路标准建设，汽车荷载等级由公路-I 级改为公路-II 级。二期恒载复核后增加，二期荷载由 96.3kN/m 改为 115.56kN/m。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: live_grade
+  op: eq
+  value: HIGHWAY_II
+- field: line_load_kn
+  op: contains
+  value: 115.56
+- field: line_load_kn
+  op: absent
+  value: 96.3
+preserve: true
+may_change:
+- line_loads.二期_二期
+notes: '脚本变更（tools/draft_change.py: live_grade, pavement），起始模板 现浇等截面箱梁-30+35+22-单箱三室-16.75。'

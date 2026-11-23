@@ -1,0 +1,180 @@
+id: project-cipbox-001
+line: project
+bridge: osis-bridge-conventional-box
+status: verified
+version: 1
+start: empty
+base: 现浇等截面箱梁-30+35+22-单箱三室-16.75
+hide_templates:
+- 现浇等截面箱梁-30+35+22-单箱三室-16.75
+hidden:
+  span_lengths:
+  - 30.0
+  - 35.0
+  - 22.0
+  H_mid: 2.0
+  H_root: 2.0
+  T_mid: 0.22
+  T_root: 0.22
+  T_top_mid: 0.25
+  T_top_root: 0.25
+  web_t_mid: 0.5
+  web_t_support: 0.5
+  concrete_grade: 50
+  live_grade: HIGHWAY_I
+  lane_count: 5
+  uniform_temp:
+  - -25.0
+  - 20.0
+  has_temp_gradient: true
+  settlement_mm:
+  - 5.0
+  humidity: 70.0
+  tendon_stress:
+  - 1395000000.0
+  tendon_count: 4
+  stage_count: 4
+  stage_names:
+  - 一次落架
+  - 二期
+  - 成桥
+  - 运营
+  二期恒载_kN_m:
+    二期: 96.3
+  桥宽_m: '16.75'
+hidden_profile: true
+turns:
+- from: build-cipbox-009
+  brief: |
+    建一个计算模型：30+35+22m 现浇预应力混凝土连续箱梁，单箱三室，桥宽 16.75m，满堂支架整跨现浇、一次落架。
+    梁高 2m。
+    主梁 C50。
+    荷载：汽车荷载公路-I 级；二期恒载 96.3kN/m；整体升温 20℃、降温 25℃，考虑正负温度梯度；支座不均匀沉降 5mm。
+    钢束张拉控制应力 1395MPa。
+    环境年平均相对湿度 70%。
+    建好后重建并求解，确认模型能算通。
+  checks:
+  - field: span_lengths
+    op: approx_list
+    value:
+    - 30.0
+    - 35.0
+    - 22.0
+    tol: 0.5
+  - field: H_mid
+    op: approx
+    value: 2.0
+    tol: 0.02
+  - field: concrete_grade
+    op: eq
+    value: 50
+  - field: live_grade
+    op: eq
+    value: HIGHWAY_I
+  - field: line_load_kn
+    op: contains
+    value: 96.3
+  - field: uniform_temp
+    op: approx_list
+    value:
+    - -25.0
+    - 20.0
+    tol: 0.5
+  - field: has_temp_gradient
+    op: eq
+    value: true
+  - field: settlement_mm
+    op: approx_list
+    value:
+    - 5.0
+    tol: 0.5
+  - field: tendon_stress
+    op: contains
+    value: 1395000000.0
+  - field: humidity
+    op: approx
+    value: 70.0
+    tol: 1
+  reference: template:现浇等截面箱梁-30+35+22-单箱三室-16.75
+- from: change-cipbox-003
+  brief: 设计变更：地勘复核后地基条件变差，支座不均匀沉降加大为10mm。其他不变，改完重建并求解确认能算通。
+  checks:
+  - field: settlement_mm
+    op: approx_list
+    value:
+    - 10.0
+    tol: 0.5
+  reference: overlay:turn2
+  preserve: true
+  may_change:
+  - settlements
+- from: change-cipbox-004
+  brief: 设计变更：为控制锚下应力，钢束张拉控制应力由 1395MPa 改为 1302MPa（约 0.70fpk）。其他不变，改完重建并求解确认能算通。
+  checks:
+  - field: settlement_mm
+    op: approx_list
+    value:
+    - 10.0
+    tol: 0.5
+  - field: tendon_stress
+    op: contains
+    value: 1302000000.0
+  - field: tendon_stress
+    op: absent
+    value: 1395000000.0
+  reference: overlay:turn3
+  preserve: true
+  may_change: []
+- brief: |
+    项目要交了。按最终的设计参数把整个模型完整复核一遍：参数以第一次交代的为准，之后两次变更都要体现。发现和设计参数不一致的地方逐项改正，改完重建并求解确认能算通。
+    回复里给出复核结论 JSON，没有不一致就给空列表：
+    {"inconsistencies":[{"item":"混凝土等级","model":"模型里的值","design":"设计值"}]}
+  checks:
+  - field: span_lengths
+    op: approx_list
+    value:
+    - 30.0
+    - 35.0
+    - 22.0
+    tol: 0.5
+  - field: H_mid
+    op: approx
+    value: 2.0
+    tol: 0.02
+  - field: concrete_grade
+    op: eq
+    value: 50
+  - field: live_grade
+    op: eq
+    value: HIGHWAY_I
+  - field: line_load_kn
+    op: contains
+    value: 96.3
+  - field: uniform_temp
+    op: approx_list
+    value:
+    - -25.0
+    - 20.0
+    tol: 0.5
+  - field: has_temp_gradient
+    op: eq
+    value: true
+  - field: humidity
+    op: approx
+    value: 70.0
+    tol: 1
+  - field: settlement_mm
+    op: approx_list
+    value:
+    - 10.0
+    tol: 0.5
+  - field: tendon_stress
+    op: contains
+    value: 1302000000.0
+  - field: tendon_stress
+    op: absent
+    value: 1395000000.0
+  reference: overlay:turn3
+  preserve: true
+  may_change: []
+notes: 同一会话四轮：build-cipbox-009 → change-cipbox-003 → change-cipbox-004 → 按最终参数复核。每轮在上一轮自己的产出上继续。

@@ -1,0 +1,25 @@
+id: change-cipbox-004
+line: change
+bridge: osis-bridge-conventional-box
+status: verified
+version: 1
+kind: stress
+start: template:现浇等截面箱梁-30+35+22-单箱三室-16.75
+base: 现浇等截面箱梁-30+35+22-单箱三室-16.75
+reference: overlay:reference
+hide_templates:
+- 现浇等截面箱梁-30+35+22-单箱三室-16.75
+brief: 设计变更：为控制锚下应力，钢束张拉控制应力由 1395MPa 改为 1302MPa（约 0.70fpk）。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: tendon_stress
+  op: contains
+  value: 1302000000.0
+- field: tendon_stress
+  op: absent
+  value: 1395000000.0
+preserve: true
+may_change: []
+notes: '脚本变更（tools/draft_change.py: stress），起始模板 现浇等截面箱梁-30+35+22-单箱三室-16.75。'

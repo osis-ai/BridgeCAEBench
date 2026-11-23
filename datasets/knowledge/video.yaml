@@ -1,0 +1,190 @@
+# knowledge：视频题，出自 WeKnora「OSIS视频知识库」的基础操作视频字幕（字幕里有拼音转写，摘录避开）。
+- id: kn-video-001
+  question: 构件理论厚度选“自动计算”时，考虑内轮廓周长的比例系数默认取多少？
+  answer: '0.5'
+  aliases: []
+  type: number
+  source: {kb: OSIS视频知识库, knowledge_id: 958b8553-1eed-4017-8cd1-1f337a833102, title: 基础操作视频字幕/12 定义收缩徐变特性.txt,
+           excerpt: 此时需要指定考虑内轮廓周长的比例系数，默认为0.5}
+  video_url: https://www.bilibili.com/video/BV1NCMQ65EqA
+  status: verified
+- id: kn-video-002
+  question: 构件理论厚度自动计算选“中国标准”，指的是哪本规范？
+  answer: JTG3362-2018
+  aliases: [JTG 3362-2018, JTG3362]
+  type: name
+  source: {kb: OSIS视频知识库, knowledge_id: 958b8553-1eed-4017-8cd1-1f337a833102, title: 基础操作视频字幕/12 定义收缩徐变特性.txt,
+           excerpt: 中国标准：主要是指JTG3362-2018}
+  video_url: https://www.bilibili.com/video/BV1NCMQ65EqA
+  status: verified
+- id: kn-video-003
+  question: 建好收缩徐变特性后，要在材料数据窗口勾选哪一项才能让混凝土材料用上它？
+  answer: 考虑材料收缩徐变特性
+  aliases: []
+  type: name
+  source: {kb: OSIS视频知识库, knowledge_id: 958b8553-1eed-4017-8cd1-1f337a833102, title: 基础操作视频字幕/12 定义收缩徐变特性.txt,
+           excerpt: 在修改材料数据窗口下方勾选“考虑材料收缩徐变特性”}
+  video_url: https://www.bilibili.com/video/BV1NCMQ65EqA
+  status: verified
+- id: kn-video-004
+  question: 教程里“十年收缩徐变”施工阶段的持续时间设成多少天？
+  answer: '3650'
+  aliases: [3650天]
+  type: number
+  source: {kb: OSIS视频知识库, knowledge_id: df871e81-56ff-47a6-9f8d-bc84d9ef7710, title: 基础操作视频字幕/13 定义施工阶段.txt,
+           excerpt: 仅需将时间设置为3650天即可}
+  video_url: https://www.bilibili.com/video/BV1rTud6EEEU
+  status: verified
+- id: kn-video-005
+  question: 施工阶段激活单元组时，“分部”选“默认”表示激活什么？
+  answer: 全截面
+  aliases: []
+  type: name
+  source: {kb: OSIS视频知识库, knowledge_id: df871e81-56ff-47a6-9f8d-bc84d9ef7710, title: 基础操作视频字幕/13 定义施工阶段.txt,
+           excerpt: 分部选项“默认”为全截面}
+  video_url: https://www.bilibili.com/video/BV1rTud6EEEU
+  status: verified
+- id: kn-video-006
+  question: 公路-Ⅰ级车道荷载的均布荷载取多少 kN/m？
+  answer: '10.5'
+  aliases: [10.5kN/m, 10.5千牛每米]
+  type: number
+  source: {kb: OSIS视频知识库, knowledge_id: dc942c03-7ea4-4eab-89dd-9469bfaf21ca, title: 基础操作视频字幕/10 定义移动荷载.txt,
+           excerpt: 取10.5千牛每米}
+  video_url: https://www.bilibili.com/video/BV1bcGA6WEWf
+  status: verified
+- id: kn-video-007
+  question: 公路-Ⅰ级车道荷载的集中力，计算跨径大于等于 50m 时取多少 kN？
+  answer: '360'
+  aliases: [360kN, 360千牛]
+  type: number
+  source: {kb: OSIS视频知识库, knowledge_id: dc942c03-7ea4-4eab-89dd-9469bfaf21ca, title: 基础操作视频字幕/10 定义移动荷载.txt,
+           excerpt: 大于等于50m时取360千牛}
+  video_url: https://www.bilibili.com/video/BV1bcGA6WEWf
+  status: verified
+- id: kn-video-008
+  question: 车道定义里加载标准车辆的横向轮距输多少？
+  answer: 1.8m
+  aliases: ['1.8', 1.8米]
+  type: number
+  source: {kb: OSIS视频知识库, knowledge_id: dc942c03-7ea4-4eab-89dd-9469bfaf21ca, title: 基础操作视频字幕/10 定义移动荷载.txt,
+           excerpt: 加载标准车辆横向轮距为1.8m}
+  video_url: https://www.bilibili.com/video/BV1bcGA6WEWf
+  status: verified
+- id: kn-video-009
+  question: 移动工况的子工况选“单独”时，程序取多个子工况的什么结果作为移动荷载结果？
+  answer: 包络结果
+  aliases: [包络, 最不利结果]
+  type: name
+  source: {kb: OSIS视频知识库, knowledge_id: dc942c03-7ea4-4eab-89dd-9469bfaf21ca, title: 基础操作视频字幕/10 定义移动荷载.txt,
+           excerpt: 子工况选择单独时，程序以多个子工况的包络结果作为移动}
+  video_url: https://www.bilibili.com/video/BV1bcGA6WEWf
+  status: verified
+- id: kn-video-010
+  question: 子工况勾了冲击系数、基频选“用户输入”时，要输入结构哪个方向的基频？
+  answer: 竖向基频
+  aliases: [竖向, 竖向自振频率]
+  type: name
+  source: {kb: OSIS视频知识库, knowledge_id: dc942c03-7ea4-4eab-89dd-9469bfaf21ca, title: 基础操作视频字幕/10 定义移动荷载.txt,
+           excerpt: 所以我们要输入结构的竖向基频}
+  video_url: https://www.bilibili.com/video/BV1bcGA6WEWf
+  status: verified
+- id: kn-video-011
+  question: 钢束特性名“15-3”里的 3 表示什么？
+  answer: 每束由3根钢绞线组成
+  aliases: [每束3根, 3根钢绞线, 钢绞线根数]
+  type: name
+  source: {kb: OSIS视频知识库, knowledge_id: cc444522-ebb1-4373-a125-01b8b005286b, title: 基础操作视频字幕/09 定义预应力荷载.txt,
+           excerpt: 代表采用公称直径为15.2mm的钢绞线，每束由3根组成}
+  video_url: https://www.bilibili.com/video/BV1P2MQ6GEzw
+  status: verified
+- id: kn-video-012
+  question: 定义钢束特性时，管道面积和钢束面积要满足什么关系？
+  answer: 管道面积大于钢束面积
+  aliases: [管道面积需大于钢束面积, 管道面积要大于钢束面积]
+  type: name
+  source: {kb: OSIS视频知识库, knowledge_id: cc444522-ebb1-4373-a125-01b8b005286b, title: 基础操作视频字幕/09 定义预应力荷载.txt,
+           excerpt: 管道面积需大于钢束面积}
+  video_url: https://www.bilibili.com/video/BV1P2MQ6GEzw
+  status: verified
+- id: kn-video-013
+  question: 2D 圆弧钢束线形里，某个控制点的弯曲半径填 0 代表什么？
+  answer: 该点位于直线段
+  aliases: [直线段, 无弯曲, 不弯曲]
+  type: name
+  source: {kb: OSIS视频知识库, knowledge_id: cc444522-ebb1-4373-a125-01b8b005286b, title: 基础操作视频字幕/09 定义预应力荷载.txt,
+           excerpt: 当弯曲半径输入0时，代表该点位于直线段}
+  video_url: https://www.bilibili.com/video/BV1P2MQ6GEzw
+  status: verified
+- id: kn-video-014
+  question: 一般支承里坐标系编号选 0 号代表哪个坐标系？
+  answer: 整体坐标系
+  aliases: [全局坐标系]
+  type: name
+  source: {kb: OSIS视频知识库, knowledge_id: 681800d8-2441-4b01-8f43-db4d384a897c, title: 基础操作视频字幕/07 定义边界条件.txt,
+           excerpt: 0号局部坐标系代表整体坐标系}
+  video_url: https://www.bilibili.com/video/BV1SfGw69Es8
+  status: verified
+- id: kn-video-015
+  question: 移动复制节点时间距输入“1，3@2”，等价于哪串间距？
+  answer: 1,2,2,2
+  aliases: [1，2，2，2]
+  type: name
+  source: {kb: OSIS视频知识库, knowledge_id: 944d9072-038f-4c13-bfd0-42dd42245446, title: 基础操作视频字幕/04 建立节点、单元.txt,
+           excerpt: 间距输入1，3@2，代表第一段间距为1米，后面连续三段间距都为2米}
+  video_url: https://www.bilibili.com/video/BV1VUgh6TEPH
+  status: verified
+- id: kn-video-016
+  question: 定义单元组时后缀写“1-5-2”，会生成哪几个后缀编号？
+  answer: 1,3,5
+  aliases: [1，3，5, 1、3、5]
+  type: name
+  source: {kb: OSIS视频知识库, knowledge_id: 67c828a8-1156-480e-bb98-495f34a64f81, title: 基础操作视频字幕/06 定义单元组、边界组.txt,
+           excerpt: 后缀格式：1至5杠2，意为从1到5，间隔2添加后缀}
+  video_url: https://www.bilibili.com/video/BV133gh6YEuK
+  status: verified
+- id: kn-video-017
+  question: “添加截面”的一般截面里内置了多少种库截面？
+  answer: '13'
+  aliases: [十三, 十三种]
+  type: number
+  source: {kb: OSIS视频知识库, knowledge_id: a25c09fd-95ed-4053-a71b-f6f58c1fe6b8, title: 基础操作视频字幕/03 定义截面.txt,
+           excerpt: “一般截面”支持十三种库截面和自定义截面}
+  video_url: https://www.bilibili.com/video/BV1qNKJ6AEad
+  status: verified
+- id: kn-video-018
+  question: 从 CAD 导入自定义截面，截面各轮廓线必须先处理成什么？
+  answer: 一条闭合的多段线
+  aliases: [闭合多段线, 闭合的多段线]
+  type: name
+  source: {kb: OSIS视频知识库, knowledge_id: a25c09fd-95ed-4053-a71b-f6f58c1fe6b8, title: 基础操作视频字幕/03 定义截面.txt,
+           excerpt: 导入截面的各轮廓线必须合并成一条闭合的多段线}
+  video_url: https://www.bilibili.com/video/BV1qNKJ6AEad
+  status: verified
+- id: kn-video-019
+  question: 材料数据的“设计类型”里内置了几种库材料？
+  answer: '4'
+  aliases: [四, 四种]
+  type: number
+  source: {kb: OSIS视频知识库, knowledge_id: 131cb607-e430-49f3-a928-5579dd69ebd7, title: 基础操作视频字幕/02 定义材料.txt,
+           excerpt: 软件内置了“混凝土”、“钢材”、“预应力”、“普通钢筋”四种库材料}
+  video_url: https://www.bilibili.com/video/BV1qNKJ6AEtN
+  status: verified
+- id: kn-video-020
+  question: 项目文件夹里，验算结果文件放在哪个文件夹？
+  answer: Check
+  aliases: [Check文件夹]
+  type: name
+  source: {kb: OSIS视频知识库, knowledge_id: 804a33a3-0246-4293-a716-accbf24af0b4, title: 基础操作视频字幕/01 OSIS软件界面介绍 - 发音.txt,
+           excerpt: Check文件夹里存放的是验算结果文件}
+  video_url: https://www.bilibili.com/video/BV1oKKJ6aEwM
+  status: verified
+- id: kn-video-021
+  question: OSIS 状态栏的单位设置里，力的单位支持哪几种？
+  answer: 牛、千牛、兆牛
+  aliases: ["N,kN,MN", "牛,千牛,兆牛", 牛、千牛和兆牛]
+  type: name
+  source: {kb: OSIS视频知识库, knowledge_id: 804a33a3-0246-4293-a716-accbf24af0b4, title: 基础操作视频字幕/01 OSIS软件界面介绍 - 发音.txt,
+           excerpt: 力的单位支持牛、千牛和兆牛}
+  video_url: https://www.bilibili.com/video/BV1oKKJ6aEwM
+  status: verified

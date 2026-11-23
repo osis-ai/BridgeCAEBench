@@ -1,0 +1,33 @@
+id: diagnose-run-001
+line: diagnose
+bridge: osis-bridge-precast-t-girder
+status: verified
+version: 1
+kind: run_error
+start: overlay:start
+base: 简支变连续-T梁-20m-边梁
+reference: template:简支变连续-T梁-20m-边梁
+hide_templates:
+- 简支变连续-T梁-20m-边梁
+brief: |
+  重建模型时报错跑不通，报错如下。帮我查出原因并修好，不要改动无关部分，改完重建并求解确认能算通。
+  报错：
+  {symptom}
+  回复里给出定位 JSON，reason_code 取自 py/reason_codes.yaml：
+  {"localizations":[{"reason_code":"短码"}]}
+symptom: "BatchError: 批量冲刷失败（共 722 条命令）: 命令流中第174句“Element,29,BEAM3D,29,30,1,99,99,1,1,0.0,0,0.0,0”命令错误如下：单元创建失败:单元[29]：截面[99]不存在！\n失败命令（1 条）:\n  [FAIL] (共722条)"
+hidden: {}
+must_ask: []
+checks: []
+preserve: true
+may_change:
+- concrete_ratio
+- pst_steel_kg_per_m
+- pst_steel_ratio
+- section_area_avg
+localization:
+- reason_code: section_ref
+seed:
+  file: prep/_6_element.py
+  how: engine.element.create(29, "BEAM3D", 29, 30, 1, 1, 1 -> engine.element.create(29, "BEAM3D", 29, 30, 1, 99, 99
+notes: 跑不通：在模板 简支变连续-T梁-20m-边梁 上种 section_ref。symptom 待在 OSIS 中重建起始项目后采集（同时确认确实报错）。

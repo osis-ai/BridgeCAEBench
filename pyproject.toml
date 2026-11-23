@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bridgecaebench"
+version = "0.1.0"
+description = "BridgeCAEBench: benchmarking LLM agents on bridge-engineering work in structural analysis software"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "httpx[socks]>=0.28,<1",   # socks: ALL_PROXY=socks5h://... must not crash clients
+  "pyyaml>=6,<7",
+  "requests>=2.32,<3",
+]
+
+# 每个框架一个 extra，装进 .venvs/<extra>（method.yaml 的 extra；同框架的方法共用）；新增框架在这里加一行。
+[project.optional-dependencies]
+miniswe = ["mini-swe-agent==2.4.6"]
+opencode = ["opencode-ai==0.1.0a36"]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+osis-bench = "bench.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["bench", "methods", "tasks", "scoring"]
+
+[tool.pytest.ini_options]
+addopts = "--strict-markers"
+testpaths = ["tests"]

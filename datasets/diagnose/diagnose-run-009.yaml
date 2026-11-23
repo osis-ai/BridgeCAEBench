@@ -1,0 +1,29 @@
+id: diagnose-run-009
+line: diagnose
+bridge: osis-bridge-conventional-box
+status: verified
+version: 1
+kind: run_error
+start: overlay:start
+base: 现浇等截面箱梁-30+30-单箱四室-20.7
+reference: template:现浇等截面箱梁-30+30-单箱四室-20.7
+hide_templates:
+- 现浇等截面箱梁-30+30-单箱四室-20.7
+brief: |
+  重建模型时报错跑不通，报错如下。帮我查出原因并修好，不要改动无关部分，改完重建并求解确认能算通。
+  报错：
+  {symptom}
+  回复里给出定位 JSON，reason_code 取自 py/reason_codes.yaml：
+  {"localizations":[{"reason_code":"短码"}]}
+symptom: "BatchError: 批量冲刷失败（共 449 条命令）: 命令流中第436句“StgLc,1,1,1,,自重自重工况”命令错误如下：激活或钝化的荷载工况[自重自重工况]不存在！\n失败命令（1 条）:\n  [FAIL] (共449条)"
+hidden: {}
+must_ask: []
+checks: []
+preserve: true
+may_change: []
+localization:
+- reason_code: load_ref
+seed:
+  file: prep/_10_stage.py
+  how: define_loadcase(1, 1, "", "自重自重" -> define_loadcase(1, 1, "", "自重自重工况"
+notes: 跑不通：在模板 现浇等截面箱梁-30+30-单箱四室-20.7 上种 load_ref。symptom 待在 OSIS 中重建起始项目后采集（同时确认确实报错）。

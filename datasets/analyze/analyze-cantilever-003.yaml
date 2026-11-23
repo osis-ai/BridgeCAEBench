@@ -1,0 +1,28 @@
+id: analyze-cantilever-003
+line: analyze
+bridge: osis-bridge-cantilever-box
+status: verified
+version: 1
+kind: displacement
+start: template:变截面悬浇连续梁-70+130+70
+brief: |
+  请先重建并求解这个模型，再从结果里查：
+  “中载工况”作用下主跨跨中的最大竖向位移（向下）是多少 mm？按 L/600 判断是否满足（L=130m）。
+  回复 JSON：{"value": 数值, "ok": "是" 或 "否"}
+checks: []
+probe:
+  call: envelope
+  kind: displacement
+  load_case: 中载工况
+  component: Uz-Min
+  column: uz
+  agg: min
+  where:
+    span_mid: 1
+  answer:
+    value: mm_down
+    ok: abs(value) <= 130 * 1000 / 600
+tolerance:
+  value: 0.02
+truth: {"value": 38.614, "ok": "是"}
+notes: 结果问答：模板 变截面悬浇连续梁-70+130+70。truth 待在 OSIS 中按 probe 取值。

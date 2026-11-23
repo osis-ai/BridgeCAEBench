@@ -1,0 +1,572 @@
+# knowledge：使用说明书题，出自 WeKnora「OSIS使用说明书」的十章 md（截图页不出题）。
+# 一、特性
+- id: kn-manual-001
+  question: 收缩徐变里的环境年平均相对湿度能填的范围是多少？
+  answer: 40-99
+  aliases: [40~99, 40到99, 40%-99%]
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: d5252ba3-ba00-4883-ac19-b8c8fa08609b, title: 一、特性/一、特性.md,
+           excerpt: 环境年平均相对湿度(40-99)}
+  status: verified
+- id: kn-manual-002
+  question: 收缩徐变的粉煤灰添加量 Alpha 能填多少范围？
+  answer: 0~30
+  aliases: [0-30, 0到30]
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: d5252ba3-ba00-4883-ac19-b8c8fa08609b, title: 一、特性/一、特性.md,
+           excerpt: 粉煤灰添加量Alpha(0~30）}
+  status: verified
+- id: kn-manual-003
+  question: 同一种混凝土想给不同构件设不同龄期，OSIS 里该怎么处理？
+  answer: 定义多个混凝土材料
+  aliases: [多个混凝土材料, 定义多个材料, 建多个混凝土材料]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: d5252ba3-ba00-4883-ac19-b8c8fa08609b, title: 一、特性/一、特性.md,
+           excerpt: 若要为同种混凝土材料定义不同龄期，需定义多个混凝土材料}
+  status: verified
+- id: kn-manual-004
+  question: 自定义截面的尺寸单位支持哪几种？
+  answer: 米、毫米、英寸
+  aliases: ["米,毫米,英寸", "m,mm,inch"]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: d5252ba3-ba00-4883-ac19-b8c8fa08609b, title: 一、特性/一、特性.md,
+           excerpt: 现在仅支持米、毫米、英寸}
+  status: verified
+- id: kn-manual-005
+  question: 截面特性调整系数里调“面积”的系数，会不会改变自重（重量）的计算？
+  answer: 否
+  aliases: [不会, 不影响]
+  type: yesno
+  source: {kb: OSIS使用说明书, knowledge_id: d5252ba3-ba00-4883-ac19-b8c8fa08609b, title: 一、特性/一、特性.md,
+           excerpt: 此处的调整系数不影响重量的计算}
+  status: verified
+- id: kn-manual-006
+  question: 变截面组的“多项式”填 2，截面按什么曲线变化？
+  answer: 二次曲线
+  aliases: [二次, 抛物线]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: d5252ba3-ba00-4883-ac19-b8c8fa08609b, title: 一、特性/一、特性.md,
+           excerpt: 输入2，则按二次曲线变化}
+  status: verified
+- id: kn-manual-007
+  question: 变截面组按多项式变化时，“对称平面”一般选哪一端？
+  answer: j端
+  aliases: [变截面组的j端, j]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: d5252ba3-ba00-4883-ac19-b8c8fa08609b, title: 一、特性/一、特性.md,
+           excerpt: 一般可选择变截面组的j端}
+  status: verified
+- id: kn-manual-008
+  question: 构件理论厚度的“规范”下拉里能选哪个国家的规范？
+  answer: 中国规范
+  aliases: [中国]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: d5252ba3-ba00-4883-ac19-b8c8fa08609b, title: 一、特性/一、特性.md,
+           excerpt: 可供选择的国家规范仅有中国规范}
+  status: verified
+- id: kn-manual-009
+  question: 定义收缩徐变的菜单路径是什么？
+  answer: 特性-材料-收缩徐变
+  aliases: [特性→材料→收缩徐变, 特性/材料/收缩徐变]
+  type: path
+  source: {kb: OSIS使用说明书, knowledge_id: d5252ba3-ba00-4883-ac19-b8c8fa08609b, title: 一、特性/一、特性.md,
+           excerpt: 功能区菜单“特性”一“材料”一“收缩徐变”}
+  status: verified
+# 二、节点
+- id: kn-manual-010
+  question: 建节点时“合并重复节点”的容许误差默认是多少？
+  answer: 0.001m
+  aliases: ['0.001', 1mm]
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: 18ffb162-4ed0-48ee-afc6-e7f1903277bf, title: 二、节点/二、节点.md,
+           excerpt: 点击右侧“...”按钮可设置合并容许误差，默认为0.001m}
+  status: verified
+- id: kn-manual-011
+  question: 新节点落在已有梁单元上时自动分割单元，交叉计算的容许误差默认多少？
+  answer: 0.001m
+  aliases: ['0.001', 1mm]
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: 18ffb162-4ed0-48ee-afc6-e7f1903277bf, title: 二、节点/二、节点.md,
+           excerpt: 可设置交叉计算容许误差，默认为0.001m}
+  status: verified
+- id: kn-manual-012
+  question: 节点间距栏里输入“1，3，5，3x2”，等价于哪串间距？
+  answer: 1,3,5,2,2,2
+  aliases: [1，3，5，2，2，2]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 18ffb162-4ed0-48ee-afc6-e7f1903277bf, title: 二、节点/二、节点.md,
+           excerpt: 1，3，5，3x2 = 1，3，5，2，2，2}
+  status: verified
+- id: kn-manual-013
+  question: 两个节点之间连着单元时，能用“合并节点”把它们合并吗？
+  answer: 否
+  aliases: [不能]
+  type: yesno
+  source: {kb: OSIS使用说明书, knowledge_id: 18ffb162-4ed0-48ee-afc6-e7f1903277bf, title: 二、节点/二、节点.md,
+           excerpt: 当节点间有单元时不能合并}
+  status: verified
+- id: kn-manual-014
+  question: 合并节点后，新节点放在什么位置？
+  answer: 开始节点的位置
+  aliases: [开始节点, 开始节点位置]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 18ffb162-4ed0-48ee-afc6-e7f1903277bf, title: 二、节点/二、节点.md,
+           excerpt: 合并后形成的新节点位置在开始节点的位置}
+  status: verified
+- id: kn-manual-015
+  question: 删除节点时勾哪个选项，可以保住连着单元或带边界、节点荷载的节点不被删？
+  answer: 仅自由节点
+  aliases: []
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 18ffb162-4ed0-48ee-afc6-e7f1903277bf, title: 二、节点/二、节点.md,
+           excerpt: 选择后，与单元有关联的、被赋予属性（节点荷载、边界条件等）的节点不会被删除}
+  status: verified
+# 三、单元
+- id: kn-manual-016
+  question: 梁单元指定方向关键点 K 后，N1、N2、K 三点确定的平面包含单元坐标系的哪两根轴？
+  answer: x轴和z轴
+  aliases: [x与z轴, x和z, x、z, xz, x-z]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 42d25715-a8e6-41f6-aec9-58e0192cd58a, title: 三、单元/三、单元.md,
+           excerpt: 该平面包含了单元坐标系的x与z轴}
+  status: verified
+- id: kn-manual-017
+  question: 指定方向关键点 K 后，梁单元局部 z 轴正向指向哪一侧？
+  answer: K节点侧
+  aliases: [K节点, K点一侧, 指向K节点]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 42d25715-a8e6-41f6-aec9-58e0192cd58a, title: 三、单元/三、单元.md,
+           excerpt: 且z轴正向指向K节点侧}
+  status: verified
+- id: kn-manual-018
+  question: 想看每个单元的容重和整体重量，用哪个表格？
+  answer: 单元重量表格
+  aliases: [单元重量表]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 42d25715-a8e6-41f6-aec9-58e0192cd58a, title: 三、单元/三、单元.md,
+           excerpt: 单元重量表格}
+  status: verified
+# 四、边界
+- id: kn-manual-019
+  question: 边界条件表格里 Dx~Rz 填 1 代表什么？
+  answer: 约束
+  aliases: [固定, 约束该自由度]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 051828e6-7c08-4cbf-bae4-b074c622e729, title: 四、边界/四、边界.md,
+           excerpt: 自由度填0表示自由，填1表示约束}
+  status: verified
+- id: kn-manual-020
+  question: 一般支承的菜单路径是什么？
+  answer: 边界-边界-一般支承
+  aliases: [边界→边界→一般支承, 边界/边界/一般支承]
+  type: path
+  source: {kb: OSIS使用说明书, knowledge_id: 051828e6-7c08-4cbf-bae4-b074c622e729, title: 四、边界/四、边界.md,
+           excerpt: 功能区菜单“边界”→“边界”→”一般支承“}
+  status: verified
+- id: kn-manual-021
+  question: 边界编号可以重复吗？
+  answer: 否
+  aliases: [不可以, 不能]
+  type: yesno
+  source: {kb: OSIS使用说明书, knowledge_id: 051828e6-7c08-4cbf-bae4-b074c622e729, title: 四、边界/四、边界.md,
+           excerpt: 边界编号具有唯一性，不能重复}
+  status: verified
+- id: kn-manual-022
+  question: 不同编号的边界能不能取同一个名称？
+  answer: 是
+  aliases: [可以, 能]
+  type: yesno
+  source: {kb: OSIS使用说明书, knowledge_id: 051828e6-7c08-4cbf-bae4-b074c622e729, title: 四、边界/四、边界.md,
+           excerpt: 不同编号的边界名称可以重复}
+  status: verified
+- id: kn-manual-023
+  question: 同一个节点能不能同时属于不同的边界编号？
+  answer: 是
+  aliases: [可以, 能]
+  type: yesno
+  source: {kb: OSIS使用说明书, knowledge_id: 051828e6-7c08-4cbf-bae4-b074c622e729, title: 四、边界/四、边界.md,
+           excerpt: 同一个节点可以属于不同的边界编号}
+  status: verified
+- id: kn-manual-024
+  question: 边界类型下拉框目前支持几种边界类型？
+  answer: '6'
+  aliases: [六, 六种, 六个]
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: 051828e6-7c08-4cbf-bae4-b074c622e729, title: 四、边界/四、边界.md,
+           excerpt: 目前支持六个：一般支承、主从约束、释放梁端约束、节点弹性支承、弹性连接、一般弹性支承}
+  status: verified
+- id: kn-manual-025
+  question: 释放梁端约束选“相对值”时，某个自由度填 0 表示什么？
+  answer: 完全释放
+  aliases: [铰接, 全部释放]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 051828e6-7c08-4cbf-bae4-b074c622e729, title: 四、边界/四、边界.md,
+           excerpt: 例如输入0，代表完全释放}
+  status: verified
+- id: kn-manual-026
+  question: 释放梁端约束选“绝对值”时，Mx、My、Mz 的单位是什么？
+  answer: kN.m/rad
+  aliases: [kN·m/rad, kNm/rad]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 051828e6-7c08-4cbf-bae4-b074c622e729, title: 四、边界/四、边界.md,
+           excerpt: Mx、My、Mz 单位 kN.m/rad}
+  status: verified
+- id: kn-manual-027
+  question: 主从约束里勾哪个选项能强制主从节点平动完全同步？
+  answer: 仅同位移约束
+  aliases: []
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 051828e6-7c08-4cbf-bae4-b074c622e729, title: 四、边界/四、边界.md,
+           excerpt: 勾选仅同位移约束，可以强制主从节点平动完全同步}
+  status: verified
+- id: kn-manual-028
+  question: 用“三点式”定义节点局部坐标系，pt1、pt2、pt3 三点确定的是新坐标系的哪个平面？
+  answer: x-z平面
+  aliases: [xz平面, x-z, xz]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 051828e6-7c08-4cbf-bae4-b074c622e729, title: 四、边界/四、边界.md,
+           excerpt: pt1、pt2、pt3三点所确定的平面为新坐标系的x-z平面}
+  status: verified
+- id: kn-manual-029
+  question: 一般弹性支承可以直接输入的节点通用刚度矩阵是几乘几的？
+  answer: 6×6
+  aliases: [6x6, 6*6, 6乘6]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 051828e6-7c08-4cbf-bae4-b074c622e729, title: 四、边界/四、边界.md,
+           excerpt: 输入节点通用刚度矩阵(6×6)}
+  status: verified
+# 五、荷载
+- id: kn-manual-030
+  question: 自重荷载里 Z 方向自重系数系统一般默认填多少？
+  answer: '-1.04'
+  aliases: []
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: 9f718141-ea3f-4c93-93fe-6995a7c344bd, title: 五、荷载/五、荷载.md,
+           excerpt: 一般系统默认输入Z方向自重系数为-1.04}
+  status: verified
+- id: kn-manual-031
+  question: 定义荷载工况时，工况系数默认是多少？
+  answer: '1.0'
+  aliases: []
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: 9f718141-ea3f-4c93-93fe-6995a7c344bd, title: 五、荷载/五、荷载.md,
+           excerpt: 工况系数默认为1.0}
+  status: verified
+- id: kn-manual-032
+  question: 均匀温度荷载的温差值填正数表示升温还是降温？
+  answer: 升温
+  aliases: []
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 9f718141-ea3f-4c93-93fe-6995a7c344bd, title: 五、荷载/五、荷载.md,
+           excerpt: 温差值，正值表示升温}
+  status: verified
+- id: kn-manual-033
+  question: 温度梯度的“参考位置”除了顶面、底面、中心，还有哪一种？
+  answer: 建模点
+  aliases: [建模点位置]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 9f718141-ea3f-4c93-93fe-6995a7c344bd, title: 五、荷载/五、荷载.md,
+           excerpt: 以建模点位置为基准位置}
+  status: verified
+- id: kn-manual-034
+  question: 钢束特性里算松弛损失的张拉方式系数，超张拉取多少？
+  answer: '0.9'
+  aliases: []
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: 9f718141-ea3f-4c93-93fe-6995a7c344bd, title: 五、荷载/五、荷载.md,
+           excerpt: 一次张拉为1.0，超张拉为0.9}
+  status: verified
+- id: kn-manual-035
+  question: 钢束特性里的松弛等级系数，低松弛钢束取多少？
+  answer: '0.3'
+  aliases: []
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: 9f718141-ea3f-4c93-93fe-6995a7c344bd, title: 五、荷载/五、荷载.md,
+           excerpt: 普通松弛为1.0，低松弛为0.3}
+  status: verified
+- id: kn-manual-036
+  question: 钢束形状里“绕钢束x轴旋转”的角度允许范围是多少？
+  answer: -89度~89度
+  aliases: [-89~89, -89°~89°, ±89度, ±89°]
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: 9f718141-ea3f-4c93-93fe-6995a7c344bd, title: 五、荷载/五、荷载.md,
+           excerpt: 角度值范围-89度~89度}
+  status: verified
+- id: kn-manual-037
+  question: 定义移动荷载时，规范名称目前只支持哪本规范？
+  answer: JTG D60-2015
+  aliases: [公路桥涵设计通用规范, 《公路桥涵设计通用规范 (JTG D60-2015)》, JTG D60]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 9f718141-ea3f-4c93-93fe-6995a7c344bd, title: 五、荷载/五、荷载.md,
+           excerpt: 目前仅支持《公路桥涵设计通用规范 (JTG D60-2015)》}
+  status: verified
+- id: kn-manual-038
+  question: 车道定义的加载方式里，先把移动荷载加在横向联系梁上、再按车道线位置分到两边主梁的是哪种方法？
+  answer: 横向联系梁法
+  aliases: []
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 9f718141-ea3f-4c93-93fe-6995a7c344bd, title: 五、荷载/五、荷载.md,
+           excerpt: 选择“横向联系梁法”时可用}
+  status: verified
+- id: kn-manual-039
+  question: 一个移动荷载工况里，两个子工况能用同一种移动荷载类型吗？
+  answer: 否
+  aliases: [不能, 不可以]
+  type: yesno
+  source: {kb: OSIS使用说明书, knowledge_id: 9f718141-ea3f-4c93-93fe-6995a7c344bd, title: 五、荷载/五、荷载.md,
+           excerpt: 各子工况必须针对不同的移动荷载类型}
+  status: verified
+- id: kn-manual-040
+  question: 沉降组里的沉降值 Dz 填负值代表向上还是向下？
+  answer: 向下
+  aliases: [下沉]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 9f718141-ea3f-4c93-93fe-6995a7c344bd, title: 五、荷载/五、荷载.md,
+           excerpt: 输入支座沉降值的大小，负值代表向下}
+  status: verified
+- id: kn-manual-041
+  question: 反应谱函数“按规范设计”目前只支持哪本规范？
+  answer: JTG/T 2231-01-2020
+  aliases: [JTG/T 2231-01, 公路桥梁抗震设计规范]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 9f718141-ea3f-4c93-93fe-6995a7c344bd, title: 五、荷载/五、荷载.md,
+           excerpt: 目前仅支持《JTG/T 2231-01-2020》规范}
+  status: verified
+- id: kn-manual-042
+  question: 反应谱工况里地震作用方向沿整体坐标系 X 轴时，地震作用角度填多少？
+  answer: '0'
+  aliases: [0度, 0°]
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: 9f718141-ea3f-4c93-93fe-6995a7c344bd, title: 五、荷载/五、荷载.md,
+           excerpt: 地震作用方向在整体坐标系的X轴上时角度为0}
+  status: verified
+# 六、分析
+- id: kn-manual-043
+  question: 求解完想回去改模型，要切到哪个分析模式？
+  answer: 解锁
+  aliases: []
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 85a151b4-f868-4871-bba4-d910b179c0ba, title: 六、分析/六、分析.md,
+           excerpt: 具有前处理功能，对模型进行修改}
+  status: verified
+- id: kn-manual-044
+  question: 要看求解结果（后处理），分析模式应处于哪个状态？
+  answer: 锁定
+  aliases: []
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 85a151b4-f868-4871-bba4-d910b179c0ba, title: 六、分析/六、分析.md,
+           excerpt: 具有后处理功能，查看求解计算结果}
+  status: verified
+- id: kn-manual-045
+  question: 特征值分析控制的菜单路径是什么？
+  answer: 分析-分析控制-特征值
+  aliases: [分析→分析控制→特征值, 分析/分析控制/特征值]
+  type: path
+  source: {kb: OSIS使用说明书, knowledge_id: 85a151b4-f868-4871-bba4-d910b179c0ba, title: 六、分析/六、分析.md,
+           excerpt: 功能区菜单“分析”→“分析控制”→“特征值”}
+  status: verified
+# 七、结果
+- id: kn-manual-046
+  question: 看反力时勾了“反力箭头固定长度”，箭头长度会怎样？
+  answer: 所有箭头一样长
+  aliases: [一样长, 长度相同, 等长]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 3a1e7a20-40f2-4992-a50d-6eea0c7777ca, title: 七、结果/七、结果.md,
+           excerpt: 不论反力数值大小，所有箭头长度一样长}
+  status: verified
+- id: kn-manual-047
+  question: 钢束结果里的 σ2 是哪一项预应力损失？
+  answer: 锚具回缩损失
+  aliases: [锚具变形、钢筋回缩和接缝压缩引起的预应力损失, 锚具回缩]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 3a1e7a20-40f2-4992-a50d-6eea0c7777ca, title: 七、结果/七、结果.md,
+           excerpt: σ2 锚具回缩损失}
+  status: verified
+- id: kn-manual-048
+  question: 钢束结果里的 σ6 是哪一项预应力损失？
+  answer: 收缩徐变损失
+  aliases: [收缩徐变]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 3a1e7a20-40f2-4992-a50d-6eea0c7777ca, title: 七、结果/七、结果.md,
+           excerpt: σ6 收缩徐变损失}
+  status: verified
+- id: kn-manual-049
+  question: 梁单元应力结果的“应力位置”一共有几个输出点？
+  answer: '12'
+  aliases: [12个, 1~12]
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: 3a1e7a20-40f2-4992-a50d-6eea0c7777ca, title: 七、结果/七、结果.md,
+           excerpt: 1~12：应力输出点位置}
+  status: verified
+- id: kn-manual-050
+  question: 按规范生成荷载组合时的“添加包络”只适用于哪个表单的组合？
+  answer: 一般
+  aliases: [一般表单]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 3a1e7a20-40f2-4992-a50d-6eea0c7777ca, title: 七、结果/七、结果.md,
+           excerpt: 自动生成荷载组合包络，仅适用于&#34;一般&#34;表单的组合情况}
+  status: verified
+# 八、验算
+- id: kn-manual-051
+  question: OSIS 验算参数里的设计规范支持哪本？
+  answer: JTG 3362-2018
+  aliases: [公路钢筋混凝土及预应力混凝土桥梁设计规范, JTG 3362]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: c6fdd7a3-56e6-4cfc-9e43-f57ba60275a6, title: 八、验算/八、验算.md,
+           excerpt: 程序支持《公路钢筋混凝土及预应力混凝土桥梁设计规范》（JTG 3362-2018）}
+  status: verified
+- id: kn-manual-052
+  question: 结构设计安全等级选一级时，重要性系数 γ0 取多少？
+  answer: '1.1'
+  aliases: []
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: c6fdd7a3-56e6-4cfc-9e43-f57ba60275a6, title: 八、验算/八、验算.md,
+           excerpt: 一级：重要性系数γ0取1.1}
+  status: verified
+- id: kn-manual-053
+  question: 结构设计安全等级选三级时，重要性系数 γ0 取多少？
+  answer: '0.9'
+  aliases: []
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: c6fdd7a3-56e6-4cfc-9e43-f57ba60275a6, title: 八、验算/八、验算.md,
+           excerpt: 三级：重要性系数γ0取0.9}
+  status: verified
+- id: kn-manual-054
+  question: 频遇组合下正截面受拉边缘不允许出现拉应力，验算参数的构件类型该选哪种？
+  answer: 全预应力
+  aliases: [全预应力构件]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: c6fdd7a3-56e6-4cfc-9e43-f57ba60275a6, title: 八、验算/八、验算.md,
+           excerpt: 全预应力：此类构件在频遇组合作用下正截面受拉边缘不允许出现拉应力}
+  status: verified
+- id: kn-manual-055
+  question: 裂缝宽度计算系数里勾了“焊接钢筋骨架”，钢筋直径要乘以多少的修正系数？
+  answer: '1.3'
+  aliases: []
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: c6fdd7a3-56e6-4cfc-9e43-f57ba60275a6, title: 八、验算/八、验算.md,
+           excerpt: 焊接钢筋骨架直径需乘以1.3修正系数}
+  status: verified
+- id: kn-manual-056
+  question: 正截面抗弯承载力验算的安全系数小于多少就算不通过？
+  answer: '1.0'
+  aliases: ['1']
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: c6fdd7a3-56e6-4cfc-9e43-f57ba60275a6, title: 八、验算/八、验算.md,
+           excerpt: 安全系数：抗弯承载能力安全系数，K=|Mu|/|γMd|。小于1.0表示验算不通过}
+  status: verified
+- id: kn-manual-057
+  question: 使用阶段正截面压应力验算里，SigMax 是拉应力时安全系数 K 显示为多少？
+  answer: '9999'
+  aliases: []
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: c6fdd7a3-56e6-4cfc-9e43-f57ba60275a6, title: 八、验算/八、验算.md,
+           excerpt: 即为拉应力时，K=9999}
+  status: verified
+- id: kn-manual-058
+  question: 施工阶段拉应力验算的容许拉应力 SigALW 取多少？
+  answer: 1.15ftk'
+  aliases: [1.15ftk’, 1.15ftk, 1.15f'tk]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: c6fdd7a3-56e6-4cfc-9e43-f57ba60275a6, title: 八、验算/八、验算.md,
+           excerpt: 按JTG 3362-2018规范第7.2.8条，取1.15ftk&#39;}
+  status: verified
+- id: kn-manual-059
+  question: OSIS 现在能做抗扭承载力验算吗？
+  answer: 否
+  aliases: [不能, 正在开发中, 暂不支持]
+  type: yesno
+  source: {kb: OSIS使用说明书, knowledge_id: c6fdd7a3-56e6-4cfc-9e43-f57ba60275a6, title: 八、验算/八、验算.md,
+           excerpt: 抗扭承载力验算
+             正在开发中}
+  status: verified
+- id: kn-manual-060
+  question: OSIS 的裂缝宽度验算功能现在开放了吗？
+  answer: 否
+  aliases: [没有, 暂未开放, 未开放]
+  type: yesno
+  source: {kb: OSIS使用说明书, knowledge_id: c6fdd7a3-56e6-4cfc-9e43-f57ba60275a6, title: 八、验算/八、验算.md,
+           excerpt: 裂缝宽度验算(该功能暂未开放)}
+  status: verified
+# 九、快速工具栏和工具
+- id: kn-manual-061
+  question: 窗选时从右往左拖，除了完全框住的对象，还会选中什么？
+  answer: 与边界相交的单元
+  aliases: [与选框相交的单元, 相交的单元]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 33cbd0c3-56f8-462b-8702-70779b1af32f, title: 九、快速工具栏和工具/九、快速工具栏和工具.md,
+           excerpt: 完全被矩形窗口包围的节点或单元以及与边界相交的单元将被选择}
+  status: verified
+- id: kn-manual-062
+  question: 侧边工具栏的“放大”按钮每点一次放大多少？
+  answer: 15%
+  aliases: ['15']
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: 33cbd0c3-56f8-462b-8702-70779b1af32f, title: 九、快速工具栏和工具/九、快速工具栏和工具.md,
+           excerpt: 单击图标，放大工作窗口的尺寸。每次放大15%}
+  status: verified
+- id: kn-manual-063
+  question: 模型窗口里动态旋转的快捷操作是什么？
+  answer: 按住鼠标滚轮+Ctrl键移动鼠标
+  aliases: [Ctrl+鼠标滚轮拖动, Ctrl+中键拖动, 按住Ctrl和滚轮拖动]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 33cbd0c3-56f8-462b-8702-70779b1af32f, title: 九、快速工具栏和工具/九、快速工具栏和工具.md,
+           excerpt: 动态旋转——快捷键：按住鼠标滚轮+Ctrl键移动鼠标}
+  status: verified
+- id: kn-manual-064
+  question: “工具-横向分布系数”提供几种计算方法？
+  answer: '4'
+  aliases: [四, 四种]
+  type: number
+  source: {kb: OSIS使用说明书, knowledge_id: 33cbd0c3-56f8-462b-8702-70779b1af32f, title: 九、快速工具栏和工具/九、快速工具栏和工具.md,
+           excerpt: 计算方法有四种，分别为杠杆法、偏心压力法、钢（铰）接板梁法、GM法}
+  status: verified
+- id: kn-manual-065
+  question: 横向分布系数用钢（铰）接板梁法时，剪切模量 G 默认取多少？
+  answer: 0.425E
+  aliases: []
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 33cbd0c3-56f8-462b-8702-70779b1af32f, title: 九、快速工具栏和工具/九、快速工具栏和工具.md,
+           excerpt: 剪切模量G：主梁剪切模量，默认为0.425E}
+  status: verified
+- id: kn-manual-066
+  question: 手上有 Midas 模型，OSIS 能直接转换哪种格式的文件？
+  answer: MCT
+  aliases: [.mct, mct文件, Midas Mct文件]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: 33cbd0c3-56f8-462b-8702-70779b1af32f, title: 九、快速工具栏和工具/九、快速工具栏和工具.md,
+           excerpt: 将Midas Mct文件转为OSIS文件}
+  status: verified
+# 十、简支小箱梁快速建模
+- id: kn-manual-067
+  question: 简支小箱梁快速建模保存的数据文件是什么扩展名？
+  answer: .rpm
+  aliases: [rpm, '*.rpm']
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: a2abfb72-b719-4dbc-a134-e9e70ffffa75, title: 十、简支小箱梁快速建模/十、简支小箱梁快速建模.md,
+           excerpt: 保存快速建模的数据文件*.rpm}
+  status: verified
+- id: kn-manual-068
+  question: 简支小箱梁快速建模导出的命令流文件是什么扩展名？
+  answer: .sml
+  aliases: [sml, '*.sml']
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: a2abfb72-b719-4dbc-a134-e9e70ffffa75, title: 十、简支小箱梁快速建模/十、简支小箱梁快速建模.md,
+           excerpt: 保存快速建模的命令流文件*.sml}
+  status: verified
+- id: kn-manual-069
+  question: 简支小箱梁快速建模的钢束表里，“作用单元组名”填什么？
+  answer: 正弯矩束单元
+  aliases: []
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: a2abfb72-b719-4dbc-a134-e9e70ffffa75, title: 十、简支小箱梁快速建模/十、简支小箱梁快速建模.md,
+           excerpt: 对于简支小箱梁桥，为“正弯矩束单元”}
+  status: verified
+- id: kn-manual-070
+  question: 简支小箱梁快速建模里的“跨径”指的是哪两条线之间的距离？
+  answer: 两桥台台背前缘线之间的距离
+  aliases: [两桥台台背前缘线, 台背前缘线之间]
+  type: name
+  source: {kb: OSIS使用说明书, knowledge_id: a2abfb72-b719-4dbc-a134-e9e70ffffa75, title: 十、简支小箱梁快速建模/十、简支小箱梁快速建模.md,
+           excerpt: 对于简支小箱梁桥，是指两桥台台背前缘线之间的距离}
+  status: verified

@@ -1,0 +1,166 @@
+id: build-rigid-005
+line: build
+bridge: osis-bridge-rigid-frame-box
+status: verified
+version: 1
+kind: complete
+start: empty
+reference: template:变截面连续刚构-56+5x100+56-双肢
+hide_templates:
+- 变截面连续刚构-56+5x100+56-双肢
+brief: |
+  建一个计算模型：56+5×100+56m 变截面预应力混凝土连续刚构，单箱单室，桥宽 12.775m，墩梁固结、双肢薄壁墩，挂篮对称悬臂浇筑，先边跨后中跨合龙。
+  根部梁高 6.2m，跨中梁高 2.5m。
+  主梁 C55。
+  荷载：汽车荷载公路-I 级；二期恒载 11.414kN/m；整体升温 34℃、降温 23℃，考虑正负温度梯度；支座不均匀沉降 10mm。
+  钢束张拉控制应力 1395MPa。
+  环境年平均相对湿度 70%。
+  建好后重建并求解，确认模型能算通。
+hidden:
+  span_lengths:
+  - 55.76
+  - 100.0
+  - 100.0
+  - 100.0
+  - 100.0
+  - 100.0
+  - 55.76
+  H_mid: 2.5
+  H_root: 6.2001
+  T_mid: 0.32
+  T_root: 1.0
+  T_top_mid: 0.32
+  T_top_root: 0.5
+  web_t_mid: 0.5
+  web_t_support: 0.8
+  concrete_grade: 55
+  live_grade: HIGHWAY_I
+  lane_count: 3
+  uniform_temp:
+  - -23.0
+  - 34.0
+  has_temp_gradient: true
+  settlement_mm:
+  - 10.0
+  humidity: 70.0
+  tendon_stress:
+  - 1395000000.0
+  - null
+  tendon_count: 151
+  stage_count: 59
+  stage_names:
+  - 桥墩施工
+  - 浇筑0号块
+  - 挂篮1
+  - 浇筑1号块
+  - 张拉1
+  - 挂篮2
+  - 浇筑2号块
+  - 张拉2
+  - 挂篮3
+  - 浇筑3号块
+  - 张拉3
+  - 挂篮4
+  - 浇筑4号块
+  - 张拉4
+  - 挂篮5
+  - 浇筑5号块
+  - 张拉5
+  - 挂篮6
+  - 浇筑6号块
+  - 张拉6
+  - 挂篮7
+  - 浇筑7号块
+  - 张拉7
+  - 挂篮8
+  - 浇筑8号块
+  - 张拉8
+  - 挂篮9
+  - 浇筑9号块
+  - 张拉9
+  - 挂篮10
+  - 浇筑10号块
+  - 张拉10
+  - 挂篮11
+  - 浇筑11号块
+  - 张拉11
+  - 挂篮12
+  - 浇筑12号块
+  - 张拉12
+  - 挂篮13
+  - 浇筑13号块
+  - 张拉13
+  - 边跨现浇段
+  - 边跨合龙吊篮
+  - 浇筑边跨合龙段
+  - 张拉边跨底板，合龙束
+  - 1，5中跨吊篮
+  - 浇筑1，5合龙段
+  - 张拉1，5中跨合龙束及底板束
+  - 顶推2，4
+  - 2，4吊篮
+  - 浇筑2，4中跨合龙段
+  - 张拉2，4中跨底板束及合龙束
+  - 3中跨吊篮
+  - 浇筑3中跨合龙段
+  - 张拉3中跨合龙束及底板束
+  - 体系转换
+  - 二期
+  - 十年收缩徐变
+  - 运营
+  二期恒载_kN_m:
+    二期: 11.414
+  桥宽_m: '12.775'
+hidden_profile: true
+must_ask: []
+checks:
+- field: span_lengths
+  op: approx_list
+  value:
+  - 55.76
+  - 100.0
+  - 100.0
+  - 100.0
+  - 100.0
+  - 100.0
+  - 55.76
+  tol: 0.5
+- field: H_root
+  op: approx
+  value: 6.2
+  tol: 0.02
+- field: H_mid
+  op: approx
+  value: 2.5
+  tol: 0.02
+- field: concrete_grade
+  op: eq
+  value: 55
+- field: live_grade
+  op: eq
+  value: HIGHWAY_I
+- field: line_load_kn
+  op: contains
+  value: 11.414
+- field: uniform_temp
+  op: approx_list
+  value:
+  - -23.0
+  - 34.0
+  tol: 0.5
+- field: has_temp_gradient
+  op: eq
+  value: true
+- field: settlement_mm
+  op: approx_list
+  value:
+  - 10.0
+  tol: 0.5
+- field: tendon_stress
+  op: contains
+  value: 1395000000.0
+- field: humidity
+  op: approx
+  value: 70.0
+  tol: 1
+notes: 由 tools/draft_build.py 从模板 变截面连续刚构-56+5x100+56-双肢 的代码提取生成（complete）。

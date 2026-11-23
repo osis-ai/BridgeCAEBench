@@ -1,0 +1,30 @@
+id: analyze-smallbox-005
+line: analyze
+bridge: osis-bridge-precast-small-box
+status: verified
+version: 1
+kind: compare
+start: template:预制简支-小箱梁-30m-边梁
+brief: |
+  请先重建并求解这个模型，再从结果里查：
+  “正温度梯度”和“负温度梯度”两个工况下，跨中的竖向位移相差多少 mm（前者减后者，向上为正）？
+  回复 JSON：{"value": 数值}
+checks: []
+probe:
+  call: node_displacement
+  load_case: 正温度梯度
+  column: uz
+  where:
+    span_mid: 0
+  minus:
+    call: node_displacement
+    load_case: 负温度梯度
+    column: uz
+    where:
+      span_mid: 0
+  answer:
+    value: mm
+tolerance:
+  value: 0.02
+truth: {"value": 7.571}
+notes: 结果问答：模板 预制简支-小箱梁-30m-边梁。truth 待在 OSIS 中按 probe 取值。

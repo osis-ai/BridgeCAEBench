@@ -1,0 +1,25 @@
+id: change-cipbox-003
+line: change
+bridge: osis-bridge-conventional-box
+status: verified
+version: 1
+kind: settlement
+start: template:现浇等截面箱梁-30+35+22-单箱三室-16.75
+base: 现浇等截面箱梁-30+35+22-单箱三室-16.75
+reference: overlay:reference
+hide_templates:
+- 现浇等截面箱梁-30+35+22-单箱三室-16.75
+brief: 设计变更：地勘复核后地基条件变差，支座不均匀沉降加大为10mm。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: settlement_mm
+  op: approx_list
+  value:
+  - 10.0
+  tol: 0.5
+preserve: true
+may_change:
+- settlements
+notes: '脚本变更（tools/draft_change.py: settlement），起始模板 现浇等截面箱梁-30+35+22-单箱三室-16.75。'

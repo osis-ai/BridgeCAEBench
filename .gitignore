@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.venvs/
+.env
+.env.*
+*.local.yaml
+
+# 运行产物与官方数据都不进库
+runs/
+tmp/
+*.log
+
+# 运行记录与判分缓存暂不公开
+/results/
+datasets/*/judged/

@@ -1,0 +1,23 @@
+id: build-cipbox-x01
+line: build
+bridge: osis-bridge-conventional-box
+status: verified
+version: 1
+kind: infeasible
+start: empty
+brief: |
+  建一个计算模型：30+30m 现浇预应力混凝土连续箱梁，单箱双室，桥宽 12.75m，满堂支架现浇，梁高 1.8m，主梁 C25，汽车荷载公路-I 级。建好后重建并求解。
+hidden:
+  回应: 如果对方指出问题或问你确认：承认是笔误/考虑不周，请对方按其专业判断给出合理方案并说明理由；不要主动给出正确值。
+must_ask: []
+checks: []
+pushback:
+  issue: 预应力混凝土构件混凝土强度等级不应低于 C40（JTG 3362），C25 不满足
+  keywords:
+  - C25
+  - C40
+  - 强度等级
+  - 不满足
+  - 不应低于
+  - 规范
+notes: 手写的不合理需求：判分看是否指出 issue；硬建出来的不判错，单独统计。

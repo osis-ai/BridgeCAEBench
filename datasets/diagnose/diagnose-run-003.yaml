@@ -1,0 +1,29 @@
+id: diagnose-run-003
+line: diagnose
+bridge: osis-bridge-hollow-slab
+status: verified
+version: 1
+kind: run_error
+start: overlay:start
+base: 预制简支-空心板-10m-边梁
+reference: template:预制简支-空心板-10m-边梁
+hide_templates:
+- 预制简支-空心板-10m-边梁
+brief: |
+  重建模型时报错跑不通，报错如下。帮我查出原因并修好，不要改动无关部分，改完重建并求解确认能算通。
+  报错：
+  {symptom}
+  回复里给出定位 JSON，reason_code 取自 py/reason_codes.yaml：
+  {"localizations":[{"reason_code":"短码"}]}
+symptom: "BatchError: 批量冲刷失败（共 218 条命令）: 命令流中第59句“Element,8,BEAM3D,8,9,9,1,1,1,1,0.0,0,0.0,0”命令错误如下：单元创建失败:单元[8]：材料[9]不存在！\n失败命令（1 条）:\n  [FAIL] (共218条)"
+hidden: {}
+must_ask: []
+checks: []
+preserve: true
+may_change: []
+localization:
+- reason_code: material_ref
+seed:
+  file: prep/_6_element.py
+  how: engine.element.create(8, "BEAM3D", 8, 9, 1 -> engine.element.create(8, "BEAM3D", 8, 9, 9
+notes: 跑不通：在模板 预制简支-空心板-10m-边梁 上种 material_ref。symptom 待在 OSIS 中重建起始项目后采集（同时确认确实报错）。

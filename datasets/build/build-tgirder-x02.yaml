@@ -1,0 +1,23 @@
+id: build-tgirder-x02
+line: build
+bridge: osis-bridge-precast-t-girder
+status: verified
+version: 1
+kind: infeasible
+start: empty
+brief: |
+  建一个计算模型：3×30m 先简支后连续预制 T 梁，一联 3 跨，只建一片中梁，梁高 2.0m，主梁 C50，汽车荷载按公路-III 级。建好后重建并求解。
+hidden:
+  回应: 如果对方指出问题或问你确认：承认是笔误/考虑不周，请对方按其专业判断给出合理方案并说明理由；不要主动给出正确值。
+must_ask: []
+checks: []
+pushback:
+  issue: JTG D60-2015 汽车荷载只有公路-I 级和公路-II 级，没有公路-III 级
+  keywords:
+  - 公路-III
+  - 公路-Ⅲ
+  - 不存在
+  - 只有
+  - 公路-II
+  - JTG D60
+notes: 手写的不合理需求：判分看是否指出 issue；硬建出来的不判错，单独统计。

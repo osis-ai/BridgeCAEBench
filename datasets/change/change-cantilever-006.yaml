@@ -1,0 +1,29 @@
+id: change-cantilever-006
+line: change
+bridge: osis-bridge-cantilever-box
+status: verified
+version: 1
+kind: temperature+humidity
+start: template:变截面悬浇连续梁-70+130+70
+base: 变截面悬浇连续梁-70+130+70
+reference: overlay:reference
+hide_templates:
+- 变截面悬浇连续梁-70+130+70
+brief: 设计变更（两项）：按桥址气温资料复核，整体升温改为 25℃、整体降温改为 25℃。桥位在西北干燥地区，环境年平均相对湿度按 55% 计。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: uniform_temp
+  op: approx_list
+  value:
+  - -25.0
+  - 25.0
+  tol: 0.5
+- field: humidity
+  op: approx
+  value: 55.0
+  tol: 1
+preserve: true
+may_change: []
+notes: '脚本变更（tools/draft_change.py: temperature, humidity），起始模板 变截面悬浇连续梁-70+130+70。'

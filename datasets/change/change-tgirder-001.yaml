@@ -1,0 +1,49 @@
+id: change-tgirder-001
+line: change
+bridge: osis-bridge-precast-t-girder
+status: verified
+version: 1
+kind: geometry
+start: template:简支变连续-T梁-35m-中梁
+reference: template:简支变连续-T梁-40m-中梁
+hide_templates:
+- 简支变连续-T梁-40m-中梁
+brief: 方案调整：标准跨径由 35m 改为 40m（跨数不变），采用对应跨径的通用图，梁高改为 2.5m；截面、钢束、施工阶段随之调整，荷载和其他设计条件不变。改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: span_lengths
+  op: approx_list
+  value:
+  - 40.0
+  - 40.0
+  - 40.0
+  tol: 0.5
+- field: H_mid
+  op: approx
+  value: 2.5
+  tol: 0.02
+preserve: true
+may_change:
+- H_root
+- L
+- beam_width
+- component_thickness_avg
+- concrete_ratio
+- element_count
+- girder_section_count
+- height_profile
+- heights
+- node_count
+- pst_steel_kg_per_m
+- pst_steel_ratio
+- section_area_avg
+- section_count
+- support_xs
+- t_girder_mid
+- t_girder_support
+- tendon_count
+- tendon_names
+- total_length
+notes: 几何变更：起始模板 简支变连续-T梁-35m-中梁，参考解为模板 简支变连续-T梁-40m-中梁。

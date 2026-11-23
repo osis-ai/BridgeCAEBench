@@ -1,0 +1,102 @@
+id: build-tgirder-007
+line: build
+bridge: osis-bridge-precast-t-girder
+status: verified
+version: 1
+kind: missing
+start: empty
+reference: template:简支变连续-T梁-25m-中梁
+hide_templates:
+- 简支变连续-T梁-25m-中梁
+brief: |
+  建一个计算模型：3×25m 先简支后连续预制 T 梁，一联 3 跨，只建一片中梁。
+  预制梁架设后浇筑墩顶湿接缝、张拉负弯矩束，体系转换为连续。
+  主梁 C50。
+  荷载：汽车荷载公路-I 级；二期恒载 铺装 10.85kN/m、防撞护栏 2.12kN/m；整体升温 20℃、降温 20℃，考虑正负温度梯度；支座不均匀沉降 5mm。
+  环境年平均相对湿度 75%。
+  建好后重建并求解，确认模型能算通。
+hidden:
+  span_lengths:
+  - 25.0
+  - 25.0
+  - 25.0
+  H_mid: 1.7
+  H_root: 1.7
+  web_t_mid: 0.2
+  web_t_support: 0.4
+  beam_width: 1.6
+  concrete_grade: 50
+  live_grade: HIGHWAY_I
+  lane_count: 1
+  uniform_temp:
+  - -20.0
+  - 20.0
+  has_temp_gradient: true
+  settlement_mm:
+  - 5.0
+  humidity: 75.0
+  tendon_stress:
+  - 1395000000.0
+  tendon_count: 14
+  stage_count: 7
+  stage_names:
+  - CS1_主梁预制、张拉正弯矩束
+  - CS2_存梁
+  - CS3_墩顶现浇段施工、张拉负弯矩束
+  - CS4_体系转换
+  - CS5_二期恒载
+  - CS6_徐变十年
+  - CS7_运营阶段
+  二期恒载_kN_m:
+    铺装: 10.85
+    防撞护栏: 2.12
+hidden_profile: true
+must_ask:
+- 梁高
+- 张拉控制应力
+checks:
+- field: span_lengths
+  op: approx_list
+  value:
+  - 25.0
+  - 25.0
+  - 25.0
+  tol: 0.5
+- field: H_mid
+  op: approx
+  value: 1.7
+  tol: 0.02
+- field: concrete_grade
+  op: eq
+  value: 50
+- field: live_grade
+  op: eq
+  value: HIGHWAY_I
+- field: line_load_kn
+  op: contains
+  value: 2.12
+- field: line_load_kn
+  op: contains
+  value: 10.85
+- field: uniform_temp
+  op: approx_list
+  value:
+  - -20.0
+  - 20.0
+  tol: 0.5
+- field: has_temp_gradient
+  op: eq
+  value: true
+- field: settlement_mm
+  op: approx_list
+  value:
+  - 5.0
+  tol: 0.5
+- field: tendon_stress
+  op: contains
+  value: 1395000000.0
+- field: humidity
+  op: approx
+  value: 75.0
+  tol: 1
+notes: 由 tools/draft_build.py 从模板 简支变连续-T梁-25m-中梁 的代码提取生成（missing）。

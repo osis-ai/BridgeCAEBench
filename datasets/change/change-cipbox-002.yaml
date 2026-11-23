@@ -1,0 +1,25 @@
+id: change-cipbox-002
+line: change
+bridge: osis-bridge-conventional-box
+status: verified
+version: 1
+kind: temperature
+start: template:现浇等截面箱梁-30+35+22-单箱三室-16.75
+base: 现浇等截面箱梁-30+35+22-单箱三室-16.75
+reference: overlay:reference
+hide_templates:
+- 现浇等截面箱梁-30+35+22-单箱三室-16.75
+brief: 设计变更：按桥址气温资料复核，整体升温改为 25℃、整体降温改为 30℃。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: uniform_temp
+  op: approx_list
+  value:
+  - -30.0
+  - 25.0
+  tol: 0.5
+preserve: true
+may_change: []
+notes: '脚本变更（tools/draft_change.py: temperature），起始模板 现浇等截面箱梁-30+35+22-单箱三室-16.75。'

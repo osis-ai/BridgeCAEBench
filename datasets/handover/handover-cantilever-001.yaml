@@ -1,0 +1,104 @@
+id: handover-cantilever-001
+line: handover
+bridge: osis-bridge-cantilever-box
+status: verified
+version: 1
+kind: A
+start: overlay:start
+base: 变截面悬浇连续梁-65+120+65
+reference: template:变截面悬浇连续梁-65+120+65
+hide_templates:
+- 变截面悬浇连续梁-65+120+65
+brief: |
+  这个项目是同事做到一半交给我的：控制参数、钢束线形、材料、截面、节点、单元已经建好（prep/_1～_6），边界、荷载、活载分析和施工阶段还没做，main.py 已经写好调用顺序。请接着补完，不要改动已经做好的部分，最后重建并求解确认能算通。
+  设计参数：
+  - 汽车荷载公路-I 级，车道数 6
+  - 支座不均匀沉降主墩 15mm、桥台 10mm
+  - 二期恒载 中央分隔带 10.3kN/m、人行道 10.5kN/m、铺装 40.125kN/m、防撞护栏 10.2kN/m
+  - 整体升温 20℃、降温 20℃，考虑正负温度梯度
+  - 钢束张拉控制应力 1395MPa
+  - 施工阶段（共 50 个）：0号段施工 → 1号段挂篮 → 1号段浇筑 → …… → 中跨1合龙 → 体系转换 → 二期恒载 → 徐变十年 → 运营阶段
+hidden:
+  lane_count: 6
+  settlement_mm:
+  - 10.0
+  - 15.0
+  uniform_temp:
+  - -20.0
+  - 20.0
+  tendon_stress:
+  - 1395000000.0
+  stage_count: 50
+  二期恒载_kN_m:
+    中央分隔带: 10.3
+    人行道: 10.5
+    铺装: 40.125
+    防撞护栏: 10.2
+hidden_profile: true
+must_ask: []
+checks:
+- field: live_grade
+  op: eq
+  value: HIGHWAY_I
+- field: lane_count
+  op: eq
+  value: 6
+- field: settlement_mm
+  op: approx_list
+  value:
+  - 10.0
+  - 15.0
+  tol: 0.5
+- field: line_load_kn
+  op: contains
+  value: 10.2
+- field: line_load_kn
+  op: contains
+  value: 10.3
+- field: line_load_kn
+  op: contains
+  value: 10.5
+- field: line_load_kn
+  op: contains
+  value: 40.125
+- field: uniform_temp
+  op: approx_list
+  value:
+  - -20.0
+  - 20.0
+  tol: 0.5
+- field: has_temp_gradient
+  op: eq
+  value: true
+- field: tendon_stress
+  op: contains
+  value: 1395000000.0
+- field: stage_count
+  op: eq
+  value: 50
+preserve: true
+may_change:
+- boundary_count
+- creep_days
+- has_prestress
+- has_temp_gradient
+- has_uniform_temp
+- lane_count
+- line_load_kn
+- line_loads
+- live_code
+- live_grade
+- load_case_types
+- load_cases
+- pst_steel_kg_per_m
+- pst_steel_ratio
+- settlement_mm
+- settlements
+- stage_count
+- stage_durations
+- stage_names
+- tendon_count
+- tendon_names
+- tendon_stress
+- uniform_temp
+notes: 由 tools/draft_handover.py 从模板 变截面悬浇连续梁-65+120+65 截断生成：删去 _7_boundary.py, _8_loadcase.py, _9_analysis.py, _10_stage.py。

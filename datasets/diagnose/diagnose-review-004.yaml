@@ -1,0 +1,44 @@
+id: diagnose-review-004
+line: diagnose
+bridge: osis-bridge-conventional-box
+status: verified
+version: 1
+kind: review
+start: overlay:start
+base: 现浇等截面箱梁-25+25-单箱三室-16.7-1
+reference: template:现浇等截面箱梁-25+25-单箱三室-16.7-1
+hide_templates:
+- 现浇等截面箱梁-25+25-单箱三室-16.7-1
+brief: |
+  这个模型是按下面的设计参数建的，交给我之前请对照复核：找出模型里和设计参数不一致的地方，逐项改正，改完重建并求解确认能算通。
+  设计参数：
+  25+25m 现浇预应力混凝土连续箱梁，单箱三室，桥宽 16.7m，满堂支架整跨现浇、一次落架。
+  梁高 1.6m。
+  主梁 C50。
+  荷载：汽车荷载公路-I 级；二期恒载 93.8kN/m；整体升温 35℃、降温 20℃，考虑正负温度梯度；支座不均匀沉降 5mm。
+  钢束张拉控制应力 1320.6MPa。
+  环境年平均相对湿度 70%。
+  回复里给出复核结论 JSON，item 取自：跨径、梁高、汽车荷载等级、整体温度、支座沉降、混凝土等级、二期恒载、张拉控制应力、环境湿度。
+  {"inconsistencies":[{"item":"混凝土等级","model":"模型里的值","design":"设计值"}]}
+hidden: {}
+must_ask: []
+checks:
+- field: concrete_grade
+  op: eq
+  value: 50
+- field: live_grade
+  op: eq
+  value: HIGHWAY_I
+- field: settlement_mm
+  op: approx_list
+  value:
+  - 5.0
+  tol: 0.5
+preserve: true
+may_change:
+- settlements
+localization:
+- item: 混凝土等级
+- item: 支座沉降
+- item: 汽车荷载等级
+notes: 复核：在模板 现浇等截面箱梁-25+25-单箱三室-16.7-1 上埋入 concrete, settlement, live_grade（tools/draft_change.py 的编辑）。

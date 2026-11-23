@@ -1,0 +1,5 @@
+id: T1
+name: mini-swe-agent
+description: mini-SWE-agent（mini.yaml 配置），只有 bash；MCP 经 osis-mcp 命令行转发、过平台代理；步数与费用不设上限
+python: venv
+extra: miniswe

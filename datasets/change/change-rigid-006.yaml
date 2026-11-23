@@ -1,0 +1,30 @@
+id: change-rigid-006
+line: change
+bridge: osis-bridge-rigid-frame-box
+status: verified
+version: 1
+kind: settlement+humidity
+start: template:变截面连续刚构-95+180+95-双肢
+base: 变截面连续刚构-95+180+95-双肢
+reference: overlay:reference
+hide_templates:
+- 变截面连续刚构-95+180+95-双肢
+brief: 设计变更（两项）：地勘复核后地基条件变差，支座不均匀沉降加大为主墩 20mm、桥台 17mm。桥位在西北干燥地区，环境年平均相对湿度按 55% 计。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: settlement_mm
+  op: approx_list
+  value:
+  - 17.0
+  - 20.0
+  tol: 0.5
+- field: humidity
+  op: approx
+  value: 55.0
+  tol: 1
+preserve: true
+may_change:
+- settlements
+notes: '脚本变更（tools/draft_change.py: settlement, humidity），起始模板 变截面连续刚构-95+180+95-双肢。'

@@ -1,0 +1,98 @@
+# osis-bench 唯一配置文件。相对路径以本仓库根为基准。
+
+parent_repo: .   # 本仓库。被测 skill 库在 skills/（出题前冻结的版本，含各桥型模板 = 参考解来源）；要换别的 skill 库，用 parent_skills: <目录> 覆盖
+runs_root: runs
+# 并行度：对比实验同时跑几个格子（方法 × 题 × seed；命令行 --jobs 可覆盖；serial 方法如 T5 仍逐个跑），
+# 造题工具（verify_case --solve、truth_analyze）同时跑几个求解器。每个格子评分时也各起一个求解器。
+jobs: 4
+
+env:
+  uv: uv            # uv 可执行文件
+  python: "3.13"    # 建 .venvs/<extra> 用的 Python（uv venv --python 的取值）
+
+# 所有方法走同一个 OpenAI 兼容网关。密钥只从环境变量读（可写在 git 忽略的 configs/platform.local.yaml 的 secrets 里）。
+model:
+  name: "deepseek-v4.1-flash"                      # 必填（/v1/models 不列出，但可调用）
+  base_url: https://your-gateway.example/v1   # 任一 OpenAI 兼容网关
+  api_key_env: OSIS_MODEL_API_KEY  # 环境变量名；值放 configs/platform.local.yaml 的 secrets 或系统环境变量
+  bypass_proxy: true                 # 网关直连：系统代理会让请求挂到超时
+  temperature: 0.0
+  reasoning_effort: medium
+  request_timeout_s: 300
+  max_output_tokens: 0               # 0 = 不限
+  context_tokens: 256000             # 单次调用的上下文上限：T2/T5 填进 OpenCode 的 limit.context（到了自动压缩），T1/T4 自带截断（丢最早的轮次）
+
+# 网关预设：osis-bench run --model <键> 把上面 model 的 name / base_url / api_key_env 换成这里的（键即模型名，也是 pricing.yaml 的键）。
+# 论文用的两个 LLM；base_url 换成自己的网关。
+models:
+  deepseek-v4.1-flash: {base_url: https://your-gateway.example/v1, api_key_env: OSIS_MODEL_API_KEY}
+  gpt-6.1-sol: {base_url: https://your-gateway.example/v1, api_key_env: OSIS_MODEL_API_KEY, prompt_cache_key: true, temperature: null}
+  # GPT 网关把调用分到多个上游账号，不带 prompt_cache_key 就几乎不命中缓存（实测 5 次 0 命中；带上从第 3 次起每次都命中）。
+  # prompt_cache_key: true 让平台的网关代理给每次运行的所有请求加同一个键，各方法一样
+  # temperature: null 不发 temperature：2026-11-09 起 GPT 网关对带 temperature 的请求返回 400 "not supported with this model"
+
+# T5 = 官方 OSIS-AI。每次运行按安装包的 start.bat 单独起一个 OpenCode 服务，与其他方法同等条件（T2 用同一个二进制、不带厂商配置）：
+# skill 用 campaign 快照（只见 train 模板），模型同上面的网关，MCP 同下面的 mcp（不用 pin 模式），无 WeKnora。
+# 安装包的 AGENTS.md、commands、prompts、子智能体配置、插件原样链接进来，只去掉 exclude_plugins。
+osisai:
+  install_dir: C:/path/to/OSIS/Rbin64/opencode   # OSIS 安装目录下的 OSIS-AI（https://www.osisbim.com 下载）
+  vanilla_opencode: C:/path/to/npm-global/node_modules/opencode-ai/bin/opencode.exe   # T2 用的上游原版（npm opencode-ai 1.19.0）
+  exclude_plugins:
+    - u-osis-load-engine             # 按不带扩展名的名字匹配（安装包会改成 .off 停用）。自动追加“先加载 osis-engine”，评测不要
+    - w-osis-project-dir             # 注入 OSIS 界面里打开的工程，不是本次运行的工程
+  # y-osis-memory 保留（OSIS-AI 卖点）：记忆在 ~/.osisai/memory，每个新 campaign 开始前清空（见 T5 method.yaml）
+
+# 平台自己（评分时重建 + 求解）用的 OSIS Broker。仅求解器模式：每次调用起新求解器，不碰用户开着的 OSIS 窗口。
+osis:
+  broker_url: http://127.0.0.1:18080
+  python: ~/.osisai/.venv/Scripts/python.exe   # Broker 跑脚本用的环境（OSIS-AI 自带）；只用来记录 pyosis 版本
+  work_dir: tmp/osis-bench   # 造题工具求解用的临时工程（大模型一次十几 GB，放空间够的盘）
+  heavy:                    # 大模型单个求解要占几 GB 内存，同时跑多了会 bad allocation / 求解器崩溃
+    bridges: [osis-bridge-rigid-frame-box, osis-bridge-cantilever-box]
+    jobs: 2                 # 2026-11-18 起 2（只有新启动的进程生效，旧进程只用 0 号锁）。整台机器上这些桥型同时最多几个格子（跨 campaign 进程，锁文件在临时目录）；刚构一个求解 8–11 GB
+  solve_timeout_s: 10800    # 一次求解的上限（engine.solve 与 execute_python 都用）；Broker 要设 OSIS_BROKER_EXECUTE_MAX_TIMEOUT 不小于它
+
+# 方法用的 MCP 服务。支持 MCP 的方法原生加载（request["mcp_servers"]），每次运行经平台代理：
+# 隐藏 hide 里的工具、拒绝不满足 require 的调用、记录每次调用（mcp_calls.jsonl）。instructions 追加到任务提示词。
+mcp:
+  osis:
+    url: http://127.0.0.1:18080/mcp            # OSIS Broker，不用 pin 模式
+    hide: [show_model, open_model_panel, get_selection, list_instances, get_instance_info,
+           raw_http_request, model_home, model_tab]
+    require: {instance_id: solver}             # 只许在无界面求解器里执行
+    instructions: >-
+      OSIS 通过 MCP 服务 osis 操作：查 pyosis API 用 api_glob / api_grep / api_read；运行脚本用 execute_python
+      （APDL 命令流用 execute_apdl），instance_id 一律填 "solver"，file 填工程 py/ 下脚本的绝对路径，cwd 填该脚本所在目录。
+      每次调用会起一个新求解器打开本工程，脚本成功才保存。这里只跑结果，不要使用任何模型显示、界面相关的功能。
+  weknora:                                     # WeKnora 知识库，只读。平台每次运行起一个本地服务（bench/weknora_mcp.py）
+    launch: weknora
+    python: ~/.osisai/.venv/Scripts/python.exe   # 装有 weknora_mcp_server 的环境（OSIS-AI 自带）
+    base_url: https://knowledge.osisbim.com/api/v1
+    bypass_proxy: true                           # 直连约 0.3 s；走系统代理 2–9 s 且偶尔 SSL 断开，服务起不来
+    api_key_env: OSIS_WEKNORA_API_KEY            # 只从环境变量读
+    deny_kbs: [OSISAI模板库, PYOSIS_rebuild]     # 模板库会泄题，PYOSIS_rebuild 已过期（pyosis 以本机安装版为准）：列表里删掉，涉及的调用一律拒绝
+    allow: [list_knowledge_bases, get_knowledge_base, list_knowledge, get_knowledge, list_chunks,
+            hybrid_search, wiki_search, wiki_read_page, wiki_index_view]   # chat/agent_chat 会用 WeKnora 自己的模型答题，不给
+    instructions: >-
+      OSIS 的使用说明书、视频讲解、命令流说明、用户常见问题在 WeKnora 知识库里，通过 MCP 服务 weknora 只读检索：
+      先 list_knowledge_bases 看有哪些库，再用 hybrid_search / wiki_search 检索，get_knowledge / list_chunks 读原文。
+
+# 每条任务线同一套键：timeout_s + tools + mcp + skills_exclude（题目读 datasets/<线>/，只跑 verified / frozen）。
+# 工具名：skill 读取 list_skills/read_skill/read_skill_reference/list_reference_files/search_skills/read_knowledge_file；
+# 工程文件 list_candidate_files/read_candidate_file/write_candidate_file。mcp：挂载上面 mcp 段里的哪些服务。
+# templates：without（默认，藏掉各题的 hide_templates）/ with（模板全留）。评分不求解，读 agent 留在 OSIS 里的结果（tasks/_project.py）。
+# 老的 qa / check_repair / modeling 线在 legacy 分支。
+_skill_tools: &skill_tools [list_skills, read_skill, read_skill_reference, list_reference_files, search_skills,
+                            read_knowledge_file]
+_project_tools: &project_tools [list_skills, read_skill, read_skill_reference, list_reference_files, search_skills,
+                                read_knowledge_file, list_candidate_files, read_candidate_file, write_candidate_file]
+tasks:
+  knowledge: {timeout_s: 900, tools: *skill_tools, mcp: [osis, weknora], skills_exclude: [],
+              judge: &judge {cli: pi, model: osis-api/glm-5.3-flash, timeout_s: 120}}   # 小模型判分，判不了用规则兜底（cli: pi 或 claude，如 claude + claude-haiku-5-5）；删掉即只按规则
+  build: {timeout_s: 7200, tools: *project_tools, mcp: [osis, weknora], skills_exclude: [], templates: without,
+          judge: *judge}   # 不合理题是否指出问题、缺参题是否说明假定值：小模型先判，判不了按关键词 / 参数名带数值
+  change: {timeout_s: 7200, tools: *project_tools, mcp: [osis, weknora], skills_exclude: [], templates: without}
+  handover: {timeout_s: 7200, tools: *project_tools, mcp: [osis, weknora], skills_exclude: [], templates: without}
+  diagnose: {timeout_s: 7200, tools: *project_tools, mcp: [osis, weknora], skills_exclude: [], templates: without}
+  analyze: {timeout_s: 7200, tools: *project_tools, mcp: [osis, weknora], skills_exclude: []}
+  project: {timeout_s: 28800, tools: *project_tools, mcp: [osis, weknora], skills_exclude: [], templates: without}   # 4 轮共用一个时限：单轮的 4 倍

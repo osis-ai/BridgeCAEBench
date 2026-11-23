@@ -1,0 +1,23 @@
+id: build-cantilever-x02
+line: build
+bridge: osis-bridge-cantilever-box
+status: verified
+version: 1
+kind: infeasible
+start: empty
+brief: |
+  建一个计算模型：40+70+40m 变截面预应力混凝土连续箱梁，单箱单室，桥宽 12.75m，挂篮悬臂浇筑，根部梁高 2.0m，跨中梁高 4.0m，主梁 C55，汽车荷载公路-I 级。建好后重建并求解。
+hidden:
+  回应: 如果对方指出问题或问你确认：承认是笔误/考虑不周，请对方按其专业判断给出合理方案并说明理由；不要主动给出正确值。
+must_ask: []
+checks: []
+pushback:
+  issue: 悬浇连续梁根部梁高应大于跨中梁高（这里写反了），且 70m 主跨根部梁高一般约 4m 以上
+  keywords:
+  - 根部
+  - 跨中
+  - 写反
+  - 大于
+  - 梁高
+  - 不合理
+notes: 手写的不合理需求：判分看是否指出 issue；硬建出来的不判错，单独统计。

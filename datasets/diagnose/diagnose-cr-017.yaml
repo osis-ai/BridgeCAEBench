@@ -1,0 +1,32 @@
+id: diagnose-cr-017
+line: diagnose
+bridge: osis-bridge-hollow-slab
+status: verified
+version: 1
+kind: check_ng
+start: overlay:start
+base: 预制简支-空心板-13m-中梁
+reference: template:预制简支-空心板-13m-中梁
+hide_templates:
+- 预制简支-空心板-13m-中梁
+brief: 本项目「正截面抗弯验算」不通过。请定位原因并修复该项至通过。其他验算项不必处理。不要询问评测方。reason_code 必须取自 py/reason_codes.yaml 中的短码。定位结论请输出 JSON：{"localizations":[{"check_item":"验算项中文名","reason_code":"短码"}]}
+hidden: {}
+must_ask: []
+checks: []
+preserve: true
+may_change: []
+target_item: 正截面抗弯验算
+ng_baseline:
+- PC正截面长期抗裂验算
+- 斜截面抗剪验算
+ng_seeded:
+- PC正截面长期抗裂验算
+- 斜截面抗剪验算
+- 正截面抗弯验算
+- 正截面抗拉压验算
+localization:
+- reason_code: rebar_num
+seed:
+  file: prep/_4_section.py
+  how: 底板纵筋根数 12→2（3 个截面同一写法），直径仍为 D16
+notes: 迁移自官方 datasets/check_repair cr-017（官方 commit 37f7685）。已实测 CombinationAndCheck。差集=['正截面抗弯验算']；prompt 目标=正截面抗弯验算。；5.1 / A 类下原 T梁 20m 简支变连续模板抗弯本身 NG、种错后验算报极限轴力二分不收敛，改到空心板 13m 中梁：原模板抗弯最小安全系数 1.19（10m 中梁 1.54，10m 上纵筋 12→1 根、钢束 2→1 束都不 NG）。

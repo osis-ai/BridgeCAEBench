@@ -1,0 +1,26 @@
+id: analyze-rigid-001
+line: analyze
+bridge: osis-bridge-rigid-frame-box
+status: verified
+version: 1
+kind: extreme
+start: template:变截面连续刚构-95+180+95-双肢
+brief: |
+  请先重建并求解这个模型，再从结果里查：
+  成桥运营阶段，“铺装左”工况作用下主梁的最大正弯矩（单元局部 My）是多少 kN·m，出现在哪个单元？
+  回复 JSON：{"value": 数值, "element": 单元号}
+checks: []
+probe:
+  call: element_force
+  load_case: 铺装左
+  column: my
+  agg: max
+  where:
+    girder: true
+  answer:
+    value: kN·m
+    element: ele
+tolerance:
+  value: 0.02
+truth: {"value": 16550.754, "element": [55, 56]}
+notes: 结果问答：模板 变截面连续刚构-95+180+95-双肢。truth 待在 OSIS 中按 probe 取值。

@@ -1,0 +1,49 @@
+# 各模型官方标价（每百万 token），用来把 cost 从 token 数换成真实金额。换算功能还没做，这里先只放价格。
+# 字段：input = 未命中缓存的输入；cache_read = 命中缓存的输入；cache_write = 缓存写入（官方没单列就是 0）；
+#       output = 输出（含推理 token）。currency 币种，source 官方价格页，checked 核对日期。
+# 价格会变：换算时以本文件为准，并把用到的价格记进 campaign。键是 configs/platform.yaml 里 model.name 的值。
+
+models:
+  deepseek-v4.1-flash: &deepseek     # 官方页上的名字是 deepseek-flash（DeepSeek-V4.1-Flash-1017），同一个模型
+    currency: USD
+    input: 0.30
+    cache_read: 0.006
+    cache_write: 0
+    output: 1.20
+    # 上面是高峰价。高峰：周一至周五 01:00–04:00、06:00–10:00 UTC（中国法定节假日除外），其余时段半价：
+    off_peak: {input: 0.15, cache_read: 0.003, cache_write: 0, output: 0.60}
+    peak_utc: ["01:00-04:00", "06:00-10:00"]
+    source: https://api-docs.deepseek.com/quick_start/pricing
+    checked: 2026-10-23
+
+  glm-5.3-flash:
+    currency: USD
+    input: 0.15
+    cache_read: 0.03
+    cache_write: 0                   # 官方未列写入价；缓存存储费“限时免费”，没写截止日期
+    output: 0.50
+    source: https://docs.z.ai/guides/overview/pricing
+    checked: 2026-10-23
+
+  minimax-m3.1-flash: &minimax
+    currency: USD
+    input: 0.15
+    cache_read: 0.015
+    cache_write: 0                   # 官方只列了缓存读价
+    output: 0.60
+    source: https://platform.minimax.io/docs/guides/pricing
+    checked: 2026-10-23
+
+  deepseek-flash: *deepseek          # 远程网关上的名字，同一个模型
+  DeepSeek-V4.1-Flash-1017-Event: *deepseek   # SCNet 网关上的名字，同一个模型
+  MiniMax-M3.1-Flash: *minimax       # 远程网关上的名字，同一个模型
+
+  gpt-6.1-sol:
+    currency: USD
+    input: 2.00
+    cache_read: 0.10
+    cache_write: 2.50                # 30 分钟缓存的写入价（12 小时的是 5.00）；按网关报的 cache_write_tokens 计，网关报 0 就是 0
+    output: 10.00
+    # 以上是短上下文价（单次输入 ≤ 272k token）；上下文上限 256k，用不到长上下文价（4.00 / 0.20 / 5.00 / 15.00）
+    source: https://developers.openai.com/api/docs/pricing
+    checked: 2026-10-24

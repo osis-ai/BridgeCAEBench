@@ -1,0 +1,61 @@
+id: change-cantilever-001
+line: change
+bridge: osis-bridge-cantilever-box
+status: verified
+version: 1
+kind: geometry
+start: template:变截面悬浇连续梁-60+110+60
+base: 变截面悬浇连续梁-65+120+65
+reference: overlay:reference
+hide_templates:
+- 变截面悬浇连续梁-65+120+65
+brief: 方案调整：跨径布置由 60+110+60m 调整为 65+120+65m，根部梁高改为 7.5m、跨中梁高改为 3.2m；截面、钢束、施工阶段随之调整，荷载和其他设计条件不变。改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: span_lengths
+  op: approx_list
+  value:
+  - 65.0
+  - 120.0
+  - 65.0
+  tol: 0.5
+- field: H_mid
+  op: approx
+  value: 3.2
+  tol: 0.02
+- field: H_root
+  op: approx
+  value: 7.5
+  tol: 0.02
+preserve: true
+may_change:
+- L
+- T_dia_root
+- T_mid
+- T_root
+- T_top_mid
+- component_thickness_avg
+- concrete_ratio
+- element_count
+- girder_section_count
+- height_profile
+- heights
+- load_case_types
+- load_cases
+- node_count
+- pst_steel_kg_per_m
+- pst_steel_ratio
+- section_area_avg
+- section_count
+- stage_count
+- stage_durations
+- stage_names
+- support_xs
+- tendon_count
+- tendon_names
+- thickness_profile
+- thicknesses
+- total_length
+notes: 几何变更：起始模板 变截面悬浇连续梁-60+110+60，参考解为模板 变截面悬浇连续梁-65+120+65，设计条件（concrete_grade、line_loads、settlements、settlement_mm、pier_heights、live_grade、uniform_temp、humidity）改回起始值。

@@ -1,0 +1,53 @@
+# 各任务线的评分标准（osis-bench 的 knowledge / build / change / handover / diagnose / analyze），由 tasks/_project.py 的 grade() 读取。
+# conformance 分项来自复制自官方的构造评分 scoring/evaluation/levels/model_conformance（它不读这份配置）。
+# 每题三部分，都在 [0,1]：
+#   quality    = gate 各分项之积 × parts 的加权平均（这题没有的分项不参与，如非缺参题没有 line_assume）
+#   efficiency = scale / (scale + duration_s)，duration_s 是按 100 token/s 换算的耗时（输出 token / 100 + 工具耗时，不含 osis MCP 的重建、求解、验算耗时）
+#   cost       = scale / (scale + cost_usd)，cost_usd 是网关记录的 token 按 configs/pricing.yaml 官方标价算的金额（美元，暂一律按高峰价）
+#   到 scale 时得 0.5。total = weights 加权；运行出错的题三部分都记 0。
+# by_kind 按题目 kind 覆盖 gate / parts（如 build 的不合理题只看是否拒做）。
+tasks:
+  knowledge:
+    weights: {quality: 0.7, efficiency: 0.15, cost: 0.15}
+    gate: []
+    parts: {correct: 1}              # 小模型判是否同义（判不了用规则匹配）；视频题还须给出视频链接
+    efficiency: {scale: 30}          # 秒
+    cost: {scale: 0.015}             # 美元；暂定，约为已有实跑各设计每题金额中位数（0.010–0.028）
+  build:
+    weights: {quality: 0.7, efficiency: 0.15, cost: 0.15}
+    gate: [solved]
+    parts: {checks: 1, conformance: 1, line_assume: 1}   # line_assume 只有缺参题有
+    by_kind:
+      infeasible: {gate: [], parts: {line_pushback: 1}}
+    efficiency: {scale: 240}
+    cost: {scale: 0.5}               # 美元；暂定，冒烟实测每题 0.05–1.46，E1 后按全量数据定（同 efficiency）
+  change:
+    weights: {quality: 0.7, efficiency: 0.15, cost: 0.15}
+    gate: [solved]
+    parts: {checks: 1, preserve: 1, conformance: 1}
+    efficiency: {scale: 240}
+    cost: {scale: 0.5}
+  handover:
+    weights: {quality: 0.7, efficiency: 0.15, cost: 0.15}
+    gate: [solved]
+    parts: {checks: 1, preserve: 1, conformance: 1}
+    efficiency: {scale: 240}
+    cost: {scale: 0.5}
+  diagnose:
+    weights: {quality: 0.7, efficiency: 0.15, cost: 0.15}
+    gate: [solved]
+    parts: {line_localize: 1, line_repair: 1, preserve: 1}
+    efficiency: {scale: 240}
+    cost: {scale: 0.5}
+  analyze:
+    weights: {quality: 0.7, efficiency: 0.15, cost: 0.15}
+    gate: []
+    parts: {line_answer: 1}
+    efficiency: {scale: 240}
+    cost: {scale: 0.5}
+  project:                           # 每轮按 change 的口径（solved × mean(checks, preserve, conformance)）评，取 4 轮均值，没跑到的轮记 0
+    weights: {quality: 0.7, efficiency: 0.15, cost: 0.15}
+    gate: []
+    parts: {turn_quality: 1}
+    efficiency: {scale: 960}         # 单轮尺度 × 4 轮；暂定，同上
+    cost: {scale: 2.0}

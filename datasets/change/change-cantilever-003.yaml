@@ -1,0 +1,22 @@
+id: change-cantilever-003
+line: change
+bridge: osis-bridge-cantilever-box
+status: verified
+version: 1
+kind: concrete
+start: template:变截面悬浇连续梁-70+130+70
+base: 变截面悬浇连续梁-70+130+70
+reference: overlay:reference
+hide_templates:
+- 变截面悬浇连续梁-70+130+70
+brief: 设计变更：主梁混凝土由 C60 改为 C55，收缩徐变参数相应调整。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: concrete_grade
+  op: eq
+  value: 55
+preserve: true
+may_change: []
+notes: '脚本变更（tools/draft_change.py: concrete），起始模板 变截面悬浇连续梁-70+130+70。'

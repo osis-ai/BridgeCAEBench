@@ -1,0 +1,40 @@
+id: diagnose-review-005
+line: diagnose
+bridge: osis-bridge-cantilever-box
+status: verified
+version: 1
+kind: review
+start: overlay:start
+base: 变截面悬浇连续梁-76+140+76
+reference: template:变截面悬浇连续梁-76+140+76
+hide_templates:
+- 变截面悬浇连续梁-76+140+76
+brief: |
+  这个模型是按下面的设计参数建的，交给我之前请对照复核：找出模型里和设计参数不一致的地方，逐项改正，改完重建并求解确认能算通。
+  设计参数：
+  76+140+76m 变截面预应力混凝土连续箱梁，单箱单室，桥宽 12.75m，主墩两侧挂篮对称悬臂浇筑，先边跨后中跨合龙。
+  根部梁高 8.2m，跨中梁高 3.6m。
+  主梁 C60。
+  荷载：汽车荷载公路-I 级；二期恒载 中央分隔带 10.4kN/m、人行道 10.5kN/m、铺装 40.125kN/m、防撞护栏 10.2kN/m；整体升温 20℃、降温 20℃，考虑正负温度梯度；支座不均匀沉降主墩 15mm、桥台 10mm。
+  钢束张拉控制应力 1395MPa。
+  环境年平均相对湿度 75%。
+  回复里给出复核结论 JSON，item 取自：跨径、梁高、汽车荷载等级、整体温度、支座沉降、混凝土等级、二期恒载、张拉控制应力、环境湿度。
+  {"inconsistencies":[{"item":"混凝土等级","model":"模型里的值","design":"设计值"}]}
+hidden: {}
+must_ask: []
+checks:
+- field: uniform_temp
+  op: approx_list
+  value:
+  - -20.0
+  - 20.0
+  tol: 0.5
+- field: tendon_stress
+  op: contains
+  value: 1395000000.0
+preserve: true
+may_change: []
+localization:
+- item: 张拉控制应力
+- item: 整体温度
+notes: 复核：在模板 变截面悬浇连续梁-76+140+76 上埋入 stress, temperature（tools/draft_change.py 的编辑）。

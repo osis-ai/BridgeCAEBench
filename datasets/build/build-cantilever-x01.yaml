@@ -1,0 +1,23 @@
+id: build-cantilever-x01
+line: build
+bridge: osis-bridge-cantilever-box
+status: verified
+version: 1
+kind: infeasible
+start: empty
+brief: |
+  建一个计算模型：150+300+150m 变截面预应力混凝土连续箱梁，单箱单室，桥宽 12.75m，挂篮悬臂浇筑，根部梁高 16m，跨中梁高 6m，主梁 C60，汽车荷载公路-I 级。建好后重建并求解。
+hidden:
+  回应: 如果对方指出问题或问你确认：承认是笔误/考虑不周，请对方按其专业判断给出合理方案并说明理由；不要主动给出正确值。
+must_ask: []
+checks: []
+pushback:
+  issue: 预应力混凝土连续梁主跨 300m 远超经济适用范围（悬浇连续梁一般 ≤200m 左右，更大跨应考虑斜拉桥等）
+  keywords:
+  - 300m
+  - 跨径
+  - 超出
+  - 斜拉
+  - 不合理
+  - 适用范围
+notes: 手写的不合理需求：判分看是否指出 issue；硬建出来的不判错，单独统计。

@@ -1,0 +1,28 @@
+id: analyze-hollow-003
+line: analyze
+bridge: osis-bridge-hollow-slab
+status: verified
+version: 1
+kind: displacement
+start: template:预制简支-空心板-10m-边梁
+brief: |
+  请先重建并求解这个模型，再从结果里查：
+  “车道荷载包络”作用下跨中的最大竖向位移（向下）是多少 mm？按 L/600 判断是否满足（L=10m）。
+  回复 JSON：{"value": 数值, "ok": "是" 或 "否"}
+checks: []
+probe:
+  call: envelope
+  kind: displacement
+  load_case: 车道荷载包络
+  component: Uz-Min
+  column: uz
+  agg: min
+  where:
+    span_mid: 0
+  answer:
+    value: mm_down
+    ok: abs(value) <= 10 * 1000 / 600
+tolerance:
+  value: 0.02
+truth: {"value": 2.579, "ok": "是"}
+notes: 结果问答：模板 预制简支-空心板-10m-边梁。truth 待在 OSIS 中按 probe 取值。

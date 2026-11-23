@@ -1,0 +1,25 @@
+id: change-rigid-005
+line: change
+bridge: osis-bridge-rigid-frame-box
+status: verified
+version: 1
+kind: stress
+start: template:变截面连续刚构-95+180+95-双肢
+base: 变截面连续刚构-95+180+95-双肢
+reference: overlay:reference
+hide_templates:
+- 变截面连续刚构-95+180+95-双肢
+brief: 设计变更：为控制锚下应力，钢束张拉控制应力由 1395MPa 改为 1302MPa（约 0.70fpk）。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: tendon_stress
+  op: contains
+  value: 1302000000.0
+- field: tendon_stress
+  op: absent
+  value: 1395000000.0
+preserve: true
+may_change: []
+notes: '脚本变更（tools/draft_change.py: stress），起始模板 变截面连续刚构-95+180+95-双肢。'

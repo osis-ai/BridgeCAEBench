@@ -1,0 +1,6 @@
+id: T4
+name: verification-gate
+description: T1 外套确定性门控（G1 有解 / G2 算后未改 / G3 点名验算 / G4 格式），不通过把违规项打回同一会话，最多重开 5 轮，仍不过记 deferred
+python: venv
+extra: miniswe
+tasks: [build, change, handover, diagnose, analyze, project]   # knowledge 没有模型状态，门控只剩格式，近似 T1

@@ -1,0 +1,245 @@
+# knowledge：skill 题，迁移自官方 datasets/qa/questions.json（commit 37f7685），id 由 qa-NNN 改为 kn-skill-NNN。
+# 2026-10-20 精简到 28 题：只留答错会建错模/走错流程、且不能靠二选一猜的；删纯算术、通用规范常识、内部流程代号、skill 文档里已不存在的。
+- id: kn-skill-003
+  question: engine.settlement.group.create(name, val, ...) 里节点编号是传入 list，还是 name、val 之后的可变参数（varargs）？
+  answer: varargs
+  aliases:
+  - 可变参数
+  type: usage
+  source:
+    skill: .agents/skills/osis-module-analysis/SKILL.md
+  status: verified
+- id: kn-skill-004
+  question: Settlement.include 添加组时，第一个位置参数 op 应填哪个字符串？
+  answer: a
+  aliases: []
+  type: usage
+  source:
+    skill: .agents/skills/osis-module-analysis/SKILL.md
+  status: verified
+- id: kn-skill-005
+  question: 按公路-I 级创建移动荷载体系，应调用哪个 API？
+  answer: engine.live.grade.create_highway
+  aliases:
+  - live.grade.create_highway
+  type: usage
+  source:
+    skill: .agents/skills/osis-module-analysis/SKILL.md
+  status: verified
+- id: kn-skill-007
+  question: 体内后张按规范创建钢束规格时，create 的 s_type 应填什么？
+  answer: IN
+  aliases: []
+  type: usage
+  source:
+    skill: .agents/skills/osis-module-tendon/references/prop_create.md
+  status: verified
+- id: kn-skill-009
+  question: engine.load.create("自重", "CS", 1.0) 和返回对象上的 create("GRAVITY") 是不是同一个 create？
+  answer: 否
+  aliases: []
+  type: usage
+  source:
+    skill: .agents/skills/osis-python-helper/SKILL.md
+  status: verified
+- id: kn-skill-010
+  question: 用户未说明如何验算时，应用哪条无参调用生成组合并验算？不要写 import，只填调用路径（如 engine.post.xxx）。
+  answer: engine.post.combination_and_check
+  aliases:
+  - OSISEngine().post.combination_and_check
+  - combination_and_check
+  type: usage
+  source:
+    skill: .agents/skills/osis-check/SKILL.md
+  status: verified
+- id: kn-skill-011
+  question: create_conc 的 crep_shrk 能否指向尚未创建的收缩徐变？
+  answer: 否
+  aliases: []
+  type: usage
+  source:
+    skill: .agents/skills/osis-module-material/SKILL.md
+  status: verified
+- id: kn-skill-014
+  question: engine.material.create_conc 是否支持参数 auto_mesh？
+  answer: 否
+  aliases: []
+  type: hallucination
+  source:
+    skill: .agents/skills/osis-module-material/SKILL.md
+  status: verified
+- id: kn-skill-019
+  question: Settlement.include 是否支持参数 async_fix？
+  answer: 否
+  aliases: []
+  type: hallucination
+  source:
+    skill: .agents/skills/osis-module-analysis/SKILL.md
+  status: verified
+- id: kn-skill-020
+  question: 模板「变截面悬浇连续梁-65+120+65」的跨中梁高 h_mid 和根部梁高 h_root 分别是多少米？
+  answer: 3.2, 7.5
+  aliases: []
+  type: template
+  source:
+    skill: .agents/skills/osis-bridge-cantilever-box/references/templates/变截面悬浇连续梁-65+120+65/项目画像.md
+  status: verified
+- id: kn-skill-022
+  question: 任何建模任务应先加载哪个总控 skill？
+  answer: osis-engine
+  aliases: []
+  type: workflow
+  source:
+    skill: .agents/AGENTS.md
+  status: verified
+- id: kn-skill-032
+  question: 施工阶段 stage.create 的 duration 单位是什么？
+  answer: 天
+  aliases:
+  - 日
+  type: usage
+  source:
+    skill: .agents/skills/osis-module-stage/SKILL.md
+  status: verified
+- id: kn-skill-041
+  question: 用户要改跨中梁高 h_mid 时应加载哪个 skill？
+  answer: osis-edit-hmid
+  aliases: []
+  type: workflow
+  source:
+    skill: .agents/skills/osis-edit-hmid/SKILL.md
+  status: verified
+- id: kn-skill-044
+  question: 名称里有「刚构」时应路由到哪个桥型 skill？
+  answer: osis-bridge-rigid-frame-box
+  aliases: []
+  type: workflow
+  source:
+    skill: .agents/skills/osis-engine/SKILL.md
+  status: verified
+- id: kn-skill-055
+  question: 二期恒载、预应力、自重三类工况的 load_case_type 都应填什么？三类相同，短码只写一次。
+  answer: CS
+  aliases: []
+  type: usage
+  source:
+    skill: .agents/skills/osis-module-loadcase/SKILL.md
+  status: verified
+- id: kn-skill-056
+  question: create_gravity 的竖向系数参数名是什么？只填参数名。
+  answer: z_coeff
+  aliases: []
+  type: usage
+  source:
+    skill: .agents/skills/osis-module-loadcase/SKILL.md
+  status: verified
+- id: kn-skill-057
+  question: 弹簧单元 create_spring 平动方向刚度极大值（视为固定）取多少？
+  answer: 1e13
+  aliases:
+  - 1e13
+  - '10000000000000'
+  type: usage
+  source:
+    skill: .agents/skills/osis-module-element/SKILL.md
+  status: verified
+- id: kn-skill-059
+  question: z=0 在箱梁顶面时，梁高 h 的主梁底 z 坐标应写成什么表达式？
+  answer: -h
+  aliases: []
+  type: usage
+  source:
+    skill: .agents/skills/osis-module-node/SKILL.md
+  status: verified
+- id: kn-skill-060
+  question: CONVENTIONALBOX 截面 create 的第 4 个参数是梁高 H 还是顶板宽？
+  answer: H
+  aliases:
+  - 梁高
+  - 梁高 H
+  type: usage
+  source:
+    skill: .agents/skills/osis-edit-hmid/SKILL.md
+  status: verified
+- id: kn-skill-066
+  question: 改跨中梁高时禁止跑 main.py，写回应使用 L1 单跑哪两个模块（填 _4/_5）？
+  answer: _4, _5
+  aliases:
+  - _4/_5
+  - 4, 5
+  type: workflow
+  source:
+    skill: .agents/skills/osis-edit-hmid/SKILL.md
+  status: verified
+- id: kn-skill-078
+  question: 变截面悬浇梁高公式指数 n 在 80+150+80 模板里取多少？
+  answer: '1.8'
+  aliases: []
+  type: template
+  source:
+    skill: .agents/skills/osis-bridge-cantilever-box/references/templates/变截面悬浇连续梁-80+150+80/项目画像.md
+  status: verified
+- id: kn-skill-081
+  question: 变截面连续梁但不是刚构（有永久支座）应走 cantilever-box 还是 rigid-frame-box？
+  answer: osis-bridge-cantilever-box
+  aliases:
+  - cantilever-box
+  type: workflow
+  source:
+    skill: .agents/skills/osis-engine/SKILL.md
+  status: verified
+- id: kn-skill-082
+  question: 求解已有模型应调用 engine.solve，还是跑 prep/main.py？只填其中一个，不要答是或否。
+  answer: engine.solve
+  aliases:
+  - OSISEngine().solve
+  - solve
+  type: workflow
+  source:
+    skill: .agents/skills/osis-engine/SKILL.md
+  status: verified
+- id: kn-skill-086
+  question: _6 里单元组名改了一个字后报「组不存在」，最可能同时坏掉引用的是 _8、_9 和哪个模块文件前缀？
+  answer: _10
+  aliases:
+  - '10'
+  - _10_stage.py
+  type: workflow
+  source:
+    skill: .agents/AGENTS.md
+  status: verified
+- id: kn-skill-089
+  question: 完整建模一座斜拉桥且对不上六种支持桥型时，应先调用什么工具提示可能建不对？
+  answer: question
+  aliases: []
+  type: workflow
+  source:
+    skill: .agents/skills/osis-engine/SKILL.md
+  status: verified
+- id: kn-skill-091
+  question: 改磁盘上的 _8_loadcase.py 但未执行写回，OSIS 内存模型会不会自动变？
+  answer: 否
+  aliases: []
+  type: workflow
+  source:
+    skill: .agents/AGENTS.md
+  status: verified
+- id: kn-skill-097
+  question: 钢束出梁排查时，第一嫌疑是 bottom 没挂上，还是先改竖曲线 z？只填其中一个词，不要答是或否。
+  answer: bottom
+  aliases:
+  - BottomTS
+  - bottom()
+  - bottom 没挂上
+  type: usage
+  source:
+    skill: .agents/skills/osis-module-tendon/SKILL.md
+  status: verified
+- id: kn-skill-100
+  question: 在 x=0（变化段起点、0 号块外缘）处，h(x)=h_mid+(h_root-h_mid)*(1-x/L)^n 的梁高等于 h_mid 还是 h_root？
+  answer: h_root
+  aliases: []
+  type: compute
+  source:
+    skill: .agents/skills/osis-bridge-cantilever-box/references/templates/变截面悬浇连续梁-80+150+80/项目画像.md
+  status: verified

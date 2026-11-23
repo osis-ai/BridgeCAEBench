@@ -1,0 +1,26 @@
+id: change-cantilever-005
+line: change
+bridge: osis-bridge-cantilever-box
+status: verified
+version: 1
+kind: pavement
+start: template:变截面悬浇连续梁-70+130+70
+base: 变截面悬浇连续梁-70+130+70
+reference: overlay:reference
+hide_templates:
+- 变截面悬浇连续梁-70+130+70
+brief: 设计变更：桥面铺装加厚（10cm 改为 12cm），铺装荷载由 40.125kN/m 改为 48.15kN/m。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: line_load_kn
+  op: contains
+  value: 48.15
+- field: line_load_kn
+  op: absent
+  value: 40.125
+preserve: true
+may_change:
+- line_loads.铺装右
+notes: '脚本变更（tools/draft_change.py: pavement），起始模板 变截面悬浇连续梁-70+130+70。'

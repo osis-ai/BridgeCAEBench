@@ -1,0 +1,23 @@
+id: change-cipbox-005
+line: change
+bridge: osis-bridge-conventional-box
+status: verified
+version: 1
+kind: humidity
+start: template:现浇等截面箱梁-30+35+22-单箱三室-16.75
+base: 现浇等截面箱梁-30+35+22-单箱三室-16.75
+reference: overlay:reference
+hide_templates:
+- 现浇等截面箱梁-30+35+22-单箱三室-16.75
+brief: 设计变更：桥位在西北干燥地区，环境年平均相对湿度按 55% 计。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: humidity
+  op: approx
+  value: 55.0
+  tol: 1
+preserve: true
+may_change: []
+notes: '脚本变更（tools/draft_change.py: humidity），起始模板 现浇等截面箱梁-30+35+22-单箱三室-16.75。'

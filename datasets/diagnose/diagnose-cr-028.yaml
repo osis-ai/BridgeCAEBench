@@ -1,0 +1,36 @@
+id: diagnose-cr-028
+line: diagnose
+bridge: osis-bridge-hollow-slab
+status: verified
+version: 1
+kind: check_ng
+start: overlay:start
+base: 预制简支-空心板-16m-中梁
+reference: template:预制简支-空心板-16m-中梁
+hide_templates:
+- 预制简支-空心板-16m-中梁
+brief: 本项目「PC正截面短期抗裂验算」不通过。请定位原因并修复该项至通过。其他验算项不必处理。不要询问评测方。reason_code 必须取自 py/reason_codes.yaml 中的短码。定位结论请输出 JSON：{"localizations":[{"check_item":"验算项中文名","reason_code":"短码"}]}
+hidden: {}
+must_ask: []
+checks:
+- field: pst_steel_kg_per_m
+  op: rel
+  value: 17.584
+  tol: 0.02
+preserve: true
+may_change:
+- pst_steel_ratio
+target_item: PC正截面短期抗裂验算
+ng_baseline: []
+ng_seeded:
+- PC正截面短期抗裂验算
+- PC正截面长期抗裂验算
+- 斜截面抗剪验算
+- 正截面抗弯验算
+- 正截面抗拉压验算
+localization:
+- reason_code: tendon_area
+seed:
+  file: prep/_8_loadcase.py
+  how: 钢束 prop num 减小，不改张拉应力
+notes: 迁移自官方 datasets/check_repair cr-028（官方 commit 37f7685）。已实测 CombinationAndCheck。差集=['PC正截面短期抗裂验算', '斜截面抗剪验算']；prompt 目标=PC正截面短期抗裂验算。 2026-10-21 预制简支-空心板-16m-边梁 在 OSIS 5.1 验算报 ultimate moment direction search 错（OSIS 已知问题），改到 预制简支-空心板-16m-中梁，种错同样是 15-4 的 num 4→2。

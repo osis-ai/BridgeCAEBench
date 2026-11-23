@@ -1,0 +1,41 @@
+id: diagnose-review-003
+line: diagnose
+bridge: osis-bridge-hollow-slab
+status: verified
+version: 1
+kind: review
+start: overlay:start
+base: 预制简支-空心板-16m-边梁
+reference: template:预制简支-空心板-16m-边梁
+hide_templates:
+- 预制简支-空心板-16m-边梁
+brief: |
+  这个模型是按下面的设计参数建的，交给我之前请对照复核：找出模型里和设计参数不一致的地方，逐项改正，改完重建并求解确认能算通。
+  设计参数：
+  单跨 16m 预制简支空心板，只建一片边梁，整跨预制、架设即成桥。
+  梁高 0.95m。
+  主梁 C50。
+  荷载：汽车荷载公路-I 级；二期恒载 铺装 10.85kN/m、防撞护栏 2.12kN/m；整体升温 20℃、降温 20℃，考虑正负温度梯度；支座不均匀沉降 50mm。
+  钢束张拉控制应力 1395MPa。
+  环境年平均相对湿度 75%。
+  回复里给出复核结论 JSON，item 取自：跨径、梁高、汽车荷载等级、整体温度、支座沉降、混凝土等级、二期恒载、张拉控制应力、环境湿度。
+  {"inconsistencies":[{"item":"混凝土等级","model":"模型里的值","design":"设计值"}]}
+hidden: {}
+must_ask: []
+checks:
+- field: settlement_mm
+  op: approx_list
+  value:
+  - 50.0
+  tol: 0.5
+- field: humidity
+  op: approx
+  value: 75.0
+  tol: 1
+preserve: true
+may_change:
+- settlements
+localization:
+- item: 环境湿度
+- item: 支座沉降
+notes: 复核：在模板 预制简支-空心板-16m-边梁 上埋入 humidity, settlement（tools/draft_change.py 的编辑）。

@@ -1,0 +1,40 @@
+id: diagnose-cr-005
+line: diagnose
+bridge: osis-bridge-precast-t-girder
+status: verified
+version: 1
+kind: check_ng
+start: overlay:start
+base: 简支变连续-T梁-20m-中梁
+reference: template:简支变连续-T梁-20m-中梁
+hide_templates:
+- 简支变连续-T梁-20m-中梁
+brief: 本项目「PC使用阶段正截面压应力验算」不通过。请定位原因并修复该项至通过。其他验算项不必处理。不要询问评测方。reason_code 必须取自 py/reason_codes.yaml 中的短码。定位结论请输出 JSON：{"localizations":[{"check_item":"验算项中文名","reason_code":"短码"}]}
+hidden: {}
+must_ask: []
+checks:
+- field: concrete_grade
+  op: rel
+  value: 50
+  tol: 0.02
+preserve: true
+may_change: []
+target_item: PC使用阶段正截面压应力验算
+ng_baseline:
+- PC正截面短期抗裂验算
+- PC正截面长期抗裂验算
+- 斜截面抗剪验算
+ng_seeded:
+- PC使用阶段斜截面主压应力验算
+- PC使用阶段正截面压应力验算
+- PC正截面短期抗裂验算
+- PC正截面长期抗裂验算
+- PC腹板斜截面抗裂验算
+- 斜截面抗剪验算
+- 正截面抗弯验算
+localization:
+- reason_code: material_grade
+seed:
+  file: prep/_3_material.py
+  how: 主梁混凝土 grade 由 C50 改为 C20
+notes: 迁移自官方 datasets/check_repair cr-005（官方 commit 37f7685）。已实测。底稿已有短期/长期抗裂、抗剪、抗弯 NG。C50→C20 把使用阶段正截面压、主压、腹板抗裂从 OK 打成 NG。目标项取使用阶段正截面压应力。

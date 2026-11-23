@@ -1,0 +1,87 @@
+id: handover-smallbox-001
+line: handover
+bridge: osis-bridge-precast-small-box
+status: verified
+version: 1
+kind: A
+start: overlay:start
+base: 简支变连续-小箱梁-20m-中梁
+reference: template:简支变连续-小箱梁-20m-中梁
+hide_templates:
+- 简支变连续-小箱梁-20m-中梁
+brief: |
+  这个项目是同事做到一半交给我的：控制参数、钢束线形、材料、截面、节点、单元已经建好（prep/_1～_6），边界、荷载、活载分析和施工阶段还没做，main.py 已经写好调用顺序。请接着补完，不要改动已经做好的部分，最后重建并求解确认能算通。
+  设计参数：
+  - 汽车荷载公路-I 级，车道数 1
+  - 二期恒载 铺装 10.85kN/m、防撞护栏 2.12kN/m
+  - 整体升温 20℃、降温 20℃，考虑正负温度梯度
+  - 钢束张拉控制应力 1395MPa
+  - 施工阶段（共 7 个）：主梁预制、张拉正弯矩束 → 存梁 → 墩顶现浇段施工、张拉负弯矩束 → 体系转换 → 二期恒载 → 徐变十年 → 运营阶段
+hidden:
+  lane_count: 1
+  uniform_temp:
+  - -20.0
+  - 20.0
+  tendon_stress:
+  - 1395000000.0
+  stage_count: 7
+  二期恒载_kN_m:
+    铺装: 10.85
+    防撞护栏: 2.12
+hidden_profile: true
+must_ask: []
+checks:
+- field: live_grade
+  op: eq
+  value: HIGHWAY_I
+- field: lane_count
+  op: eq
+  value: 1
+- field: line_load_kn
+  op: contains
+  value: 2.12
+- field: line_load_kn
+  op: contains
+  value: 10.85
+- field: uniform_temp
+  op: approx_list
+  value:
+  - -20.0
+  - 20.0
+  tol: 0.5
+- field: has_temp_gradient
+  op: eq
+  value: true
+- field: tendon_stress
+  op: contains
+  value: 1395000000.0
+- field: stage_count
+  op: eq
+  value: 7
+preserve: true
+may_change:
+- L
+- boundary_count
+- creep_days
+- has_prestress
+- has_temp_gradient
+- has_uniform_temp
+- lane_count
+- line_load_kn
+- line_loads
+- live_code
+- live_grade
+- load_case_types
+- load_cases
+- pst_steel_kg_per_m
+- pst_steel_ratio
+- span_lengths
+- stage_count
+- stage_durations
+- stage_names
+- support_xs
+- tendon_count
+- tendon_names
+- tendon_stress
+- uniform_temp
+notes: 由 tools/draft_handover.py 从模板 简支变连续-小箱梁-20m-中梁 截断生成：删去 _7_boundary.py, _8_loadcase.py, _9_analysis.py, _10_stage.py。

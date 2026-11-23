@@ -1,0 +1,70 @@
+# reason_code 表（测试种错必须用这些短码）
+#
+# 底稿不要求全过。种错后须 ng_baseline ⊆ ng_seeded 且差集非空。
+# 目标项从差集选，写入 prompt；不要预先点名一项再硬打。
+# check_item 与 .lcc 文件名中的验算项中文名对齐。一条样本只种 1 个可命名的错。
+# 本批 30 题不种 missing_combination，但表项保留。
+
+codes:
+  material_grade:
+    label: 主梁混凝土等级偏低
+    how: 改 prep/_3_material.py 中主梁 create_conc 的 grade（如 C60→C40 / C50→C30）
+    likely_check_item:
+      - 施工阶段压应力验算
+      - 正截面压应力验算
+    typical_file: prep/_3_material.py
+
+  tendon_area:
+    label: 钢束偏少（规格/面积变小或根数减少）
+    how: 改 tendon.prop 的 num 或规格名（如 15-19→15-7），或删掉部分 shape / PST；使有效预应力偏小。不要改张拉应力。旧短码 tendon_count 已并入本码。
+    likely_check_item:
+      - 正截面抗弯承载能力验算
+      - 正截面压应力验算
+      - PC施工阶段正截面拉应力验算
+    typical_file: prep/_8_loadcase.py
+
+  tendon_stress:
+    label: 张拉控制应力偏低
+    how: 改预应力工况 PST 张拉控制应力（如 1.395e9→0.90e9），不要改钢束规格
+    likely_check_item:
+      - PC正截面短期抗裂验算
+      - 正截面抗弯验算
+    typical_file: prep/_8_loadcase.py
+
+  rebar_dia:
+    label: 普通钢筋直径偏小
+    how: 改截面纵筋 diameter（如 D16→D4、D25→D5），不要改箍筋面积
+    likely_check_item:
+      - 正截面抗弯验算
+    typical_file: prep/_4_section.py
+
+  rebar_num:
+    label: 普通钢筋根数偏少
+    how: 改纵筋 num（如 23→8），直径不变
+    likely_check_item:
+      - 正截面抗弯验算
+    typical_file: prep/_4_section.py
+
+  section_h:
+    label: 梁高偏小
+    how: 改截面梁高（悬浇改根部 h_root；T 梁/小箱梁/空心板改主梁 h）
+    likely_check_item:
+      - 正截面抗弯承载能力验算
+      - 斜截面抗剪承载能力验算
+    typical_file: prep/_4_section.py
+
+  web_t:
+    label: 腹板厚度偏小
+    how: 改箱梁/小箱梁腹板厚（如 0.20→0.12），不要同时改梁高
+    likely_check_item:
+      - 斜截面抗剪验算
+      - PC腹板斜截面抗裂验算
+    typical_file: prep/_4_section.py
+
+  missing_combination:
+    label: 漏荷载组合 / 漏活载
+    how: 从施工阶段或分析模块去掉活载工况激活，或跳过 combination 所需的活载定义
+    likely_check_item:
+      - 正截面抗弯承载能力验算
+      - 斜截面抗剪承载能力验算
+    typical_file: prep/_9_analysis.py

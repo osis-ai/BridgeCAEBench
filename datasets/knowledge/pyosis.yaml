@@ -1,0 +1,72 @@
+# knowledge：pyosis 接口题，出自本机 OSIS-AI 环境安装的 osis_python（模块 pyosis）源码 docstring。
+# 不用 WeKnora 的 PYOSIS_rebuild（已过期）；agent 应通过 OSIS MCP 的 api_* 查。升级 pyosis 后 check_knowledge 会报版本不符，需重审。
+- id: kn-pyosis-001
+  question: 用 create_gradient_temperature 加梯度温度，参考位置想取“从梁顶到温度变化点的距离”，g_temp_type 填什么？
+  answer: T
+  aliases: []
+  type: api
+  source: {package: osis_python, file: pyosis/load/manager.py, excerpt: 'T: 从梁顶到温度变化点的距离'}
+  status: verified
+- id: kn-pyosis-002
+  question: create_gradient_temperature 的 g_temp_type 不填时默认是哪个参考位置代码？
+  answer: R
+  aliases: []
+  type: api
+  source: {package: osis_python, file: pyosis/load/manager.py, excerpt: 'g_temp_type: Literal["R", "T", "C", "B"] = "R"'}
+  status: verified
+- id: kn-pyosis-003
+  question: create_prestress 想只从钢束终点单端张拉，tension_type 填什么？
+  answer: END
+  aliases: []
+  type: api
+  source: {package: osis_python, file: pyosis/load/manager.py, excerpt: END = 终点张拉}
+  status: verified
+- id: kn-pyosis-004
+  question: create_prestress 的张拉力想按内力而不是应力输入，tension_force_type 填什么？
+  answer: IF
+  aliases: []
+  type: api
+  source: {package: osis_python, file: pyosis/load/manager.py, excerpt: IF = 内力}
+  status: verified
+- id: kn-pyosis-005
+  question: 验算参数里用 set_member_type 把构件设成 A 类预应力，member_type 填什么？
+  answer: APC
+  aliases: []
+  type: api
+  source: {package: osis_python, file: pyosis/post/manager.py, excerpt: APC — A 类预应力}
+  status: verified
+- id: kn-pyosis-006
+  question: set_member_type 里盖梁对应的 member_type 字符串是什么？
+  answer: PierCap
+  aliases: []
+  type: api
+  source: {package: osis_python, file: pyosis/post/manager.py, excerpt: PierCap — 盖梁}
+  status: verified
+- id: kn-pyosis-007
+  question: set_csc_ratio 设施工阶段混凝土强度折减系数，允许的最小值是多少？
+  answer: '0.8'
+  aliases: []
+  type: number
+  source: {package: osis_python, file: pyosis/post/manager.py, excerpt: "折减系数，取值范围 [0.8, 1.0]；默认 0.8"}
+  status: verified
+- id: kn-pyosis-008
+  question: set_environment 的 env_type 填 3 表示哪类环境？
+  answer: 海洋氯化物环境
+  aliases: [海洋氯化物]
+  type: name
+  source: {package: osis_python, file: pyosis/post/manager.py, excerpt: 3 — 海洋氯化物环境}
+  status: verified
+- id: kn-pyosis-009
+  question: set_prs_ratio 设预应力弯起钢筋参与抗剪验算的范围，不填时默认多少倍 h？
+  answer: '1.0'
+  aliases: ['1']
+  type: number
+  source: {package: osis_python, file: pyosis/post/manager.py, excerpt: "取值范围 [0.0, 1.0]；默认 1.0"}
+  status: verified
+- id: kn-pyosis-010
+  question: 模态分析用 set_modal_opt 设特征值数目，不传参数时算几阶？
+  answer: '1'
+  aliases: []
+  type: number
+  source: {package: osis_python, file: pyosis/dynamic/manager.py, excerpt: 需要计算的特征值最大数目，缺省值：1}
+  status: verified

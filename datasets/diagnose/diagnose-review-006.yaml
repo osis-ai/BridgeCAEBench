@@ -1,0 +1,43 @@
+id: diagnose-review-006
+line: diagnose
+bridge: osis-bridge-rigid-frame-box
+status: verified
+version: 1
+kind: review
+start: overlay:start
+base: 变截面连续刚构-56+5x100+56-双肢
+reference: template:变截面连续刚构-56+5x100+56-双肢
+hide_templates:
+- 变截面连续刚构-56+5x100+56-双肢
+brief: |
+  这个模型是按下面的设计参数建的，交给我之前请对照复核：找出模型里和设计参数不一致的地方，逐项改正，改完重建并求解确认能算通。
+  设计参数：
+  56+5×100+56m 变截面预应力混凝土连续刚构，单箱单室，桥宽 12.775m，墩梁固结、双肢薄壁墩，挂篮对称悬臂浇筑，先边跨后中跨合龙。
+  根部梁高 6.2m，跨中梁高 2.5m。
+  主梁 C55。
+  荷载：汽车荷载公路-I 级；二期恒载 11.414kN/m；整体升温 34℃、降温 23℃，考虑正负温度梯度；支座不均匀沉降 10mm。
+  钢束张拉控制应力 1395MPa。
+  环境年平均相对湿度 70%。
+  回复里给出复核结论 JSON，item 取自：跨径、梁高、汽车荷载等级、整体温度、支座沉降、混凝土等级、二期恒载、张拉控制应力、环境湿度。
+  {"inconsistencies":[{"item":"混凝土等级","model":"模型里的值","design":"设计值"}]}
+hidden: {}
+must_ask: []
+checks:
+- field: concrete_grade
+  op: eq
+  value: 55
+- field: line_load_kn
+  op: contains
+  value: 11.414
+- field: humidity
+  op: approx
+  value: 70.0
+  tol: 1
+preserve: true
+may_change:
+- line_loads
+localization:
+- item: 二期恒载
+- item: 环境湿度
+- item: 混凝土等级
+notes: 复核：在模板 变截面连续刚构-56+5x100+56-双肢 上埋入 pavement, humidity, concrete（tools/draft_change.py 的编辑）。

@@ -1,0 +1,14 @@
+# 跑不通类原因短码
+codes:
+  section_ref:
+    label: 单元引用了不存在的截面号
+  material_ref:
+    label: 单元引用了不存在的材料号
+  stage_group_ref:
+    label: 施工阶段激活的单元组名与 _6 建的组名不一致
+  boundary_ref:
+    label: 施工阶段激活的边界组名与 _7 建的组名不一致
+  load_ref:
+    label: 施工阶段激活的荷载工况名与 _8 建的工况名不一致
+  tendon_prop_ref:
+    label: 钢束引用的钢束规格名未定义

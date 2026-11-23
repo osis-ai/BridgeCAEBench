@@ -1,0 +1,137 @@
+# knowledge：真实用户问题，出自 WeKnora「OSIS用户问答记录」的《OSIS常见问题解答》，改写成可短答的问法。
+- id: kn-faq-001
+  question: 盖梁模块验算出计算书时，悬臂外合力的位置 X 是拿来判断要不要用哪种公式验算的？
+  answer: 拉压杆公式
+  aliases: [拉压杆]
+  type: name
+  source: {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+           excerpt: 用来判断是否需要采用拉压杆公式进行验算}
+  status: verified
+- id: kn-faq-002
+  question: 建模时单元长度小到多少以下会导致算不了？
+  answer: 1mm
+  aliases: [1毫米, 0.001m]
+  type: number
+  source: {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+           excerpt: 如果单位长度过小（＜1mm）会导致无法计算}
+  status: verified
+- id: kn-faq-003
+  question: 用盖梁快速建模算悬臂盖梁，悬臂端位移特别大，模型里最该先查的是哪种简化？
+  answer: 用单桩模拟群桩
+  aliases: [单桩模拟群桩, 单桩来模拟群桩, 单桩]
+  type: name
+  source: {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+           excerpt: 请检查模型是不是用单桩来模拟群桩}
+  status: verified
+- id: kn-faq-004
+  question: 主控数据里勾了“修改变截面局部坐标轴进行内力/应力计算”，单元局部坐标轴改成按什么线考虑？
+  answer: 变截面的质心连线
+  aliases: [质心连线, 变截面质心连线]
+  type: name
+  source: {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+           excerpt: 还是变截面的质心连线考虑}
+  status: verified
+- id: kn-faq-005
+  question: 在“分析-特征值”里设好模态阶数后，程序会自动生成一个什么工况？
+  answer: 自振模态工况
+  aliases: [自振模态]
+  type: name
+  source: {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+           excerpt: 会自动出现一个自振模态工况}
+  status: verified
+- id: kn-faq-006
+  question: OSIS 的冲击系数在哪里勾选？
+  answer: 移动荷载工况的子工况
+  aliases: [移动荷载子工况, 子工况, 移动荷载工况子工况内部]
+  type: name
+  source: {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+           excerpt: OSIS的冲击系数设置在每一个移动荷载工况的子工况内部进行勾选}
+  status: verified
+- id: kn-faq-007
+  question: 悬浇梁的抗剪验算图不连续，“抗剪验算考虑范围”建议改填多少？
+  answer: '0.2'
+  aliases: [0.2h]
+  type: number
+  source: {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+           excerpt: 如果只填0.2表示只考虑距底缘向上0.2h高度范围内的钢筋}
+  status: verified
+- id: kn-faq-008
+  question: 通用模块出的计算书缺验算结果图片，常见原因是什么？
+  answer: 项目文件名称重复
+  aliases: [项目名称重复, 文件名重复, 项目名重复]
+  type: name
+  source: {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+           excerpt: 原因是项目文件名称重复时}
+  status: verified
+- id: kn-faq-009
+  question: 看全预应力构件的正截面抗裂验算图形，数值推荐选 Max、Min 还是 All？
+  answer: MAX
+  aliases: []
+  type: name
+  source: {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+           excerpt: 正截面抗裂图推荐选择数值中的MAX进行查看}
+  status: verified
+- id: kn-faq-010
+  question: OSIS 默认把模型的哪个施工阶段当成运营阶段？
+  answer: 最后一个阶段
+  aliases: [最后一个, 最后一个施工阶段, 最后阶段]
+  type: name
+  source: {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+           excerpt: 软件默认将模型的最后一个阶段定义为运营阶段}
+  status: verified
+- id: kn-faq-011
+  question: 施工阶段里先激活预应力、后加自重，自重会让钢束产生哪种预应力损失？
+  answer: 弹性压缩损失
+  aliases: [弹性压缩]
+  type: name
+  source: {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+           excerpt: 自重效应会引起预应力钢束产生弹性压缩损失}
+  status: verified
+- id: kn-faq-012
+  question: 施加温度梯度时，H1、H2 的正负号按哪个坐标系的方向定？
+  answer: 单元坐标系
+  aliases: [单元局部坐标系]
+  type: name
+  source: {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+           excerpt: H1、H2 的正负由单元坐标系方向决定}
+  status: verified
+- id: kn-faq-013
+  question: 弹性连接的“刚性”类型现在能不能当边界刚臂，把主梁节点连到下方支座节点？
+  answer: 否
+  aliases: [不能]
+  type: yesno
+  source: {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+           excerpt: 目前弹性连接刚性有bug无法作为边界的刚臂连接主梁节点与下方的支座节点}
+  status: verified
+- id: kn-faq-014
+  question: 大跨连续梁的底板束要随梁高自动变化，同一组钢束线形点里应该只勾哪些点？
+  answer: 梁高变化区间的起点和终点
+  aliases: [起点和终点, 起点、终点, 梁高变化区间的起点、终点]
+  type: name
+  source: {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+           excerpt: 在同一组钢束线形点内仅勾选梁高变化区间的起点、终点}
+  status: verified
+- id: kn-faq-015
+  question: 变截面梁的斜截面抗裂在支点位置算不过，建议勾选主控数据里的哪个选项再算？
+  answer: 修改变截面局部坐标轴进行内力/应力计算
+  aliases: [修改变截面局部坐标轴]
+  type: name
+  source: {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+           excerpt: 建议勾选“修改变截面局部坐标轴进行内力/应力计算”}
+  status: verified
+- id: kn-faq-016
+  question: 车道设了偏心，可左右支座反力却相等，常见原因是支座和梁之间用了什么单元？
+  answer: 弹簧单元
+  aliases: [弹簧]
+  type: name
+  source: {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+           excerpt: 是不是在支座与梁的链接中采用了弹簧单元}
+  status: verified
+- id: kn-faq-017
+  question: 盖梁拉压杆抗拉承载力公式里取柱支撑宽度 bc/2，这个公式适用于宽墩还是窄墩？
+  answer: 窄墩
+  aliases: []
+  type: name
+  source: {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+           excerpt: 该公式只适用于窄墩}
+  status: verified

@@ -1,0 +1,22 @@
+id: change-tgirder-002
+line: change
+bridge: osis-bridge-precast-t-girder
+status: verified
+version: 1
+kind: live_grade
+start: template:简支变连续-T梁-25m-中梁
+base: 简支变连续-T梁-25m-中梁
+reference: overlay:reference
+hide_templates:
+- 简支变连续-T梁-25m-中梁
+brief: 设计变更：这条路按二级公路标准建设，汽车荷载等级由公路-I 级改为公路-II 级。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: live_grade
+  op: eq
+  value: HIGHWAY_II
+preserve: true
+may_change: []
+notes: '脚本变更（tools/draft_change.py: live_grade），起始模板 简支变连续-T梁-25m-中梁。'

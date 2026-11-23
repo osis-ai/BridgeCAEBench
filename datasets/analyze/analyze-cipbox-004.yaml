@@ -1,0 +1,25 @@
+id: analyze-cipbox-004
+line: analyze
+bridge: osis-bridge-conventional-box
+status: verified
+version: 1
+kind: check
+start: template:现浇等截面箱梁-30+35+22-单箱三室-16.75
+brief: |
+  请先重建并求解这个模型，再运行 py/post/main.py 做组合与验算，然后从结果里查：
+  使用阶段正截面压应力验算是否全部通过？最小安全系数是多少，在哪个单元？
+  回复 JSON：{"ok": "是" 或 "否", "value": 最小安全系数, "element": 单元号}
+checks: []
+probe:
+  call: check_all
+  item: PC使用阶段正截面压应力验算
+  column: 安全系数
+  agg: min
+  answer:
+    ok: value >= 1.0
+    value: ''
+    element: 单元
+tolerance:
+  value: 0.02
+truth: {"ok": "是", "value": 1.292, "element": [25]}
+notes: 结果问答：模板 现浇等截面箱梁-30+35+22-单箱三室-16.75。truth 待在 OSIS 中按 probe 取值。

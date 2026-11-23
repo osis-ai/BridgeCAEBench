@@ -1,0 +1,23 @@
+id: change-smallbox-004
+line: change
+bridge: osis-bridge-precast-small-box
+status: verified
+version: 1
+kind: humidity
+start: template:预制简支-小箱梁-30m-边梁
+base: 预制简支-小箱梁-30m-边梁
+reference: overlay:reference
+hide_templates:
+- 预制简支-小箱梁-30m-边梁
+brief: 设计变更：桥位在西北干燥地区，环境年平均相对湿度按 55% 计。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: humidity
+  op: approx
+  value: 55.0
+  tol: 1
+preserve: true
+may_change: []
+notes: '脚本变更（tools/draft_change.py: humidity），起始模板 预制简支-小箱梁-30m-边梁。'

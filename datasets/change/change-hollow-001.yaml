@@ -1,0 +1,47 @@
+id: change-hollow-001
+line: change
+bridge: osis-bridge-hollow-slab
+status: verified
+version: 1
+kind: geometry
+start: template:预制简支-空心板-13m-中梁
+base: 预制简支-空心板-16m-中梁
+reference: overlay:reference
+hide_templates:
+- 预制简支-空心板-16m-中梁
+brief: 方案调整：标准跨径由 13m 改为 16m（跨数不变），采用对应跨径的通用图，梁高改为 0.95m；截面、钢束、施工阶段随之调整，荷载和其他设计条件不变。改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: span_lengths
+  op: approx_list
+  value:
+  - 16.0
+  tol: 0.5
+- field: H_mid
+  op: approx
+  value: 0.95
+  tol: 0.02
+preserve: true
+may_change:
+- H_root
+- L
+- component_thickness_avg
+- concrete_ratio
+- element_count
+- height_profile
+- heights
+- hollow_slab_mid
+- hollow_slab_support
+- node_count
+- pst_steel_kg_per_m
+- pst_steel_ratio
+- section_area_avg
+- support_xs
+- tendon_count
+- tendon_names
+- thickness_profile
+- total_length
+- void_ratio
+notes: 几何变更：起始模板 预制简支-空心板-13m-中梁，参考解为模板 预制简支-空心板-16m-中梁，设计条件（concrete_grade、line_loads、settlements、settlement_mm、pier_heights、live_grade、uniform_temp、humidity）改回起始值。

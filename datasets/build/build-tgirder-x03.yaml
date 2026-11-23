@@ -1,0 +1,23 @@
+id: build-tgirder-x03
+line: build
+bridge: osis-bridge-precast-t-girder
+status: verified
+version: 1
+kind: infeasible
+start: empty
+brief: |
+  建一个计算模型：单跨 30m 预制简支 T 梁，只建一片中梁，梁高 2.0m，主梁 C50，钢绞线 1860 级，钢束张拉控制应力 1800MPa，汽车荷载公路-I 级。建好后重建并求解。
+hidden:
+  回应: 如果对方指出问题或问你确认：承认是笔误/考虑不周，请对方按其专业判断给出合理方案并说明理由；不要主动给出正确值。
+must_ask: []
+checks: []
+pushback:
+  issue: 1860 级钢绞线张拉控制应力不应超过 0.75fpk≈1395MPa（规范上限约 0.80fpk），1800MPa 接近抗拉强度，不可行
+  keywords:
+  - '1800'
+  - '1395'
+  - '0.75'
+  - fpk
+  - 超过
+  - 张拉控制应力
+notes: 手写的不合理需求：判分看是否指出 issue；硬建出来的不判错，单独统计。

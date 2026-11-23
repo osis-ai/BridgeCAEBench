@@ -1,0 +1,6 @@
+id: T3
+name: domain-pipeline
+description: 固定的领域流水线（解析 → 检索 → 编写 → 执行 → 复核修复环 ≤15 轮 → 报告），普通 Python，不依赖 Agent 框架
+python: main
+# 空工程先整份复制一个模板为起点（11-03 不复制时 build 正常题解出率 0）
+tasks: all

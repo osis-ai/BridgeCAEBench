@@ -1,0 +1,92 @@
+id: build-smallbox-006
+line: build
+bridge: osis-bridge-precast-small-box
+status: verified
+version: 1
+kind: complete
+start: empty
+reference: template:预制简支-小箱梁-30m-边梁
+hide_templates:
+- 预制简支-小箱梁-30m-边梁
+brief: |
+  建一个计算模型：单跨 30m 预制简支小箱梁，只建一片边梁，整跨预制、架设即成桥。
+  梁高 1.6m。
+  主梁 C50。
+  荷载：汽车荷载公路-I 级；二期恒载 铺装 10.85kN/m、防撞护栏 2.12kN/m；整体升温 20℃、降温 20℃，考虑正负温度梯度。
+  钢束张拉控制应力 1395MPa。
+  环境年平均相对湿度 75%。
+  建好后重建并求解，确认模型能算通。
+hidden:
+  span_lengths:
+  - 30.0
+  H_mid: 1.6
+  H_root: 1.6
+  T_mid: 0.2
+  T_root: 0.2
+  T_top_mid: 0.18
+  T_top_root: 0.18
+  web_t_mid: 0.2
+  web_t_support: 0.3
+  beam_width: 2.4
+  concrete_grade: 50
+  live_grade: HIGHWAY_I
+  lane_count: 1
+  uniform_temp:
+  - -20.0
+  - 20.0
+  has_temp_gradient: true
+  humidity: 75.0
+  tendon_stress:
+  - 1395000000.0
+  tendon_count: 5
+  stage_count: 5
+  stage_names:
+  - CS1_主梁预制、张拉预应力
+  - CS2_存梁
+  - CS3_二期恒载
+  - CS4_徐变十年
+  - CS5_运营阶段
+  二期恒载_kN_m:
+    铺装: 10.85
+    防撞护栏: 2.12
+hidden_profile: true
+must_ask: []
+checks:
+- field: span_lengths
+  op: approx_list
+  value:
+  - 30.0
+  tol: 0.5
+- field: H_mid
+  op: approx
+  value: 1.6
+  tol: 0.02
+- field: concrete_grade
+  op: eq
+  value: 50
+- field: live_grade
+  op: eq
+  value: HIGHWAY_I
+- field: line_load_kn
+  op: contains
+  value: 2.12
+- field: line_load_kn
+  op: contains
+  value: 10.85
+- field: uniform_temp
+  op: approx_list
+  value:
+  - -20.0
+  - 20.0
+  tol: 0.5
+- field: has_temp_gradient
+  op: eq
+  value: true
+- field: tendon_stress
+  op: contains
+  value: 1395000000.0
+- field: humidity
+  op: approx
+  value: 75.0
+  tol: 1
+notes: 由 tools/draft_build.py 从模板 预制简支-小箱梁-30m-边梁 的代码提取生成（complete）。

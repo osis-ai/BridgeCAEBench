@@ -1,0 +1,29 @@
+id: diagnose-run-008
+line: diagnose
+bridge: osis-bridge-rigid-frame-box
+status: verified
+version: 1
+kind: run_error
+start: overlay:start
+base: 变截面连续刚构-108+200+108-双肢
+reference: template:变截面连续刚构-108+200+108-双肢
+hide_templates:
+- 变截面连续刚构-108+200+108-双肢
+brief: |
+  重建模型时报错跑不通，报错如下。帮我查出原因并修好，不要改动无关部分，改完重建并求解确认能算通。
+  报错：
+  {symptom}
+  回复里给出定位 JSON，reason_code 取自 py/reason_codes.yaml：
+  {"localizations":[{"reason_code":"短码"}]}
+symptom: "BatchError: 批量冲刷失败（共 3248 条命令）: 命令流中第2967句“StgBd,1,1,1,墩底固定点1”命令错误如下：激活或钝化的边界组[墩底固定点1]不存在！\n失败命令（1 条）:\n  [FAIL] (共3248条)"
+hidden: {}
+must_ask: []
+checks: []
+preserve: true
+may_change: []
+localization:
+- reason_code: boundary_ref
+seed:
+  file: prep/_10_stage.py
+  how: define_boundary(1, 1, "墩底固定点" -> define_boundary(1, 1, "墩底固定点1"
+notes: 跑不通：在模板 变截面连续刚构-108+200+108-双肢 上种 boundary_ref。symptom 待在 OSIS 中重建起始项目后采集（同时确认确实报错）。

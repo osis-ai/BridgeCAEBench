@@ -1,0 +1,26 @@
+id: change-hollow-002
+line: change
+bridge: osis-bridge-hollow-slab
+status: verified
+version: 1
+kind: pavement
+start: template:预制简支-空心板-10m-边梁
+base: 预制简支-空心板-10m-边梁
+reference: overlay:reference
+hide_templates:
+- 预制简支-空心板-10m-边梁
+brief: 设计变更：桥面铺装加厚（10cm 改为 12cm），铺装荷载由 9.35kN/m 改为 11.22kN/m。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: line_load_kn
+  op: contains
+  value: 11.22
+- field: line_load_kn
+  op: absent
+  value: 9.35
+preserve: true
+may_change:
+- line_loads.铺装工况
+notes: '脚本变更（tools/draft_change.py: pavement），起始模板 预制简支-空心板-10m-边梁。'

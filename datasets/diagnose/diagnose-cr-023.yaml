@@ -1,0 +1,37 @@
+id: diagnose-cr-023
+line: diagnose
+bridge: osis-bridge-conventional-box
+status: verified
+version: 1
+kind: check_ng
+start: overlay:start
+base: 现浇等截面箱梁-27+35+27-单箱双室-12.25
+reference: template:现浇等截面箱梁-27+35+27-单箱双室-12.25
+hide_templates:
+- 现浇等截面箱梁-27+35+27-单箱双室-12.25
+brief: 本项目「PC使用阶段正截面压应力验算」不通过。请定位原因并修复该项至通过。其他验算项不必处理。不要询问评测方。reason_code 必须取自 py/reason_codes.yaml 中的短码。定位结论请输出 JSON：{"localizations":[{"check_item":"验算项中文名","reason_code":"短码"}]}
+hidden: {}
+must_ask: []
+checks:
+- field: concrete_grade
+  op: rel
+  value: 50
+  tol: 0.02
+preserve: true
+may_change: []
+target_item: PC使用阶段正截面压应力验算
+ng_baseline:
+- 斜截面抗剪验算
+- 正截面抗弯验算
+ng_seeded:
+- PC使用阶段斜截面主压应力验算
+- PC使用阶段正截面压应力验算
+- 斜截面抗剪验算
+- 正截面抗弯验算
+localization:
+- reason_code: material_grade
+seed:
+  file: prep/_3_material.py
+  how: 主梁混凝土 grade 降低
+notes: 迁移自官方 datasets/check_repair cr-023（官方 commit 37f7685）。OSIS 5.1 正确 C50 模板的固定组合验算还含 PC正截面短期抗裂验算 18 条 NG、PC腹板斜截面抗裂验算 1 条 NG，已并入 baseline/seeded 评分名单；旧 seeded .lcc 的原始 NG 名单单列 ng_seeded_preflight。差集=['PC使用阶段斜截面主压应力验算',
+  'PC使用阶段正截面压应力验算']；prompt 目标=PC使用阶段正截面压应力验算。

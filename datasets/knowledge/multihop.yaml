@@ -1,0 +1,114 @@
+# knowledge：多跳题，答案要把两篇以上文档的内容拼起来才得出；source 列出每一跳的出处。
+# absent: true 的出处表示“这篇里查不到”（版本题用来证明旧版没有）。
+- id: kn-multihop-001
+  question: 变截面梁支点斜截面抗裂算不过，常见问题解答建议打开的那个主控选项，用命令流该怎么写？
+  answer: ModLocCoor,1
+  aliases: [ModLocCoor, ModLocCoor 1]
+  type: api
+  source:
+  - {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+     excerpt: 建议勾选“修改变截面局部坐标轴进行内力/应力计算”}
+  - {kb: OSIS算例命令流说明文档, knowledge_id: dca76b7f-460a-4d47-8c89-9117d1fe6d9e, title: OSIS命令-帮助文档-5.1版本.docx,
+     excerpt: "ModLocCoor,op\n简介：是否修改变截面单元局部坐标轴来计算内力/应力\nop：1 = 修改，0 = 不修改"}
+  status: verified
+- id: kn-multihop-002
+  question: 梁单元的方向关键点 K 放在梁的正上方，加 z 向温度梯度时，从参考点往截面上方量的 H1 取正还是负？
+  answer: 正
+  aliases: [正值, 取正]
+  type: name
+  source:
+  - {kb: OSIS用户问答记录, knowledge_id: 34a58a2b-c608-46af-8c38-cd9f98a06dd0, title: OSIS常见问题解答.docx,
+     excerpt: 沿单元坐标系正方向的距离取值为正}
+  - {kb: OSIS使用说明书, knowledge_id: 42d25715-a8e6-41f6-aec9-58e0192cd58a, title: 三、单元/三、单元.md,
+     excerpt: 且z轴正向指向K节点侧}
+  status: verified
+- id: kn-multihop-003
+  question: 命令流 CrpShrk 里把年平均湿度写成 0.7（想表示 70%），这样写对吗？
+  answer: 否
+  aliases: [不对, 应写70]
+  type: yesno
+  source:
+  - {kb: OSIS算例命令流说明文档, knowledge_id: dca76b7f-460a-4d47-8c89-9117d1fe6d9e, title: OSIS命令-帮助文档-5.1版本.docx,
+     excerpt: AVG.Humidity：年平均湿度（百分比）}
+  - {kb: OSIS使用说明书, knowledge_id: d5252ba3-ba00-4883-ac19-b8c8fa08609b, title: 一、特性/一、特性.md,
+     excerpt: 环境年平均相对湿度(40-99)}
+  status: verified
+- id: kn-multihop-004
+  question: 批量添加施工阶段时后缀写“1-5-1”，会一次加出几个施工阶段？
+  answer: '5'
+  aliases: [5个, 五个]
+  type: number
+  source:
+  - {kb: OSIS视频知识库, knowledge_id: df871e81-56ff-47a6-9f8d-bc84d9ef7710, title: 基础操作视频字幕/13 定义施工阶段.txt,
+     excerpt: 利用后缀编号功能，可批量添加多个施工阶段}
+  - {kb: OSIS视频知识库, knowledge_id: 67c828a8-1156-480e-bb98-495f34a64f81, title: 基础操作视频字幕/06 定义单元组、边界组.txt,
+     excerpt: 后缀格式：1至5杠2，意为从1到5，间隔2添加后缀}
+  status: verified
+- id: kn-multihop-005
+  question: 表示“连续三段、每段 2 米”的间距，建节点的间距栏和移动复制的间距栏分别怎么写？
+  answer: 3x2,3@2
+  aliases: [3x2;3@2, "3*2,3@2"]
+  type: name
+  source:
+  - {kb: OSIS使用说明书, knowledge_id: 18ffb162-4ed0-48ee-afc6-e7f1903277bf, title: 二、节点/二、节点.md,
+     excerpt: 1，3，5，3x2 = 1，3，5，2，2，2}
+  - {kb: OSIS视频知识库, knowledge_id: 944d9072-038f-4c13-bfd0-42dd42245446, title: 基础操作视频字幕/04 建立节点、单元.txt,
+     excerpt: 间距输入1，3@2，代表第一段间距为1米，后面连续三段间距都为2米}
+  status: verified
+- id: kn-multihop-006
+  question: 瞬态（时程）分析工况命令 TransAnal 是从哪一版命令帮助文档开始有的？
+  answer: '5.1'
+  aliases: [5.1版本, 5.1版]
+  type: name
+  source:
+  - {kb: OSIS算例命令流说明文档, knowledge_id: dca76b7f-460a-4d47-8c89-9117d1fe6d9e, title: OSIS命令-帮助文档-5.1版本.docx,
+     excerpt: "TransAnalMod, Index, TransientAnalConfig, TransientExcitationType\n简介：瞬态分析工况"}
+  - {kb: OSIS算例命令流说明文档, knowledge_id: 09be35a7-3cad-47f7-a121-e968c1d5d041, title: OSIS命令-帮助文档-5.0版本.docx,
+     excerpt: TransAnal, absent: true}
+  - {kb: OSIS算例命令流说明文档, knowledge_id: 52da5157-3623-4db0-b5ae-9aa687f3d7fb, title: OSIS命令-帮助文档-4.9版本.docx,
+     excerpt: TransAnal, absent: true}
+  status: verified
+- id: kn-multihop-007
+  question: 命令流里创建壳单元（Element::壳单元）是从哪一版命令帮助文档开始有的？
+  answer: '5.0'
+  aliases: [5.0版本, 5.0版, '5']
+  type: name
+  source:
+  - {kb: OSIS算例命令流说明文档, knowledge_id: 09be35a7-3cad-47f7-a121-e968c1d5d041, title: OSIS命令-帮助文档-5.0版本.docx,
+     excerpt: 简介：创建或修改壳单元}
+  - {kb: OSIS算例命令流说明文档, knowledge_id: 52da5157-3623-4db0-b5ae-9aa687f3d7fb, title: OSIS命令-帮助文档-4.9版本.docx,
+     excerpt: 壳单元, absent: true}
+  status: verified
+- id: kn-multihop-008
+  question: 命令流用 Load,GRAVITY 加自重，Z 方向系数按说明书的系统默认值应该写多少？
+  answer: '-1.04'
+  aliases: ['-1.040']
+  type: number
+  source:
+  - {kb: OSIS使用说明书, knowledge_id: 9f718141-ea3f-4c93-93fe-6995a7c344bd, title: 五、荷载/五、荷载.md,
+     excerpt: 一般系统默认输入Z方向自重系数为-1.04}
+  - {kb: OSIS算例命令流说明文档, knowledge_id: dca76b7f-460a-4d47-8c89-9117d1fe6d9e, title: OSIS命令-帮助文档-5.1版本.docx,
+     excerpt: Load,GRAVITY,自定义工况1,0.000,0.000,-1.040;}
+  status: verified
+- id: kn-multihop-009
+  question: 构件理论厚度自动计算的周长公式里，比例系数 a 默认取多少？
+  answer: '0.5'
+  aliases: []
+  type: number
+  source:
+  - {kb: OSIS使用说明书, knowledge_id: d5252ba3-ba00-4883-ac19-b8c8fa08609b, title: 一、特性/一、特性.md,
+     excerpt: a为要考虑内轮廓周长的比例系数}
+  - {kb: OSIS视频知识库, knowledge_id: 958b8553-1eed-4017-8cd1-1f337a833102, title: 基础操作视频字幕/12 定义收缩徐变特性.txt,
+     excerpt: 此时需要指定考虑内轮廓周长的比例系数，默认为0.5}
+  status: verified
+- id: kn-multihop-010
+  question: CAD 里截面是按英寸画的，导入 OSIS 自定义截面时导入单位该选什么？
+  answer: 英寸
+  aliases: [inch, in]
+  type: name
+  source:
+  - {kb: OSIS使用说明书, knowledge_id: d5252ba3-ba00-4883-ac19-b8c8fa08609b, title: 一、特性/一、特性.md,
+     excerpt: 现在仅支持米、毫米、英寸}
+  - {kb: OSIS视频知识库, knowledge_id: a25c09fd-95ed-4053-a71b-f6f58c1fe6b8, title: 基础操作视频字幕/03 定义截面.txt,
+     excerpt: 导入图形前，务必先选择导入单位，选择的单位需与绘图的单位保持一致}
+  status: verified

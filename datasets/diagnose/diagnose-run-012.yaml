@@ -1,0 +1,31 @@
+id: diagnose-run-012
+line: diagnose
+bridge: osis-bridge-hollow-slab
+status: verified
+version: 1
+kind: run_error
+start: overlay:start
+base: 预制简支-空心板-16m-中梁
+reference: template:预制简支-空心板-16m-中梁
+hide_templates:
+- 预制简支-空心板-16m-中梁
+brief: |
+  重建模型时报错跑不通，报错如下。帮我查出原因并修好，不要改动无关部分，改完重建并求解确认能算通。
+  报错：
+  {symptom}
+  回复里给出定位 JSON，reason_code 取自 py/reason_codes.yaml：
+  {"localizations":[{"reason_code":"短码"}]}
+symptom: "BatchError: 批量冲刷失败（共 221 条命令）: 命令流中第91句“TdShape,N1,2,15-4,钢束-1-N1线型单元,ARC3D,钢束-1-N1”命令错误如下：钢束形状创建失败:\n失败命令（1 条）:\n  [FAIL] (共221条)"
+hidden: {}
+must_ask: []
+checks: []
+preserve: true
+may_change:
+- pst_steel_kg_per_m
+- pst_steel_ratio
+localization:
+- reason_code: tendon_prop_ref
+seed:
+  file: prep/_8_loadcase.py
+  how: engine.tendon.prop.create("15-4" -> engine.tendon.prop.create("15-4A"
+notes: 跑不通：在模板 预制简支-空心板-16m-中梁 上种 tendon_prop_ref。symptom 待在 OSIS 中重建起始项目后采集（同时确认确实报错）。

@@ -1,0 +1,1919 @@
+build-cantilever-001:
+  date: '2026-10-19'
+  error: null
+  hash: 27a7b396e4ccaa72
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.2
+  solve_s: 466.9
+build-cantilever-002:
+  date: '2026-10-19'
+  error: null
+  hash: 27a7b396e4ccaa72
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.2
+  solve_s: 466.9
+build-cantilever-003:
+  date: '2026-10-19'
+  error: null
+  hash: 578b305bed759fe9
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.5
+  solve_s: 525.6
+build-cantilever-004:
+  date: '2026-10-19'
+  error: null
+  hash: 65dbb94a022739ba
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.6
+  solve_s: 637.1
+build-cantilever-005:
+  date: '2026-10-19'
+  error: null
+  hash: 65dbb94a022739ba
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.6
+  solve_s: 637.1
+build-cipbox-001:
+  date: '2026-10-19'
+  error: null
+  hash: deb3dc3fed73b222
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.9
+  solve_s: 81.4
+build-cipbox-002:
+  date: '2026-10-19'
+  error: null
+  hash: ed244dbf462393c7
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.3
+  solve_s: 77.5
+build-cipbox-003:
+  date: '2026-10-19'
+  error: null
+  hash: 921b416d988f5d46
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.9
+  solve_s: 72.1
+build-cipbox-004:
+  date: '2026-10-19'
+  error: null
+  hash: f821a775a01615b9
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.7
+  solve_s: 136.1
+build-cipbox-005:
+  date: '2026-10-19'
+  error: null
+  hash: 712530f97ee58c5e
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.5
+  solve_s: 125.8
+build-cipbox-006:
+  date: '2026-10-19'
+  error: null
+  hash: 7ce9c76426c4ec36
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 11.7
+  solve_s: 103.0
+build-cipbox-007:
+  date: '2026-10-19'
+  error: null
+  hash: 7ce9c76426c4ec36
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 11.7
+  solve_s: 103.0
+build-cipbox-008:
+  date: '2026-10-19'
+  error: null
+  hash: b9b257c58acf3082
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 12.1
+  solve_s: 276.3
+build-cipbox-009:
+  date: '2026-10-19'
+  error: null
+  hash: b4ac98e6eaef7cea
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 437.6
+build-cipbox-010:
+  date: '2026-10-19'
+  error: null
+  hash: abeda78b7e3c6dbb
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 17.2
+  solve_s: 280.6
+build-cipbox-011:
+  date: '2026-10-19'
+  error: null
+  hash: abeda78b7e3c6dbb
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 17.2
+  solve_s: 280.6
+build-cipbox-012:
+  date: '2026-10-19'
+  error: null
+  hash: bbd8e649cd8a054d
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 14.6
+  solve_s: 163.8
+build-cipbox-013:
+  date: '2026-10-19'
+  error: null
+  hash: 38011fc23289b506
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.5
+  solve_s: 52.1
+build-hollow-001:
+  date: '2026-10-21'
+  error: null
+  hash: 341c946bd2e3de18
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 18.6
+build-hollow-002:
+  date: '2026-10-19'
+  error: null
+  hash: 341c946bd2e3de18
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 18.6
+build-hollow-003:
+  date: '2026-10-19'
+  error: null
+  hash: c3c433cc9a014076
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 17.8
+build-hollow-004:
+  date: '2026-10-19'
+  error: null
+  hash: c3c433cc9a014076
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 17.8
+build-hollow-005:
+  date: '2026-10-19'
+  error: null
+  hash: f5b11e6045c02f25
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.5
+  solve_s: 17.7
+build-rigid-001:
+  date: '2026-10-19'
+  error: null
+  hash: 840064f1615826c8
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.5
+  solve_s: 3542.9
+build-rigid-002:
+  date: '2026-10-19'
+  error: null
+  hash: 840064f1615826c8
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.5
+  solve_s: 3542.9
+build-rigid-003:
+  date: '2026-10-20'
+  error: null
+  hash: 6588eaed6220e09a
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.2
+  solve_s: 4226.2
+build-rigid-004:
+  date: '2026-10-20'
+  error: null
+  hash: 6588eaed6220e09a
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.2
+  solve_s: 4226.2
+build-rigid-005:
+  date: '2026-10-20'
+  error: null
+  hash: b987c1dfc75cc735
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 17.2
+  solve_s: 6655.9
+build-smallbox-001:
+  date: '2026-10-19'
+  error: null
+  hash: 027e02a71d561bed
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 12.2
+  solve_s: 52.3
+build-smallbox-002:
+  date: '2026-10-19'
+  error: null
+  hash: 8bae4f3d8fb34879
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.9
+  solve_s: 64.7
+build-smallbox-003:
+  date: '2026-10-19'
+  error: null
+  hash: 8bae4f3d8fb34879
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.9
+  solve_s: 64.7
+build-smallbox-004:
+  date: '2026-10-19'
+  error: null
+  hash: 96917bf3bac9d879
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 9.3
+  solve_s: 85.8
+build-smallbox-005:
+  date: '2026-10-19'
+  error: null
+  hash: a54fe8c20a348794
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.8
+  solve_s: 19.3
+build-smallbox-006:
+  date: '2026-10-19'
+  error: null
+  hash: 08fe2c1c26753c6b
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.6
+  solve_s: 19.8
+build-smallbox-007:
+  date: '2026-10-19'
+  error: null
+  hash: 8bee214e7c5b04b1
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.6
+  solve_s: 22.1
+build-smallbox-008:
+  date: '2026-10-19'
+  error: null
+  hash: 8bee214e7c5b04b1
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.6
+  solve_s: 22.1
+build-tgirder-001:
+  date: '2026-10-19'
+  error: null
+  hash: 7540ce0a72453bc9
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 18.0
+build-tgirder-002:
+  date: '2026-10-19'
+  error: null
+  hash: 57f6a4660b8d2ba1
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 20.5
+build-tgirder-003:
+  date: '2026-10-19'
+  error: null
+  hash: 57f6a4660b8d2ba1
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 20.5
+build-tgirder-004:
+  date: '2026-10-19'
+  error: null
+  hash: 216268ef7be8bbc5
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 9.0
+  solve_s: 25.9
+build-tgirder-005:
+  date: '2026-10-19'
+  error: null
+  hash: ba72d9c38b0f67a0
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 9.1
+  solve_s: 81.2
+build-tgirder-006:
+  date: '2026-10-19'
+  error: null
+  hash: 74801d9888669dd2
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 9.0
+  solve_s: 107.3
+build-tgirder-007:
+  date: '2026-10-19'
+  error: null
+  hash: 74801d9888669dd2
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 9.0
+  solve_s: 107.3
+build-tgirder-008:
+  date: '2026-10-19'
+  error: null
+  hash: ef4f3dfc0b827760
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 9.2
+  solve_s: 102.4
+build-tgirder-009:
+  date: '2026-10-19'
+  error: null
+  hash: ffa7701f0ca5946a
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.1
+  solve_s: 179.7
+change-cantilever-001:
+  date: '2026-10-19'
+  error: null
+  hash: 27a7b396e4ccaa72
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.2
+  solve_s: 466.9
+change-cantilever-002:
+  date: '2026-10-19'
+  error: null
+  hash: 0f37817991bc9e2c
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.5
+  solve_s: 575.5
+change-cantilever-003:
+  date: '2026-10-19'
+  error: null
+  hash: 82a0771f7dec9ef5
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.1
+  solve_s: 567.5
+change-cantilever-004:
+  date: '2026-10-19'
+  error: null
+  hash: 29622d0bd352e4ff
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.2
+  solve_s: 536.2
+change-cantilever-005:
+  date: '2026-10-19'
+  error: null
+  hash: d8f95c2bd9e6c04f
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.1
+  solve_s: 534.4
+change-cantilever-006:
+  date: '2026-10-19'
+  error: null
+  hash: 2204807ce1cf3ec5
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 9.9
+  solve_s: 513.0
+change-cipbox-001:
+  date: '2026-10-19'
+  error: null
+  hash: b9b257c58acf3082
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 12.1
+  solve_s: 276.3
+change-cipbox-002:
+  date: '2026-10-19'
+  error: null
+  hash: 646a0523e380b527
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 471.0
+change-cipbox-003:
+  date: '2026-10-19'
+  error: null
+  hash: 5af48caf332a40d4
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 452.8
+change-cipbox-004:
+  date: '2026-10-19'
+  error: null
+  hash: e5bff88b1d5c3516
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.6
+  solve_s: 445.0
+change-cipbox-005:
+  date: '2026-10-19'
+  error: null
+  hash: 4a923393edb58451
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 449.5
+change-cipbox-006:
+  date: '2026-10-19'
+  error: null
+  hash: 85830cc0588bd92a
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 465.1
+change-hollow-001:
+  date: '2026-10-19'
+  error: null
+  hash: c3c433cc9a014076
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 17.8
+change-hollow-002:
+  date: '2026-10-19'
+  error: null
+  hash: a2cdf7cc18d7c3d9
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.6
+  solve_s: 18.4
+change-hollow-003:
+  date: '2026-10-19'
+  error: null
+  hash: 6d446ea62d639276
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.5
+  solve_s: 18.1
+change-hollow-004:
+  date: '2026-10-19'
+  error: null
+  hash: a2f080cd1e602d40
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.5
+  solve_s: 18.2
+change-hollow-005:
+  date: '2026-10-19'
+  error: null
+  hash: b129ba74db5e0d4d
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.6
+  solve_s: 18.0
+change-hollow-006:
+  date: '2026-10-19'
+  error: null
+  hash: 1d0d783b1e37b139
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.6
+  solve_s: 18.1
+change-rigid-001:
+  date: '2026-10-20'
+  error: null
+  hash: 6588eaed6220e09a
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.2
+  solve_s: 4226.2
+change-rigid-002:
+  date: '2026-10-19'
+  error: null
+  hash: 8afa066fdd468c94
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.2
+  solve_s: 3518.4
+change-rigid-003:
+  date: '2026-10-19'
+  error: null
+  hash: d6ae4dc91883396c
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 11.2
+  solve_s: 3545.2
+change-rigid-004:
+  date: '2026-10-19'
+  error: null
+  hash: 70a3aa4e1885f01b
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.5
+  solve_s: 3528.5
+change-rigid-005:
+  date: '2026-10-20'
+  error: null
+  hash: 98d7252fe4bdc53c
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 11.2
+  solve_s: 3499.7
+change-rigid-006:
+  date: '2026-10-20'
+  error: null
+  hash: 51e77f7c5ce7195b
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.6
+  solve_s: 3339.5
+change-smallbox-001:
+  date: '2026-10-20'
+  error: null
+  hash: 96917bf3bac9d879
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 9.3
+  solve_s: 85.8
+change-smallbox-002:
+  date: '2026-10-20'
+  error: null
+  hash: 4895825166f245c0
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 20.7
+change-smallbox-003:
+  date: '2026-10-20'
+  error: null
+  hash: 115c765a9a843606
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.6
+  solve_s: 20.2
+change-smallbox-004:
+  date: '2026-10-20'
+  error: null
+  hash: 799ad0b7a4659b6b
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.5
+  solve_s: 20.0
+change-smallbox-005:
+  date: '2026-10-20'
+  error: null
+  hash: 54aa6dfb4d18d902
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.6
+  solve_s: 20.1
+change-smallbox-006:
+  date: '2026-10-20'
+  error: null
+  hash: 66a1a273f5a0d026
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.6
+  solve_s: 20.2
+change-tgirder-001:
+  date: '2026-10-20'
+  error: null
+  hash: ffa7701f0ca5946a
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.1
+  solve_s: 179.7
+change-tgirder-002:
+  date: '2026-10-20'
+  error: null
+  hash: 11a51ebecdea8bb3
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 9.0
+  solve_s: 108.1
+change-tgirder-003:
+  date: '2026-10-20'
+  error: null
+  hash: fd9b2e5b35704670
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 9.0
+  solve_s: 109.5
+change-tgirder-004:
+  date: '2026-10-20'
+  error: null
+  hash: b37508befd730145
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 9.1
+  solve_s: 109.7
+change-tgirder-005:
+  date: '2026-10-20'
+  error: null
+  hash: 8b8c7197c32b24e9
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 9.3
+  solve_s: 111.4
+change-tgirder-006:
+  date: '2026-10-20'
+  error: null
+  hash: 7fbf5a5d5d8f7b58
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 9.0
+  solve_s: 111.1
+diagnose-cr-001:
+  check_s: 1221.1
+  date: '2026-11-07'
+  error: null
+  hash: be5a270056b0fa7f
+  ng:
+  - PC使用阶段斜截面主压应力验算
+  - PC使用阶段正截面压应力验算
+  - PC施工阶段正截面压应力验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.3
+  solve_s: 146.4
+diagnose-cr-001:start:
+  check_s: 1405.3
+  date: '2026-11-07'
+  error: null
+  hash: 3e2cb2001d03853a
+  ng:
+  - PC使用阶段斜截面主压应力验算
+  - PC使用阶段正截面压应力验算
+  - PC施工阶段正截面压应力验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  - 正截面抗拉压验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.2
+  solve_s: 142.9
+diagnose-cr-002:
+  check_s: 20.7
+  date: '2026-11-07'
+  error: null
+  hash: 0043ecc2fe079862
+  ng: &id001
+  - PC正截面长期抗裂验算
+  - 斜截面抗剪验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 10.4
+diagnose-cr-002:start:
+  check_s: 26.3
+  date: '2026-11-07'
+  error: null
+  hash: 7b40cc9a62bdd2dc
+  ng:
+  - PC使用阶段正截面压应力验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 12.0
+diagnose-cr-003:
+  check_s: 20.7
+  date: '2026-11-07'
+  error: null
+  hash: 0043ecc2fe079862
+  ng: *id001
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 10.4
+diagnose-cr-003:start:
+  check_s: 20.6
+  date: '2026-11-07'
+  error: null
+  hash: 646a771fda381334
+  ng:
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - 斜截面抗剪验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.6
+  solve_s: 11.4
+diagnose-cr-004:
+  check_s: 20.7
+  date: '2026-11-07'
+  error: null
+  hash: 0043ecc2fe079862
+  ng: *id001
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 10.4
+diagnose-cr-004:start:
+  check_s: 21.1
+  date: '2026-11-07'
+  error: null
+  hash: 11c99803c726663a
+  ng:
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  - 正截面抗拉压验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.6
+  solve_s: 11.3
+diagnose-cr-005:
+  check_s: 40.8
+  date: '2026-11-07'
+  error: null
+  hash: c67bd32d7cc435d5
+  ng:
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - 斜截面抗剪验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.8
+  solve_s: 21.1
+diagnose-cr-005:start:
+  check_s: 58.5
+  date: '2026-11-07'
+  error: null
+  hash: fe949aca57adb4e5
+  ng:
+  - PC使用阶段斜截面主压应力验算
+  - PC使用阶段正截面压应力验算
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - PC腹板斜截面抗裂验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.0
+  solve_s: 23.5
+diagnose-cr-006:
+  check_s: 21.5
+  date: '2026-11-07'
+  error: null
+  hash: 133e6ee23aafa409
+  ng:
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 11.4
+diagnose-cr-006:start:
+  check_s: 21.3
+  date: '2026-11-07'
+  error: null
+  hash: 434f997aee60b056
+  ng:
+  - PC施工阶段正截面拉应力验算
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - PC腹板斜截面抗裂验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 11.7
+diagnose-cr-007:
+  check_s: 25.6
+  date: '2026-11-07'
+  error: null
+  hash: 2613c609bbd67753
+  ng:
+  - 斜截面抗剪验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 11.5
+diagnose-cr-007:start:
+  check_s: 28.3
+  date: '2026-11-07'
+  error: null
+  hash: 06f0a92af99fe1a7
+  ng:
+  - PC使用阶段斜截面主压应力验算
+  - PC使用阶段正截面压应力验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  - 正截面抗拉压验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 12.5
+diagnose-cr-008:
+  check_s: 196.5
+  date: '2026-11-07'
+  error: null
+  hash: 5df092a72b4cba44
+  ng: &id002
+  - PC正截面长期抗裂验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 10.5
+  solve_s: 20.7
+diagnose-cr-008:start:
+  check_s: 373.4
+  date: '2026-11-07'
+  error: null
+  hash: e86f22a05982f2d8
+  ng:
+  - PC使用阶段斜截面主压应力验算
+  - PC使用阶段正截面压应力验算
+  - PC正截面长期抗裂验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 10.2
+  solve_s: 22.4
+diagnose-cr-009:
+  check_s: 196.5
+  date: '2026-11-07'
+  error: null
+  hash: 5df092a72b4cba44
+  ng: *id002
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 10.5
+  solve_s: 20.7
+diagnose-cr-009:start:
+  check_s: 214.7
+  date: '2026-11-07'
+  error: null
+  hash: a07a6622d990d955
+  ng:
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  - 正截面抗拉压验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 10.3
+  solve_s: 22.5
+diagnose-cr-010:
+  check_s: 196.5
+  date: '2026-11-07'
+  error: null
+  hash: 5df092a72b4cba44
+  ng: *id002
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 10.5
+  solve_s: 20.7
+diagnose-cr-010:start:
+  check_s: 219.4
+  date: '2026-11-07'
+  error: null
+  hash: 030029fe1593fd53
+  ng:
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - PC腹板斜截面抗裂验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 10.2
+  solve_s: 22.3
+diagnose-cr-011:
+  check_s: 334.2
+  date: '2026-11-07'
+  error: null
+  hash: 70c5f0b702a7e45a
+  ng: &id003
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - PC腹板斜截面抗裂验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.0
+  solve_s: 58.7
+diagnose-cr-011:start:
+  check_s: 335.8
+  date: '2026-11-07'
+  error: null
+  hash: d79f4c308568ef32
+  ng:
+  - PC使用阶段斜截面主压应力验算
+  - PC使用阶段正截面压应力验算
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - PC腹板斜截面抗裂验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.9
+  solve_s: 56.4
+diagnose-cr-012:
+  check_s: 334.2
+  date: '2026-11-07'
+  error: null
+  hash: 70c5f0b702a7e45a
+  ng: *id003
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.0
+  solve_s: 58.7
+diagnose-cr-012:start:
+  check_s: 329.5
+  date: '2026-11-07'
+  error: null
+  hash: c8eba95b54e19c5d
+  ng:
+  - PC施工阶段正截面拉应力验算
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - PC腹板斜截面抗裂验算
+  - 正截面抗弯验算
+  - 正截面抗拉压验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.0
+  solve_s: 55.3
+diagnose-cr-013:
+  check_s: 411.6
+  date: '2026-11-07'
+  error: null
+  hash: d3ff515476ce489f
+  ng: &id004
+  - PC腹板斜截面抗裂验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.2
+  solve_s: 123.2
+diagnose-cr-013:start:
+  check_s: 433.8
+  date: '2026-11-07'
+  error: null
+  hash: 7697dbcd01ed96d0
+  ng:
+  - PC使用阶段斜截面主压应力验算
+  - PC使用阶段正截面压应力验算
+  - PC腹板斜截面抗裂验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  - 正截面抗拉压验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.4
+  solve_s: 116.4
+diagnose-cr-014:
+  check_s: 411.6
+  date: '2026-11-07'
+  error: null
+  hash: d3ff515476ce489f
+  ng: *id004
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.2
+  solve_s: 123.2
+diagnose-cr-014:start:
+  check_s: 309.5
+  date: '2026-11-07'
+  error: null
+  hash: 8911eab23c1d5dbc
+  ng:
+  - PC施工阶段正截面拉应力验算
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - PC腹板斜截面抗裂验算
+  - 正截面抗弯验算
+  - 正截面抗拉压验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.4
+  solve_s: 113.8
+diagnose-cr-015:
+  check_s: 411.6
+  date: '2026-11-07'
+  error: null
+  hash: d3ff515476ce489f
+  ng: *id004
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.2
+  solve_s: 123.2
+diagnose-cr-015:start:
+  check_s: 425.9
+  date: '2026-11-07'
+  error: null
+  hash: 2bba653bbb0337fa
+  ng:
+  - PC施工阶段正截面拉应力验算
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - PC腹板斜截面抗裂验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.3
+  solve_s: 111.9
+diagnose-cr-016:
+  check_s: 23.9
+  date: '2026-11-07'
+  error: null
+  hash: bd155acdbcc58f0f
+  ng: &id005
+  - PC正截面长期抗裂验算
+  - 斜截面抗剪验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 11.8
+diagnose-cr-016:start:
+  check_s: 21.1
+  date: '2026-11-07'
+  error: null
+  hash: e052e819c2a1d53a
+  ng:
+  - PC正截面长期抗裂验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  - 正截面抗拉压验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 11.0
+diagnose-cr-017:
+  check_s: 23.9
+  date: '2026-11-07'
+  error: null
+  hash: bd155acdbcc58f0f
+  ng: *id005
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 11.8
+diagnose-cr-017:start:
+  check_s: 21.1
+  date: '2026-11-07'
+  error: null
+  hash: dee35e6d4e130fa9
+  ng:
+  - PC正截面长期抗裂验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  - 正截面抗拉压验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.4
+  solve_s: 11.0
+diagnose-cr-018:
+  check_s: 832.4
+  date: '2026-11-07'
+  error: null
+  hash: 3a70665895e6ba89
+  ng:
+  - PC使用阶段正截面压应力验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.9
+  solve_s: 126.2
+diagnose-cr-018:start:
+  check_s: 837.8
+  date: '2026-11-07'
+  error: null
+  hash: 97f4a3dac578eac3
+  ng:
+  - PC使用阶段正截面压应力验算
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - PC腹板斜截面抗裂验算
+  - 正截面抗弯验算
+  - 正截面抗拉压验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.9
+  solve_s: 123.1
+diagnose-cr-019:
+  check_s: 537.1
+  date: '2026-11-07'
+  error: null
+  hash: c08b7bde276238bb
+  ng:
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.5
+  solve_s: 75.9
+diagnose-cr-019:start:
+  check_s: 822.8
+  date: '2026-11-07'
+  error: null
+  hash: c22540a769188149
+  ng:
+  - PC腹板斜截面抗裂验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.3
+  solve_s: 72.6
+diagnose-cr-020:
+  check_s: 23.5
+  date: '2026-11-07'
+  error: null
+  hash: 4714d8e2a673bb03
+  ng: &id006 []
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.6
+  solve_s: 11.9
+diagnose-cr-020:start:
+  check_s: 22.5
+  date: '2026-11-07'
+  error: null
+  hash: 335a0a710c831e6b
+  ng:
+  - PC使用阶段斜截面主压应力验算
+  - PC使用阶段正截面压应力验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  - 正截面抗拉压验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 11.6
+diagnose-cr-021:
+  check_s: 27.7
+  date: '2026-11-07'
+  error: null
+  hash: f1e5f1058a662054
+  ng: []
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 12.5
+diagnose-cr-021:start:
+  check_s: 25.0
+  date: '2026-11-07'
+  error: null
+  hash: b4d0509b6db0541f
+  ng:
+  - PC施工阶段正截面拉应力验算
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - PC腹板斜截面抗裂验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 12.0
+diagnose-cr-022:
+  check_s: 22.2
+  date: '2026-11-07'
+  error: null
+  hash: 14060dd173074e6f
+  ng:
+  - 斜截面抗剪验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 11.5
+diagnose-cr-022:start:
+  check_s: 23.1
+  date: '2026-11-07'
+  error: null
+  hash: 0db3d7070b8cf259
+  ng:
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - PC腹板斜截面抗裂验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  - 正截面抗拉压验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 11.7
+diagnose-cr-023:
+  check_s: 342.5
+  date: '2026-11-07'
+  error: null
+  hash: 397e5cd6a1cc7430
+  ng:
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 12.0
+  solve_s: 28.3
+diagnose-cr-023:start:
+  check_s: 452.5
+  date: '2026-11-07'
+  error: null
+  hash: 6faf809908317430
+  ng:
+  - PC使用阶段斜截面主压应力验算
+  - PC使用阶段正截面压应力验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 11.9
+  solve_s: 27.4
+diagnose-cr-024:
+  check_s: 486.7
+  date: '2026-11-07'
+  error: null
+  hash: f0f0c41eb4511b96
+  ng:
+  - PC正截面长期抗裂验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.2
+  solve_s: 65.2
+diagnose-cr-024:start:
+  check_s: 497.2
+  date: '2026-11-07'
+  error: null
+  hash: d35b8a96e214891f
+  ng:
+  - PC施工阶段正截面拉应力验算
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - PC腹板斜截面抗裂验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.3
+  solve_s: 62.2
+diagnose-cr-025:
+  check_s: 411.6
+  date: '2026-11-07'
+  error: null
+  hash: d3ff515476ce489f
+  ng: *id004
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.2
+  solve_s: 123.2
+diagnose-cr-025:start:
+  check_s: 238.4
+  date: '2026-11-07'
+  error: null
+  hash: d0f88b8e5b1c23df
+  ng:
+  - PC施工阶段正截面拉应力验算
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - PC腹板斜截面抗裂验算
+  - 正截面抗弯验算
+  - 正截面抗拉压验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.4
+  solve_s: 125.7
+diagnose-cr-026:
+  check_s: 30.7
+  date: '2026-11-07'
+  error: null
+  hash: 57e1eaa211654885
+  ng: []
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.7
+  solve_s: 13.6
+diagnose-cr-026:start:
+  check_s: 29.0
+  date: '2026-11-07'
+  error: null
+  hash: d3df3116a2e0e84a
+  ng:
+  - PC使用阶段斜截面主压应力验算
+  - PC使用阶段正截面压应力验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  - 正截面抗拉压验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.7
+  solve_s: 12.7
+diagnose-cr-027:
+  check_s: 612.4
+  date: '2026-11-07'
+  error: null
+  hash: 57b7c94d02623d23
+  ng:
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.4
+  solve_s: 32.4
+diagnose-cr-027:start:
+  check_s: 605.4
+  date: '2026-11-07'
+  error: null
+  hash: 6317a7af5e0fa967
+  ng:
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - PC腹板斜截面抗裂验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 29.6
+diagnose-cr-028:
+  check_s: 23.5
+  date: '2026-11-07'
+  error: null
+  hash: 4714d8e2a673bb03
+  ng: *id006
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.6
+  solve_s: 11.9
+diagnose-cr-028:start:
+  check_s: 22.7
+  date: '2026-11-07'
+  error: null
+  hash: 4c7ff70973bf29d8
+  ng:
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  - 正截面抗拉压验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.7
+  solve_s: 12.2
+diagnose-cr-029:
+  check_s: 1080.6
+  date: '2026-11-07'
+  error: null
+  hash: 62570083d3e4fd24
+  ng: &id007
+  - PC使用阶段斜截面主压应力验算
+  - PC使用阶段正截面压应力验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.7
+  solve_s: 153.8
+diagnose-cr-029:start:
+  check_s: 1398.5
+  date: '2026-11-07'
+  error: null
+  hash: 29956911f3b7be1d
+  ng:
+  - PC使用阶段斜截面主压应力验算
+  - PC使用阶段正截面压应力验算
+  - PC施工阶段正截面压应力验算
+  - 斜截面抗剪验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.8
+  solve_s: 150.4
+diagnose-cr-030:
+  check_s: 75.9
+  date: '2026-11-07'
+  error: null
+  hash: 33e9c5aa84eccd4c
+  ng:
+  - PC使用阶段正截面压应力验算
+  - PC正截面长期抗裂验算
+  - 正截面抗弯验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.2
+  solve_s: 27.8
+diagnose-cr-030:start:
+  check_s: 69.5
+  date: '2026-11-07'
+  error: null
+  hash: e40a1d6a6bbda9e4
+  ng:
+  - PC施工阶段正截面拉应力验算
+  - PC正截面短期抗裂验算
+  - PC正截面长期抗裂验算
+  - PC腹板斜截面抗裂验算
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.2
+  solve_s: 26.0
+diagnose-review-001:
+  date: '2026-11-07'
+  error: null
+  hash: 6b4fc57716fc2907
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.9
+  solve_s: 24.7
+diagnose-review-002:
+  date: '2026-11-07'
+  error: null
+  hash: 92b26828b37c5fc6
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.6
+  solve_s: 18.7
+diagnose-review-003:
+  date: '2026-11-07'
+  error: null
+  hash: e2b8b3682d19a7f0
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 12.2
+diagnose-review-004:
+  date: '2026-11-07'
+  error: null
+  hash: 0e292700235ba4e3
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 10.5
+  solve_s: 28.0
+diagnose-review-005:
+  date: '2026-11-07'
+  error: null
+  hash: d3975333dbc146e9
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.8
+  solve_s: 179.3
+diagnose-review-006:
+  date: '2026-11-07'
+  error: null
+  hash: 1cefd8b924c723a9
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 17.0
+  solve_s: 780.5
+diagnose-run-001:
+  date: '2026-11-07'
+  error: null
+  hash: 223bc17fcb282069
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.4
+  solve_s: 23.4
+diagnose-run-001:start:
+  date: '2026-11-07'
+  error: "rebuild: BatchError: 批量冲刷失败（共 722 条命令）: 命令流中第174句“Element,29,BEAM3D,29,30,1,99,99,1,1,0.0,0,0.0,0”命令错误如下：单元创建失败:单元[29]：截面[99]不存在！\n失败命令（1 条）:\n  [FAIL] (共722条)"
+  hash: 3b987c89b71963b8
+  ok: false
+  pyosis: 0.9.0
+  rebuild_s: 3.4
+  solve_s: null
+diagnose-run-002:
+  check_s: 1080.6
+  date: '2026-11-07'
+  error: null
+  hash: 62570083d3e4fd24
+  ng: *id007
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.7
+  solve_s: 153.8
+diagnose-run-002:start:
+  date: '2026-11-07'
+  error: "rebuild: BatchError: 批量冲刷失败（共 2679 条命令）: 命令流中第485句“Element,44,BEAM3D,44,45,1,99,99,1,1,0.0,0,0.0,0”命令错误如下：单元创建失败:单元[44]：截面[99]不存在！\n失败命令（1 条）:\n  [FAIL] (共2679条)"
+  hash: d9b26f4b569ec165
+  ok: false
+  pyosis: 0.9.0
+  rebuild_s: 3.7
+  solve_s: null
+diagnose-run-003:
+  date: '2026-11-07'
+  error: null
+  hash: 74c0e2e1f1a4dcb5
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.5
+  solve_s: 12.0
+diagnose-run-003:start:
+  date: '2026-11-07'
+  error: "rebuild: BatchError: 批量冲刷失败（共 218 条命令）: 命令流中第59句“Element,8,BEAM3D,8,9,9,1,1,1,1,0.0,0,0.0,0”命令错误如下：单元创建失败:单元[8]：材料[9]不存在！\n失败命令（1 条）:\n  [FAIL] (共218条)"
+  hash: cd708e6b4cef8e43
+  ok: false
+  pyosis: 0.9.0
+  rebuild_s: 3.3
+  solve_s: null
+diagnose-run-004:
+  date: '2026-11-07'
+  error: null
+  hash: 6a64f96a2cd57ae9
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 10.1
+  solve_s: 498.8
+diagnose-run-004:start:
+  date: '2026-11-07'
+  error: "rebuild: BatchError: 批量冲刷失败（共 2940 条命令）: 命令流中第712句“Element,116,BEAM3D,121,122,9,2,2,1,1,0.0,0,0.0,0”命令错误如下：单元创建失败:单元[116]：材料[9]不存在！\n失败命令（1 条）:\n  [FAIL] (共2940条)"
+  hash: 4e664cd49cd54a8d
+  ok: false
+  pyosis: 0.9.0
+  rebuild_s: 4.1
+  solve_s: null
+diagnose-run-005:
+  date: '2026-11-07'
+  error: null
+  hash: 06ed2fdb0fb00df8
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.6
+  solve_s: 23.0
+diagnose-run-005:start:
+  date: '2026-11-07'
+  error: "rebuild: BatchError: 批量冲刷失败（共 703 条命令）: 命令流中第676句“StgEle,1,1,1,预制单元组,7.0,0”命令错误如下：激活或钝化的单元组[预制单元组]不存在！\n失败命令（1 条）:\n  [FAIL] (共703条)"
+  hash: 42343b6760e84698
+  ok: false
+  pyosis: 0.9.0
+  rebuild_s: 3.3
+  solve_s: null
+diagnose-run-006:
+  date: '2026-11-07'
+  error: null
+  hash: 2eab4d0807cd0733
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 11.7
+  solve_s: 30.1
+diagnose-run-006:start:
+  date: '2026-11-07'
+  error: "rebuild: BatchError: 批量冲刷失败（共 656 条命令）: 命令流中第639句“StgEle,1,1,1,结构组_1组,3.0,0”命令错误如下：激活或钝化的单元组[结构组_1组]不存在！\n失败命令（1 条）:\n  [FAIL] (共656条)"
+  hash: 3b122cc2d2883ba5
+  ok: false
+  pyosis: 0.9.0
+  rebuild_s: 6.3
+  solve_s: null
+diagnose-run-007:
+  date: '2026-11-07'
+  error: null
+  hash: 45ca2e4e08113c29
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.9
+  solve_s: 14.5
+diagnose-run-007:start:
+  date: '2026-11-07'
+  error: "rebuild: BatchError: 批量冲刷失败（共 394 条命令）: 命令流中第378句“StgBd,1,1,1,桥台1_永久_x向固定1”命令错误如下：激活或钝化的边界组[桥台1_永久_x向固定1]不存在！\n失败命令（1 条）:\n  [FAIL] (共394条)"
+  hash: fdf6a188db91c966
+  ok: false
+  pyosis: 0.9.0
+  rebuild_s: 3.6
+  solve_s: null
+diagnose-run-008:
+  date: '2026-11-07'
+  error: null
+  hash: fde9196214091c7d
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 10.4
+  solve_s: 676.9
+diagnose-run-008:start:
+  date: '2026-11-07'
+  error: "rebuild: BatchError: 批量冲刷失败（共 3248 条命令）: 命令流中第2967句“StgBd,1,1,1,墩底固定点1”命令错误如下：激活或钝化的边界组[墩底固定点1]不存在！\n失败命令（1 条）:\n  [FAIL] (共3248条)"
+  hash: 4ea8d80066806561
+  ok: false
+  pyosis: 0.9.0
+  rebuild_s: 4.9
+  solve_s: null
+diagnose-run-009:
+  date: '2026-11-07'
+  error: null
+  hash: 7fbd3985bb60cc06
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 11.9
+  solve_s: 45.1
+diagnose-run-009:start:
+  date: '2026-11-07'
+  error: "rebuild: BatchError: 批量冲刷失败（共 449 条命令）: 命令流中第436句“StgLc,1,1,1,,自重自重工况”命令错误如下：激活或钝化的荷载工况[自重自重工况]不存在！\n失败命令（1 条）:\n  [FAIL] (共449条)"
+  hash: 66c3f2101dca49c2
+  ok: false
+  pyosis: 0.9.0
+  rebuild_s: 6.7
+  solve_s: null
+diagnose-run-010:
+  date: '2026-11-07'
+  error: null
+  hash: d3975333dbc146e9
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 9.8
+  solve_s: 179.3
+diagnose-run-010:start:
+  date: '2026-11-07'
+  error: "rebuild: BatchError: 批量冲刷失败（共 2936 条命令）: 命令流中第2695句“StgLc,1,1,1,,0号块单元自重工况”命令错误如下：激活或钝化的荷载工况[0号块单元自重工况]不存在！\n失败命令（1 条）:\n  [FAIL] (共2936条)"
+  hash: db98292064260752
+  ok: false
+  pyosis: 0.9.0
+  rebuild_s: 4.2
+  solve_s: null
+diagnose-run-011:
+  date: '2026-11-07'
+  error: null
+  hash: c09a04ec772fd3ed
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.7
+  solve_s: 12.1
+diagnose-run-011:start:
+  date: '2026-11-07'
+  error: "rebuild: BatchError: 批量冲刷失败（共 235 条命令）: 命令流中第104句“TdShape,N1,2,15-4,钢束-1-N1线型单元,ARC3D,钢束-1-N1”命令错误如下：钢束形状创建失败:\n失败命令（1 条）:\n  [FAIL] (共235条)"
+  hash: 0b8b66870a7c5878
+  ok: false
+  pyosis: 0.9.0
+  rebuild_s: 3.4
+  solve_s: null
+diagnose-run-012:
+  check_s: 23.5
+  date: '2026-11-07'
+  error: null
+  hash: 4714d8e2a673bb03
+  ng: *id006
+  ok: true
+  pyosis: 0.9.0
+  rebuild_s: 8.6
+  solve_s: 11.9
+diagnose-run-012:start:
+  date: '2026-11-07'
+  error: "rebuild: BatchError: 批量冲刷失败（共 221 条命令）: 命令流中第91句“TdShape,N1,2,15-4,钢束-1-N1线型单元,ARC3D,钢束-1-N1”命令错误如下：钢束形状创建失败:\n失败命令（1 条）:\n  [FAIL] (共221条)"
+  hash: ff90e1896f69a831
+  ok: false
+  pyosis: 0.9.0
+  rebuild_s: 3.2
+  solve_s: null
+handover-cantilever-001:
+  date: '2026-10-20'
+  error: null
+  hash: 27a7b396e4ccaa72
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.2
+  solve_s: 466.9
+handover-cantilever-002:
+  date: '2026-10-20'
+  error: null
+  hash: 65dbb94a022739ba
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.6
+  solve_s: 637.1
+handover-cipbox-001:
+  date: '2026-10-20'
+  error: null
+  hash: deb3dc3fed73b222
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.9
+  solve_s: 81.4
+handover-cipbox-002:
+  date: '2026-10-20'
+  error: null
+  hash: 38011fc23289b506
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.5
+  solve_s: 52.1
+handover-hollow-001:
+  date: '2026-10-20'
+  error: null
+  hash: 341c946bd2e3de18
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 18.6
+handover-hollow-002:
+  date: '2026-10-20'
+  error: null
+  hash: f5b11e6045c02f25
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.5
+  solve_s: 17.7
+handover-rigid-001:
+  date: '2026-10-20'
+  error: null
+  hash: 840064f1615826c8
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.5
+  solve_s: 3542.9
+handover-rigid-002:
+  date: '2026-10-20'
+  error: null
+  hash: b987c1dfc75cc735
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 17.2
+  solve_s: 6655.9
+handover-smallbox-001:
+  date: '2026-10-20'
+  error: null
+  hash: 027e02a71d561bed
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 12.2
+  solve_s: 52.3
+handover-smallbox-002:
+  date: '2026-10-20'
+  error: null
+  hash: 8bee214e7c5b04b1
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.6
+  solve_s: 22.1
+handover-tgirder-001:
+  date: '2026-10-20'
+  error: null
+  hash: 7540ce0a72453bc9
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 18.0
+handover-tgirder-002:
+  date: '2026-10-20'
+  error: null
+  hash: ffa7701f0ca5946a
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.1
+  solve_s: 179.7
+project-cantilever-001:overlay:turn2:
+  date: '2026-10-20'
+  error: null
+  hash: 82a0771f7dec9ef5
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.1
+  solve_s: 567.5
+project-cantilever-001:overlay:turn3:
+  date: '2026-10-20'
+  error: null
+  hash: 0bea426f0de24af4
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.3
+  solve_s: 572.2
+project-cantilever-001:template:变截面悬浇连续梁-70+130+70:
+  date: '2026-10-20'
+  error: null
+  hash: 578b305bed759fe9
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.5
+  solve_s: 525.6
+project-cipbox-001:overlay:turn2:
+  date: '2026-10-20'
+  error: null
+  hash: 5af48caf332a40d4
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 452.8
+project-cipbox-001:overlay:turn3:
+  date: '2026-10-20'
+  error: null
+  hash: 475ccfee6f9269cb
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 465.7
+project-cipbox-001:template:现浇等截面箱梁-30+35+22-单箱三室-16.75:
+  date: '2026-10-20'
+  error: null
+  hash: b4ac98e6eaef7cea
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 437.6
+project-hollow-001:overlay:turn2:
+  date: '2026-10-20'
+  error: null
+  hash: a2f080cd1e602d40
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.5
+  solve_s: 18.2
+project-hollow-001:overlay:turn3:
+  date: '2026-10-20'
+  error: null
+  hash: 3db0737eba06d672
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 18.4
+project-hollow-001:template:预制简支-空心板-10m-边梁:
+  date: '2026-10-20'
+  error: null
+  hash: 341c946bd2e3de18
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.7
+  solve_s: 18.6
+project-rigid-001:overlay:turn2:
+  date: '2026-10-20'
+  error: null
+  hash: d6ae4dc91883396c
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 11.2
+  solve_s: 3545.2
+project-rigid-001:overlay:turn3:
+  date: '2026-10-20'
+  error: null
+  hash: 8ec01f318bf33785
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.4
+  solve_s: 3560.1
+project-rigid-001:template:变截面连续刚构-95+180+95-双肢:
+  date: '2026-10-20'
+  error: null
+  hash: 840064f1615826c8
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 10.5
+  solve_s: 3542.9
+project-smallbox-001:overlay:turn2:
+  date: '2026-10-20'
+  error: null
+  hash: 115c765a9a843606
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.6
+  solve_s: 20.2
+project-smallbox-001:overlay:turn3:
+  date: '2026-10-20'
+  error: null
+  hash: 74f21ec854686598
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.6
+  solve_s: 21.8
+project-smallbox-001:template:预制简支-小箱梁-30m-边梁:
+  date: '2026-10-20'
+  error: null
+  hash: 08fe2c1c26753c6b
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 8.6
+  solve_s: 19.8
+project-tgirder-001:overlay:turn2:
+  date: '2026-10-20'
+  error: null
+  hash: 11a51ebecdea8bb3
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 9.0
+  solve_s: 108.1
+project-tgirder-001:overlay:turn3:
+  date: '2026-10-20'
+  error: null
+  hash: 37967623beb3ad0e
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 9.1
+  solve_s: 112.4
+project-tgirder-001:template:简支变连续-T梁-25m-中梁:
+  date: '2026-10-20'
+  error: null
+  hash: 74801d9888669dd2
+  ok: true
+  pyosis: 0.8.7
+  rebuild_s: 9.0
+  solve_s: 107.3

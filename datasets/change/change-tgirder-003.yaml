@@ -1,0 +1,26 @@
+id: change-tgirder-003
+line: change
+bridge: osis-bridge-precast-t-girder
+status: verified
+version: 1
+kind: pavement
+start: template:简支变连续-T梁-25m-中梁
+base: 简支变连续-T梁-25m-中梁
+reference: overlay:reference
+hide_templates:
+- 简支变连续-T梁-25m-中梁
+brief: 设计变更：桥面铺装加厚（10cm 改为 12cm），铺装荷载由 10.85kN/m 改为 13.02kN/m。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: line_load_kn
+  op: contains
+  value: 13.02
+- field: line_load_kn
+  op: absent
+  value: 10.85
+preserve: true
+may_change:
+- line_loads.铺装工况
+notes: '脚本变更（tools/draft_change.py: pavement），起始模板 简支变连续-T梁-25m-中梁。'

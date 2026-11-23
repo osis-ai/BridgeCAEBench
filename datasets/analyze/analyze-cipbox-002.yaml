@@ -1,0 +1,24 @@
+id: analyze-cipbox-002
+line: analyze
+bridge: osis-bridge-conventional-box
+status: verified
+version: 1
+kind: reaction
+start: template:现浇等截面箱梁-30+35+22-单箱三室-16.75
+brief: |
+  请先重建并求解这个模型，再从结果里查：
+  “二期_二期”工况下，0 号台（桥梁起点）支座的竖向反力合计是多少 kN？
+  回复 JSON：{"value": 数值}
+checks: []
+probe:
+  call: support_reaction
+  load_case: 二期_二期
+  column: fz
+  where:
+    support: first
+  answer:
+    value: kN
+tolerance:
+  value: 0.02
+truth: {"value": 1110.139}
+notes: 结果问答：模板 现浇等截面箱梁-30+35+22-单箱三室-16.75。truth 待在 OSIS 中按 probe 取值。

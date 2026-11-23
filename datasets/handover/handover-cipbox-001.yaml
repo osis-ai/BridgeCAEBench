@@ -1,0 +1,89 @@
+id: handover-cipbox-001
+line: handover
+bridge: osis-bridge-conventional-box
+status: verified
+version: 1
+kind: A
+start: overlay:start
+base: 现浇等截面箱梁-20+30+20-单箱双室-12.75-1
+reference: template:现浇等截面箱梁-20+30+20-单箱双室-12.75-1
+hide_templates:
+- 现浇等截面箱梁-20+30+20-单箱双室-12.75-1
+brief: |
+  这个项目是同事做到一半交给我的：控制参数、钢束线形、材料、截面、节点、单元已经建好（prep/_1～_6），边界、荷载、活载分析和施工阶段还没做，main.py 已经写好调用顺序。请接着补完，不要改动已经做好的部分，最后重建并求解确认能算通。
+  设计参数：
+  - 汽车荷载公路-I 级，车道数 3
+  - 支座不均匀沉降 5mm
+  - 二期恒载 77.05kN/m
+  - 整体升温 35℃、降温 20℃，考虑正负温度梯度
+  - 钢束张拉控制应力 1283.4MPa
+  - 施工阶段（共 4 个）：自重 → 二期 → 成桥 → 运营
+hidden:
+  lane_count: 3
+  settlement_mm:
+  - 5.0
+  uniform_temp:
+  - -20.0
+  - 35.0
+  tendon_stress:
+  - 1283400000.0
+  stage_count: 4
+  二期恒载_kN_m:
+    二期: 77.05
+hidden_profile: true
+must_ask: []
+checks:
+- field: live_grade
+  op: eq
+  value: HIGHWAY_I
+- field: lane_count
+  op: eq
+  value: 3
+- field: settlement_mm
+  op: approx_list
+  value:
+  - 5.0
+  tol: 0.5
+- field: line_load_kn
+  op: contains
+  value: 77.05
+- field: uniform_temp
+  op: approx_list
+  value:
+  - -20.0
+  - 35.0
+  tol: 0.5
+- field: has_temp_gradient
+  op: eq
+  value: true
+- field: tendon_stress
+  op: contains
+  value: 1283400000.0
+- field: stage_count
+  op: eq
+  value: 4
+preserve: true
+may_change:
+- boundary_count
+- has_prestress
+- has_temp_gradient
+- has_uniform_temp
+- lane_count
+- line_load_kn
+- line_loads
+- live_code
+- live_grade
+- load_case_types
+- load_cases
+- pst_steel_kg_per_m
+- pst_steel_ratio
+- settlement_mm
+- settlements
+- stage_count
+- stage_durations
+- stage_names
+- tendon_count
+- tendon_names
+- tendon_stress
+- uniform_temp
+notes: 由 tools/draft_handover.py 从模板 现浇等截面箱梁-20+30+20-单箱双室-12.75-1 截断生成：删去 _7_boundary.py, _8_loadcase.py, _9_analysis.py, _10_stage.py。

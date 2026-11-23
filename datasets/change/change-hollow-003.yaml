@@ -1,0 +1,25 @@
+id: change-hollow-003
+line: change
+bridge: osis-bridge-hollow-slab
+status: verified
+version: 1
+kind: settlement
+start: template:预制简支-空心板-10m-边梁
+base: 预制简支-空心板-10m-边梁
+reference: overlay:reference
+hide_templates:
+- 预制简支-空心板-10m-边梁
+brief: 设计变更：地勘复核后地基条件变差，支座不均匀沉降加大为55mm。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: settlement_mm
+  op: approx_list
+  value:
+  - 55.0
+  tol: 0.5
+preserve: true
+may_change:
+- settlements
+notes: '脚本变更（tools/draft_change.py: settlement），起始模板 预制简支-空心板-10m-边梁。'

@@ -1,0 +1,5 @@
+id: T2
+name: opencode-bare
+description: 与 T5 同一个 OpenCode 二进制（OSIS 分支 1.2.0），去掉 OSIS-AI 的全部厂商配置；skill 原生加载，MCP、模型、提问作答与 T5 相同
+python: venv
+extra: opencode

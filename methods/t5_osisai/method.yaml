@@ -1,0 +1,8 @@
+id: T5               # 旧 T6
+name: osis-ai-native
+description: 官方 OSIS-AI（OpenCode 会话）。每次运行用安装包起专用服务，skill、模型、MCP 与其他方法同条件
+python: venv
+extra: opencode
+serial: true            # 长期记忆插件写死在 ~/.osisai/memory（全机共享）：逐个跑，才能每次运行前清空而互不干扰
+reset_dirs: [~/.osisai/memory]   # 每次运行前清空，每题从同一状态开始；清空前的条目数记在运行目录 reset_dirs.json
+tasks: all

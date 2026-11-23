@@ -1,0 +1,72 @@
+# knowledge：无答案题。可检索的知识库、本机 pyosis、skill 里都没有答案，应答“查不到”而不是编。
+# absent_terms：check_knowledge 校验这些词在上述来源里一处都没有。
+- id: kn-noanswer-001
+  question: OSIS 能把模型直接导出成 IFC 文件交给 BIM 平台吗？
+  answer: 查不到
+  aliases: [查不到, 未找到, 无法确定, 不确定, 知识库中没有]
+  type: no_answer
+  absent_terms: [IFC]
+  status: verified
+- id: kn-noanswer-002
+  question: OSIS 5.1 的单机许可证最多能同时激活几台电脑？
+  answer: 查不到
+  aliases: [查不到, 未找到, 无法确定, 不确定, 知识库中没有]
+  type: no_answer
+  absent_terms: [许可证, 授权]
+  status: verified
+- id: kn-noanswer-003
+  question: 悬浇梁施工监控要算各节段的立模标高，OSIS 里用哪个功能直接出？
+  answer: 查不到
+  aliases: [查不到, 未找到, 无法确定, 不确定, 知识库中没有]
+  type: no_answer
+  absent_terms: [立模]
+  status: verified
+- id: kn-noanswer-004
+  question: OSIS 能直接导入 Revit 的桥梁模型吗？
+  answer: 查不到
+  aliases: [查不到, 未找到, 无法确定, 不确定, 知识库中没有]
+  type: no_answer
+  absent_terms: [Revit]
+  status: verified
+- id: kn-noanswer-005
+  question: OSIS 求解大模型时能开 GPU 加速吗？
+  answer: 查不到
+  aliases: [查不到, 未找到, 无法确定, 不确定, 知识库中没有]
+  type: no_answer
+  absent_terms: [GPU]
+  status: verified
+- id: kn-noanswer-006
+  question: OSIS 有没有普通钢筋和预应力管道的碰撞检查功能？
+  answer: 查不到
+  aliases: [查不到, 未找到, 无法确定, 不确定, 知识库中没有]
+  type: no_answer
+  absent_terms: [碰撞]
+  status: verified
+- id: kn-noanswer-007
+  question: OSIS 模型能导出给 Abaqus 做实体精细分析吗？
+  answer: 查不到
+  aliases: [查不到, 未找到, 无法确定, 不确定, 知识库中没有]
+  type: no_answer
+  absent_terms: [Abaqus]
+  status: verified
+- id: kn-noanswer-008
+  question: Midas 的 mct 能转 OSIS，那 SAP2000 的 s2k 模型能转吗？
+  answer: 查不到
+  aliases: [查不到, 未找到, 无法确定, 不确定, 知识库中没有]
+  type: no_answer
+  absent_terms: [SAP2000, s2k]
+  status: verified
+- id: kn-noanswer-009
+  question: OSIS 求解时能在哪里设置并行计算的线程数？
+  answer: 查不到
+  aliases: [查不到, 未找到, 无法确定, 不确定, 知识库中没有]
+  type: no_answer
+  absent_terms: [线程数, 并行]
+  status: verified
+- id: kn-noanswer-010
+  question: 大跨连续刚构要做抗风颤振分析，OSIS 里怎么设置？
+  answer: 查不到
+  aliases: [查不到, 未找到, 无法确定, 不确定, 知识库中没有]
+  type: no_answer
+  absent_terms: [颤振]
+  status: verified

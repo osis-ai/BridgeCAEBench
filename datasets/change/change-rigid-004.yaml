@@ -1,0 +1,24 @@
+id: change-rigid-004
+line: change
+bridge: osis-bridge-rigid-frame-box
+status: verified
+version: 1
+kind: creep
+start: template:变截面连续刚构-95+180+95-双肢
+base: 变截面连续刚构-95+180+95-双肢
+reference: overlay:reference
+hide_templates:
+- 变截面连续刚构-95+180+95-双肢
+brief: 设计变更：成桥后收缩徐变计算时长由 10 年改为 20 年。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: creep_days
+  op: approx
+  value: 7300.0
+  tol: 1
+preserve: true
+may_change:
+- stage_durations.CS66_徐变十年
+notes: '脚本变更（tools/draft_change.py: creep），起始模板 变截面连续刚构-95+180+95-双肢。'

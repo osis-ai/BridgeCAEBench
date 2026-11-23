@@ -1,0 +1,24 @@
+id: analyze-smallbox-002
+line: analyze
+bridge: osis-bridge-precast-small-box
+status: verified
+version: 1
+kind: reaction
+start: template:预制简支-小箱梁-30m-边梁
+brief: |
+  请先重建并求解这个模型，再从结果里查：
+  “铺装工况”工况下，0 号台（桥梁起点）支座的竖向反力合计是多少 kN？
+  回复 JSON：{"value": 数值}
+checks: []
+probe:
+  call: support_reaction
+  load_case: 铺装工况
+  column: fz
+  where:
+    support: first
+  answer:
+    value: kN
+tolerance:
+  value: 0.02
+truth: {"value": 162.308}
+notes: 结果问答：模板 预制简支-小箱梁-30m-边梁。truth 待在 OSIS 中按 probe 取值。

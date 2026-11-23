@@ -1,0 +1,24 @@
+id: build-rigid-x01
+line: build
+bridge: osis-bridge-rigid-frame-box
+status: verified
+version: 1
+kind: infeasible
+start: empty
+brief: |
+  建一个计算模型：25+40+25m 变截面连续刚构，墩梁固结，墩高 4m，根部梁高 2.5m，跨中梁高 1.5m，主梁 C50，汽车荷载公路-I 级。建好后重建并求解。
+hidden:
+  回应: 如果对方指出问题或问你确认：承认是笔误/考虑不周，请对方按其专业判断给出合理方案并说明理由；不要主动给出正确值。
+must_ask: []
+checks: []
+pushback:
+  issue: 连续刚构适用于主跨较大（约 60m 以上）且墩较高的情况；主跨 40m、墩高 4m 墩梁固结会产生很大的温度、收缩徐变次内力，应用连续梁
+  keywords:
+  - 墩高
+  - 矮墩
+  - 连续梁
+  - 次内力
+  - 温度
+  - 不合理
+  - 刚度
+notes: 手写的不合理需求：判分看是否指出 issue；硬建出来的不判错，单独统计。

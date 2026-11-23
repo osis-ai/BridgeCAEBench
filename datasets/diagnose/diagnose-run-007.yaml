@@ -1,0 +1,29 @@
+id: diagnose-run-007
+line: diagnose
+bridge: osis-bridge-precast-t-girder
+status: verified
+version: 1
+kind: run_error
+start: overlay:start
+base: 预制简支-T梁-40m-中梁
+reference: template:预制简支-T梁-40m-中梁
+hide_templates:
+- 预制简支-T梁-40m-中梁
+brief: |
+  重建模型时报错跑不通，报错如下。帮我查出原因并修好，不要改动无关部分，改完重建并求解确认能算通。
+  报错：
+  {symptom}
+  回复里给出定位 JSON，reason_code 取自 py/reason_codes.yaml：
+  {"localizations":[{"reason_code":"短码"}]}
+symptom: "BatchError: 批量冲刷失败（共 394 条命令）: 命令流中第378句“StgBd,1,1,1,桥台1_永久_x向固定1”命令错误如下：激活或钝化的边界组[桥台1_永久_x向固定1]不存在！\n失败命令（1 条）:\n  [FAIL] (共394条)"
+hidden: {}
+must_ask: []
+checks: []
+preserve: true
+may_change: []
+localization:
+- reason_code: boundary_ref
+seed:
+  file: prep/_10_stage.py
+  how: define_boundary(1, 1, "桥台1_永久_x向固定" -> define_boundary(1, 1, "桥台1_永久_x向固定1"
+notes: 跑不通：在模板 预制简支-T梁-40m-中梁 上种 boundary_ref。symptom 待在 OSIS 中重建起始项目后采集（同时确认确实报错）。

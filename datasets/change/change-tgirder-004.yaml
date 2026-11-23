@@ -1,0 +1,23 @@
+id: change-tgirder-004
+line: change
+bridge: osis-bridge-precast-t-girder
+status: verified
+version: 1
+kind: storage
+start: template:简支变连续-T梁-25m-中梁
+base: 简支变连续-T梁-25m-中梁
+reference: overlay:reference
+hide_templates:
+- 简支变连续-T梁-25m-中梁
+brief: 设计变更：预制梁存梁期由 60 天改为 90 天。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: stage_durations.CS2_存梁
+  op: approx
+  value: 90.0
+  tol: 0.5
+preserve: true
+may_change: []
+notes: '脚本变更（tools/draft_change.py: storage），起始模板 简支变连续-T梁-25m-中梁。'

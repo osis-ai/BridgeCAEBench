@@ -1,0 +1,98 @@
+id: build-cipbox-006
+line: build
+bridge: osis-bridge-conventional-box
+status: verified
+version: 1
+kind: complete
+start: empty
+reference: template:现浇等截面箱梁-26+35+26-单箱双室-12.25
+hide_templates:
+- 现浇等截面箱梁-26+35+26-单箱双室-12.25
+brief: |
+  建一个计算模型：26+35+26m 现浇预应力混凝土连续箱梁，单箱双室，桥宽 12.25m，满堂支架整跨现浇、一次落架。
+  梁高 2m。
+  主梁 C50。
+  荷载：汽车荷载公路-I 级；二期恒载 77.05kN/m；整体升温 35℃、降温 20℃，考虑正负温度梯度；支座不均匀沉降 5mm。
+  钢束张拉控制应力 1283.4MPa。
+  环境年平均相对湿度 70%。
+  建好后重建并求解，确认模型能算通。
+hidden:
+  span_lengths:
+  - 26.0
+  - 35.0
+  - 26.0
+  H_mid: 2.0
+  H_root: 2.0
+  T_mid: 0.22
+  T_root: 0.22
+  T_top_mid: 0.25
+  T_top_root: 0.95
+  web_t_mid: 0.5
+  web_t_support: 2.0
+  concrete_grade: 50
+  live_grade: HIGHWAY_I
+  lane_count: 3
+  uniform_temp:
+  - -20.0
+  - 35.0
+  has_temp_gradient: true
+  settlement_mm:
+  - 5.0
+  humidity: 70.0
+  tendon_stress:
+  - 1283400000.0
+  tendon_count: 4
+  stage_count: 4
+  stage_names:
+  - 自重
+  - 二期
+  - 成桥
+  - 运营
+  二期恒载_kN_m:
+    二期: 77.05
+  桥宽_m: '12.25'
+hidden_profile: true
+must_ask: []
+checks:
+- field: span_lengths
+  op: approx_list
+  value:
+  - 26.0
+  - 35.0
+  - 26.0
+  tol: 0.5
+- field: H_mid
+  op: approx
+  value: 2.0
+  tol: 0.02
+- field: concrete_grade
+  op: eq
+  value: 50
+- field: live_grade
+  op: eq
+  value: HIGHWAY_I
+- field: line_load_kn
+  op: contains
+  value: 77.05
+- field: uniform_temp
+  op: approx_list
+  value:
+  - -20.0
+  - 35.0
+  tol: 0.5
+- field: has_temp_gradient
+  op: eq
+  value: true
+- field: settlement_mm
+  op: approx_list
+  value:
+  - 5.0
+  tol: 0.5
+- field: tendon_stress
+  op: contains
+  value: 1283400000.0
+- field: humidity
+  op: approx
+  value: 70.0
+  tol: 1
+notes: 由 tools/draft_build.py 从模板 现浇等截面箱梁-26+35+26-单箱双室-12.25 的代码提取生成（complete）。

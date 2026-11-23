@@ -1,0 +1,30 @@
+id: change-smallbox-006
+line: change
+bridge: osis-bridge-precast-small-box
+status: verified
+version: 1
+kind: storage+pavement
+start: template:预制简支-小箱梁-30m-边梁
+base: 预制简支-小箱梁-30m-边梁
+reference: overlay:reference
+hide_templates:
+- 预制简支-小箱梁-30m-边梁
+brief: 设计变更（两项）：预制梁存梁期由 60 天改为 90 天。桥面铺装加厚（10cm 改为 12cm），铺装荷载由 10.85kN/m 改为 13.02kN/m。其他不变，改完重建并求解确认能算通。
+hidden: {}
+hidden_profile: true
+must_ask: []
+checks:
+- field: stage_durations.CS2_存梁
+  op: approx
+  value: 90.0
+  tol: 0.5
+- field: line_load_kn
+  op: contains
+  value: 13.02
+- field: line_load_kn
+  op: absent
+  value: 10.85
+preserve: true
+may_change:
+- line_loads.铺装工况
+notes: '脚本变更（tools/draft_change.py: storage, pavement），起始模板 预制简支-小箱梁-30m-边梁。'

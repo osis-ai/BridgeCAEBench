@@ -1,0 +1,59 @@
+id: handover-hollow-002
+line: handover
+bridge: osis-bridge-hollow-slab
+status: verified
+version: 1
+kind: B
+start: overlay:start
+base: 预制简支-空心板-16m-边梁
+reference: template:预制简支-空心板-16m-边梁
+hide_templates:
+- 预制简支-空心板-16m-边梁
+brief: |
+  这个项目是同事做到一半交给我的：边界和荷载也已经做完（prep/_1～_8），只剩活载分析（含沉降）和施工阶段没做，main.py 已经写好调用顺序。请接着补完，不要改动已经做好的部分，最后重建并求解确认能算通。
+  设计参数：
+  - 汽车荷载公路-I 级，车道数 1
+  - 支座不均匀沉降 50mm
+  - 施工阶段（共 5 个）：主梁预制、张拉预应力 → 存梁 → 二期恒载 → 徐变十年 → 运营阶段
+hidden:
+  lane_count: 1
+  settlement_mm:
+  - 50.0
+  uniform_temp:
+  - -20.0
+  - 20.0
+  tendon_stress:
+  - 1395000000.0
+  stage_count: 5
+  二期恒载_kN_m:
+    铺装: 10.85
+    防撞护栏: 2.12
+hidden_profile: true
+must_ask: []
+checks:
+- field: live_grade
+  op: eq
+  value: HIGHWAY_I
+- field: lane_count
+  op: eq
+  value: 1
+- field: settlement_mm
+  op: approx_list
+  value:
+  - 50.0
+  tol: 0.5
+- field: stage_count
+  op: eq
+  value: 5
+preserve: true
+may_change:
+- creep_days
+- lane_count
+- live_code
+- live_grade
+- settlement_mm
+- settlements
+- stage_count
+- stage_durations
+- stage_names
+notes: 由 tools/draft_handover.py 从模板 预制简支-空心板-16m-边梁 截断生成：删去 _9_analysis.py, _10_stage.py。

@@ -1,0 +1,169 @@
+id: build-cantilever-003
+line: build
+bridge: osis-bridge-cantilever-box
+status: verified
+version: 1
+kind: complete
+start: empty
+reference: template:变截面悬浇连续梁-70+130+70
+hide_templates:
+- 变截面悬浇连续梁-70+130+70
+brief: |
+  建一个计算模型：70+130+70m 变截面预应力混凝土连续箱梁，单箱单室，桥宽 12.75m，主墩两侧挂篮对称悬臂浇筑，先边跨后中跨合龙。
+  根部梁高 7.8m，跨中梁高 3.4m。
+  主梁 C60。
+  荷载：汽车荷载公路-I 级；二期恒载 中央分隔带 10.3kN/m、人行道 10.4kN/m、铺装 40.125kN/m、防撞护栏 10.2kN/m；整体升温 20℃、降温 20℃，考虑正负温度梯度；支座不均匀沉降主墩 15mm、桥台 10mm。
+  钢束张拉控制应力 1395MPa。
+  环境年平均相对湿度 75%。
+  建好后重建并求解，确认模型能算通。
+hidden:
+  span_lengths:
+  - 70.0
+  - 130.0
+  - 70.0
+  H_mid: 3.4
+  H_root: 7.8
+  T_mid: 0.32
+  T_root: 1.3
+  T_top_mid: 0.28
+  T_top_root: 0.7
+  web_t_mid: 0.5
+  web_t_support: 1.0
+  zero_block_len: 12.0
+  concrete_grade: 60
+  live_grade: HIGHWAY_I
+  lane_count: 6
+  uniform_temp:
+  - -20.0
+  - 20.0
+  has_temp_gradient: true
+  settlement_mm:
+  - 10.0
+  - 15.0
+  humidity: 75.0
+  tendon_stress:
+  - 1395000000.0
+  tendon_count: 140
+  stage_count: 56
+  stage_names:
+  - CS1_0号段施工
+  - CS2_1号段挂篮
+  - CS3_1号段浇筑
+  - CS4_1号段预应力
+  - CS5_2号段挂篮
+  - CS6_2号段浇筑
+  - CS7_2号段预应力
+  - CS8_3号段挂篮
+  - CS9_3号段浇筑
+  - CS10_3号段预应力
+  - CS11_4号段挂篮
+  - CS12_4号段浇筑
+  - CS13_4号段预应力
+  - CS14_5号段挂篮
+  - CS15_5号段浇筑
+  - CS16_5号段预应力
+  - CS17_6号段挂篮
+  - CS18_6号段浇筑
+  - CS19_6号段预应力
+  - CS20_7号段挂篮
+  - CS21_7号段浇筑
+  - CS22_7号段预应力
+  - CS23_8号段挂篮
+  - CS24_8号段浇筑
+  - CS25_8号段预应力
+  - CS26_9号段挂篮
+  - CS27_9号段浇筑
+  - CS28_9号段预应力
+  - CS29_10号段挂篮
+  - CS30_10号段浇筑
+  - CS31_10号段预应力
+  - CS32_11号段挂篮
+  - CS33_11号段浇筑
+  - CS34_11号段预应力
+  - CS35_12号段挂篮
+  - CS36_12号段浇筑
+  - CS37_12号段预应力
+  - CS38_13号段挂篮
+  - CS39_13号段浇筑
+  - CS40_13号段预应力
+  - CS41_14号段挂篮
+  - CS42_14号段浇筑
+  - CS43_14号段预应力
+  - CS44_15号段挂篮
+  - CS45_15号段浇筑
+  - CS46_15号段预应力
+  - CS47_16号段挂篮
+  - CS48_16号段浇筑
+  - CS49_16号段预应力
+  - CS50_边跨支架现浇
+  - CS51_左边跨、右边跨合龙
+  - CS52_中跨1合龙
+  - CS53_体系转换
+  - CS54_二期恒载
+  - CS55_徐变十年
+  - CS56_运营阶段
+  二期恒载_kN_m:
+    中央分隔带: 10.3
+    人行道: 10.4
+    铺装: 40.125
+    防撞护栏: 10.2
+  桥宽_m: '12.75'
+hidden_profile: true
+must_ask: []
+checks:
+- field: span_lengths
+  op: approx_list
+  value:
+  - 70.0
+  - 130.0
+  - 70.0
+  tol: 0.5
+- field: H_root
+  op: approx
+  value: 7.8
+  tol: 0.02
+- field: H_mid
+  op: approx
+  value: 3.4
+  tol: 0.02
+- field: concrete_grade
+  op: eq
+  value: 60
+- field: live_grade
+  op: eq
+  value: HIGHWAY_I
+- field: line_load_kn
+  op: contains
+  value: 10.2
+- field: line_load_kn
+  op: contains
+  value: 10.3
+- field: line_load_kn
+  op: contains
+  value: 10.4
+- field: line_load_kn
+  op: contains
+  value: 40.125
+- field: uniform_temp
+  op: approx_list
+  value:
+  - -20.0
+  - 20.0
+  tol: 0.5
+- field: has_temp_gradient
+  op: eq
+  value: true
+- field: settlement_mm
+  op: approx_list
+  value:
+  - 10.0
+  - 15.0
+  tol: 0.5
+- field: tendon_stress
+  op: contains
+  value: 1395000000.0
+- field: humidity
+  op: approx
+  value: 75.0
+  tol: 1
+notes: 由 tools/draft_build.py 从模板 变截面悬浇连续梁-70+130+70 的代码提取生成（complete）。

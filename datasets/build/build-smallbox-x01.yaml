@@ -1,0 +1,23 @@
+id: build-smallbox-x01
+line: build
+bridge: osis-bridge-precast-small-box
+status: verified
+version: 1
+kind: infeasible
+start: empty
+brief: |
+  建一个计算模型：单跨 12m 预制简支小箱梁，只建一片边梁，梁高 1.6m，主梁 C50，汽车荷载公路-I 级。建好后重建并求解。
+hidden:
+  回应: 如果对方指出问题或问你确认：承认是笔误/考虑不周，请对方按其专业判断给出合理方案并说明理由；不要主动给出正确值。
+must_ask: []
+checks: []
+pushback:
+  issue: 预制小箱梁适用跨径约 20~40m，12m 应选空心板；1.6m 梁高对 12m 跨也明显偏大
+  keywords:
+  - 跨径
+  - 20m
+  - 空心板
+  - 不经济
+  - 不合理
+  - 偏大
+notes: 手写的不合理需求：判分看是否指出 issue；硬建出来的不判错，单独统计。

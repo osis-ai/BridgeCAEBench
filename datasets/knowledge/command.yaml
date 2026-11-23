@@ -1,0 +1,81 @@
+# knowledge：命令流题，出自 WeKnora「OSIS算例命令流说明文档」，默认以最新的 5.1 版为准。
+- id: kn-command-001
+  question: 命令流里定义或修改重力加速度用哪个命令？
+  answer: Acel
+  aliases: ["Acel,g"]
+  type: api
+  source: {kb: OSIS算例命令流说明文档, knowledge_id: dca76b7f-460a-4d47-8c89-9117d1fe6d9e, title: OSIS命令-帮助文档-5.1版本.docx,
+           excerpt: "Acel,g\n简介：定义或修改重力加速度值"}
+  status: verified
+- id: kn-command-002
+  question: 命令流里控制“是否修改变截面单元局部坐标轴来计算内力/应力”的是哪个命令？
+  answer: ModLocCoor
+  aliases: ["ModLocCoor,op"]
+  type: api
+  source: {kb: OSIS算例命令流说明文档, knowledge_id: dca76b7f-460a-4d47-8c89-9117d1fe6d9e, title: OSIS命令-帮助文档-5.1版本.docx,
+           excerpt: "ModLocCoor,op\n简介：是否修改变截面单元局部坐标轴来计算内力/应力"}
+  status: verified
+- id: kn-command-003
+  question: 命令流写 CalcRlx,1 打开的是哪项计算？
+  answer: 钢束松弛
+  aliases: [计算钢束松弛, 松弛]
+  type: name
+  source: {kb: OSIS算例命令流说明文档, knowledge_id: dca76b7f-460a-4d47-8c89-9117d1fe6d9e, title: OSIS命令-帮助文档-5.1版本.docx,
+           excerpt: 简介：是否计算钢束松弛}
+  status: verified
+- id: kn-command-004
+  question: Unit 命令的 Length 参数能填哪几个值？
+  answer: mm,m
+  aliases: ["m,mm", "毫米,米", mm、m]
+  type: name
+  source: {kb: OSIS算例命令流说明文档, knowledge_id: dca76b7f-460a-4d47-8c89-9117d1fe6d9e, title: OSIS命令-帮助文档-5.1版本.docx,
+           excerpt: "| Length | mm | 毫米 |\n| m | 米 |"}
+  status: verified
+- id: kn-command-005
+  question: CrpShrk 命令里的年平均湿度 AVG.Humidity 按什么形式填？
+  answer: 百分比
+  aliases: ['%', 百分数]
+  type: name
+  source: {kb: OSIS算例命令流说明文档, knowledge_id: dca76b7f-460a-4d47-8c89-9117d1fe6d9e, title: OSIS命令-帮助文档-5.1版本.docx,
+           excerpt: AVG.Humidity：年平均湿度（百分比）}
+  status: verified
+- id: kn-command-006
+  question: NL 命令的第一个参数 Geom 填 1 打开的是什么？
+  answer: 几何非线性
+  aliases: [几何非线性开关, 大位移大转角]
+  type: name
+  source: {kb: OSIS算例命令流说明文档, knowledge_id: dca76b7f-460a-4d47-8c89-9117d1fe6d9e, title: OSIS命令-帮助文档-5.1版本.docx,
+           excerpt: Geom：0关闭几何非线性开关；1打开几何非线性开关、大位移大转角}
+  status: verified
+- id: kn-command-007
+  question: 求解的线性搜索开关 LnSrch 默认是开着还是关着？
+  answer: 关闭
+  aliases: [关, 默认关闭, 关着]
+  type: name
+  source: {kb: OSIS算例命令流说明文档, knowledge_id: dca76b7f-460a-4d47-8c89-9117d1fe6d9e, title: OSIS命令-帮助文档-5.1版本.docx,
+           excerpt: "Key==1：线性搜索\n注：默认关闭"}
+  status: verified
+- id: kn-command-008
+  question: 用 LiveGrade 命令定义公路-Ⅰ级车道荷载时，类型字段写什么？
+  answer: HIGHWAY_I
+  aliases: []
+  type: api
+  source: {kb: OSIS算例命令流说明文档, knowledge_id: dca76b7f-460a-4d47-8c89-9117d1fe6d9e, title: OSIS命令-帮助文档-5.1版本.docx,
+           excerpt: 'LiveGrade,公路一级,JTGD60\_2015,HIGHWAY\_I;'}
+  status: verified
+- id: kn-command-009
+  question: 用 Element 命令建壳单元时，紧跟在 type 后面的参数是什么？
+  answer: isThin
+  aliases: []
+  type: api
+  source: {kb: OSIS算例命令流说明文档, knowledge_id: dca76b7f-460a-4d47-8c89-9117d1fe6d9e, title: OSIS命令-帮助文档-5.1版本.docx,
+           excerpt: "Element, eleIndex, type, isThin, mat, thickness, node1, node2, node3(, node4)"}
+  status: verified
+- id: kn-command-010
+  question: 瞬态分析工况命令 TransAnal 的激励类型 TransientExcitationType 填 BASE 表示什么激励？
+  answer: 基底激励
+  aliases: [基底]
+  type: name
+  source: {kb: OSIS算例命令流说明文档, knowledge_id: dca76b7f-460a-4d47-8c89-9117d1fe6d9e, title: OSIS命令-帮助文档-5.1版本.docx,
+           excerpt: TransientExcitationType：FORCE = 力程激励，BASE = 基底激励}
+  status: verified
